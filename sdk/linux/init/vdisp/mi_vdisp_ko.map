@@ -1,0 +1,464 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x46ec
+ *(.text .stub)
+ .text          0x0000000000000000     0x46bc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+                0x0000000000000424                MI_DEVICE_WrapperFunction_vdisp
+                0x000000000000043c                IS_PRINT_MATCH_vdisp
+                0x00000000000004a4                MI_DEVICE_Instance_vdisp
+                0x00000000000004ac                MI_DEVICE_GetSelfDir_vdisp
+                0x00000000000004b8                AddUTIoctlTable
+                0x00000000000004ba                vdisp__module_init
+                0x0000000000000584                vdisp__module_exit
+                0x000000000000064e                MI_VDISP_IMPL_OnPrepareAsyncOutputTaskMetaInfo
+                0x0000000000000656                MI_VDISP_IMPL_BarrierInputTask
+                0x000000000000065a                MI_VDISP_IMPL_DequeueInputTask
+                0x0000000000000662                MI_VDISP_IMPL_OnGetInputPortBindCapability
+                0x000000000000066a                MI_VDISP_IMPL_HwTimerOutputTaskHandler
+                0x0000000000000698                MI_VDISP_IMPL_EnqueueAsyncOutputTask
+                0x0000000000000750                MI_VDISP_IMPL_OnPreProcessInputTask
+                0x0000000000000948                MI_VDISP_IMPL_CheckInputTaskStatus
+                0x0000000000000d1c                MI_VDISP_IMPL_ResumeInputChannel
+                0x0000000000000e0c                MI_VDISP_IMPL_PauseInputChannel
+                0x0000000000000efc                MI_VDISP_IMPL_StartDev
+                0x000000000000120c                MI_VDISP_IMPL_OnGetOutputPortBindCapability
+                0x0000000000001268                MI_VDISP_IMPL_RgnAddRect
+                0x00000000000012a4                MI_VDISP_IMPL_FillBufNotReady
+                0x000000000000134c                MI_VDISP_IMPL_WriteOutTaskFile
+                0x0000000000001544                MI_VDISP_IMPL_WriteInTaskFile
+                0x0000000000001770                MI_VDISP_IMPL_GetIntersect
+                0x00000000000017c0                MI_VDISP_IMPL_SplitRectangle
+                0x00000000000018a4                MI_VDISP_IMPL_ReorderOverlayChn
+                0x000000000000192e                MI_VDISP_IMPL_GenerateOverlayRectangle
+                0x0000000000001a48                MI_VDISP_IMPL_EnableInputChannel
+                0x0000000000001c34                MI_VDISP_IMPL_DeleteAndGenerateOverlayRectangle
+                0x0000000000001cd0                MI_VDISP_IMPL_MoveToTop
+                0x0000000000001dec                MI_VDISP_IMPL_CheckInputAlignment
+                0x0000000000001ea4                MI_VDISP_IMPL_InOutAttrCheck
+                0x0000000000001ef8                MI_VDISP_IMPL_IntersectionCheck
+                0x0000000000001f98                MI_VDISP_IMPL_OutBufBliting
+                0x0000000000002038                MI_VDISP_IMPL_OutBufPadding
+                0x000000000000211c                MI_VDISP_IMPL_DequeueOutputTask
+                0x0000000000002440                MI_VDISP_IMPL_AllSubBufDoneCheck
+                0x0000000000002554                MI_VDISP_IMPL_FindOutPutBuf
+                0x00000000000025ae                MI_VDISP_IMPL_EnqueueInputTask
+                0x0000000000002794                MI_VDISP_IMPL_IsDoneInFreeFrameRate
+                0x00000000000027dc                MI_VDISP_IMPL_IsDoneInFixFrameRate
+                0x0000000000002864                MI_VDISP_IMPL_CheckOutputTaskStatus
+                0x0000000000002924                MI_VDISP_IMPL_ClearOverlayInputTask
+                0x0000000000002984                MI_VDISP_IMPL_DisableInputChannel
+                0x0000000000002b0c                MI_VDISP_IMPL_StopDev
+                0x0000000000002da0                MI_VDISP_IMPL_InitSubBufInfo
+                0x0000000000002ea4                MI_VDISP_IMPL_Init
+                0x0000000000002fb4                MI_VDISP_IMPL_Exit
+                0x0000000000003050                MI_VDISP_IMPL_CreateDevice
+                0x00000000000032dc                MI_VDISP_IMPL_DestroyDevice
+                0x000000000000340c                MI_VDISP_IMPL_SetOutputPortAttr
+                0x0000000000003614                MI_VDISP_IMPL_GetOutputPortAttr
+                0x00000000000036e0                MI_VDISP_IMPL_SetInputChannelAttr
+                0x00000000000038f8                MI_VDISP_IMPL_GetInputChannelAttr
+                0x0000000000003a28                MI_VDISP_AllocationOnRef
+                0x0000000000003a70                MI_VDISP_AllocatorOnRef
+                0x0000000000003aa8                MI_VDISP_AllocationOnUnRef
+                0x0000000000003afc                MI_VDISP_AllocatorOnUnRef
+                0x0000000000003dfc                MI_VDISP_AllocationInit
+                0x00000000000040d4                MI_VDISP_AllocatorInit
+                0x000000000000411c                VDISP_CUSTOM_AllcatorCreate
+                0x0000000000004178                VDISP_CUSTOM_AllcatorDestroy
+                0x00000000000043a4                VDISP_CUSTOM_AllcatorInit
+                0x00000000000043ec                VDISP_CUSTOM_AllcatorDeinit
+                0x00000000000044c8                VDISP_CUSTOMER_ALLOCATOR_MapUsr
+                0x0000000000004558                VDISP_CUSTOMER_ALLOCATOR_UnmapUsr
+                0x00000000000045c4                MI_VDISP_MODPARAM_Init
+                0x00000000000045ce                MI_VDISP_MODPARAM_Deinit
+                0x00000000000045d4                MI_VDISP_BLIT_Fill
+                0x0000000000004634                MI_VDISP_BLIT_VdispBlitFinish
+                0x0000000000004636                MI_VDISP_BLIT_VdispBlitFill
+                0x00000000000046b4                MI_VDISP_BLIT_VdispBlitOpen
+                0x00000000000046b8                MI_VDISP_BLIT_VdispBlitClose
+ .text          0x00000000000046bc       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+                0x00000000000046bc                MI_VDISP_GetCurUserMapCtx
+                0x00000000000046ce                vdisp_mod_init
+                0x00000000000046dc                vdisp_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0x4a
+ *(.rodata)
+ .rodata        0x0000000000000000       0x4a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.rodata.cst4    0x0000000000000000       0x40
+ .rodata.cst4   0x0000000000000000       0x40 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+
+.rodata.str1.1  0x0000000000000000      0xaec
+ .rodata.str1.1
+                0x0000000000000000      0xaec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.modinfo        0x0000000000000000       0x87
+ .modinfo       0x0000000000000000       0x87 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0x78
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0x78 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .ARM.extab     0x0000000000000078        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.ARM.exidx      0x0000000000000000      0x4b0
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x498 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .ARM.exidx     0x0000000000000498       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000       0xfa
+ *(.data)
+ .data          0x0000000000000000       0xfa /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+                0x00000000000000c0                vdisp_debug_level
+                0x00000000000000f8                g_stVdispModParam
+ .data          0x00000000000000fa        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000    0x17d64
+ *(.bss)
+ .bss           0x0000000000000000    0x17d64 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+                0x0000000000000004                vdisp_debug_file
+                0x0000000000000104                vdisp_debug_func
+                0x0000000000000208                gp_moduleSem
+                0x000000000000020c                g_vdispClrFmtMap
+                0x0000000000000218                g_stModDbgParams
+                0x0000000000000220                g_rgnsubHandle
+                0x0000000000000230                g_stVdispModRes
+ .bss           0x0000000000017d64        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0xee
+ *(.comment)
+ .comment       0x0000000000000000       0xcc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .comment       0x00000000000000cc       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xf0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0xc0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_aranges
+                0x00000000000000c0       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x2eae6
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x2352b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_info    0x000000000002352b     0xb5bb /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_abbrev   0x0000000000000000     0x2385
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x1d58 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_abbrev  0x0000000000001d58      0x62d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_line     0x0000000000000000     0x6c11
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x6166 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_line    0x0000000000006166      0xaab /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_frame    0x0000000000000000     0x1568
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x1508 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_frame   0x0000000000001508       0x60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_str      0x0000000000000000    0x26fbd
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x1fc04 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_str     0x000000000001fc04     0x73b9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_loc      0x0000000000000000     0x914f
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x914f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x468
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x448 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/../../obj/uclibc/9.1.0/vdisp.o
+ .debug_ranges  0x0000000000000448       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/vdisp_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vdisp/mi_vdisp.o elf32-littlearm)

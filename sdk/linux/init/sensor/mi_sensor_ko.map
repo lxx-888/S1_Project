@@ -1,0 +1,929 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x8b90
+ *(.text .stub)
+ .text          0x0000000000000000     0x861c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+                0x0000000000000330                drv_sensor_insmod
+                0x0000000000000360                drv_sensor_rmmod
+                0x0000000000000388                MI_DEVICE_WrapperFunction_sensor
+                0x00000000000003a0                IS_PRINT_MATCH_sensor
+                0x0000000000000408                MI_DEVICE_Instance_sensor
+                0x0000000000000410                MI_DEVICE_GetSelfDir_sensor
+                0x000000000000041c                AddUTIoctlTable
+                0x000000000000041e                sensor__module_init
+                0x00000000000004e8                sensor__module_exit
+                0x0000000000000604                MI_SENSOR_IMPL_GetPadInfo
+                0x0000000000000670                MI_SENSOR_IMPL_GetPlaneInfo
+                0x00000000000006f8                MI_SENSOR_IMPL_GetFps
+                0x000000000000081c                MI_SENSOR_IMPL_SetFps
+                0x000000000000087c                MI_SENSOR_IMPL_QueryResCount
+                0x0000000000000924                MI_SENSOR_IMPL_GetRes
+                0x0000000000000994                MI_SENSOR_IMPL_GetCurRes
+                0x0000000000000a44                MI_SENSOR_IMPL_SetOrien
+                0x0000000000000ab0                MI_SENSOR_IMPL_GetOrien
+                0x0000000000000c58                MI_SENSOR_IMPL_PMVoteOn
+                0x0000000000000c70                MI_SENSOR_IMPL_PMVoteOff
+                0x0000000000000c88                MI_SENSOR_IMPL_Enable
+                0x0000000000000d64                MI_SENSOR_IMPL_Disable
+                0x0000000000000dec                MI_SENSOR_IMPL_GetAnadecSrcType
+                0x0000000000000e8c                MI_SENSOR_IMPL_SetAnadecSrcType
+                0x0000000000000f2c                MI_SENSOR_IMPL_SetRes
+                0x0000000000000fa0                MI_SENSOR_IMPL_SetPlaneMode
+                0x0000000000001014                MI_SENSOR_IMPL_GetPlaneMode
+                0x0000000000001070                MI_SENSOR_IMPL_CustFunction
+                0x0000000000001178                MI_SENSOR_IMPL_ModParamPrint
+                0x000000000000117c                MI_SENSOR_IMPL_ModParamInit
+                0x0000000000001228                MI_SENSOR_IMPL_LoadExternalConfig
+                0x0000000000001238                MI_SENSOR_IMPL_GetSnrPmStatus
+                0x0000000000001288                MI_SENSOR_IMPL_PreSuspend
+                0x0000000000001350                MI_SENSOR_IMPL_ExitPreSuspend
+                0x0000000000001410                _MI_SENSOR_IMPL_ModDbgParams_Init
+                0x00000000000015b4                MI_SENSOR_IMPL_Insmod
+                0x00000000000015be                MI_SENSOR_IMPL_Init
+                0x0000000000001690                MI_SENSOR_IMPL_DeInit
+                0x000000000000174c                MI_SENSOR_DEBUG_SetCsiClk
+                0x0000000000001762                MI_SENSOR_DEBUG_GetCsiClk
+                0x000000000000176c                MI_SENSOR_DEBUG_GetCsiClkRateByIdx
+                0x0000000000001770                MI_SENSOR_DEBUG_GetCsiClkDfs
+                0x0000000000001774                MI_SENSOR_DEBUG_SetCsiDbgMask
+                0x000000000000177e                MI_SENSOR_DEBUG_GetCsiDbgMask
+                0x0000000000001788                MI_SENSOR_DEBUG_SetCsiRptMask
+                0x0000000000001792                MI_SENSOR_DEBUG_GetCsiRptMask
+                0x000000000000179c                MI_SENSOR_DEBUG_SetCsiInts
+                0x00000000000017a8                MI_SENSOR_DEBUG_GetCsiInts
+                0x000000000000180c                MI_SENSOR_DEBUG_SetCsiInfo
+                0x0000000000001818                MI_SENSOR_DEBUG_GetCsiInfo
+                0x0000000000001864                MI_SENSOR_DEBUG_GetSensorInfo
+                0x000000000000186e                MI_SENSOR_DEBUG_IrControl
+                0x00000000000019b2                MI_SENSOR_CJSONPARSER_LoadExtrnalConfig
+                0x0000000000002140                DRV_SENSOR_I2C_Open
+                0x0000000000002144                DRV_SENSOR_I2C_Close
+                0x0000000000002148                _DrvSensorGetI2CMaster
+                0x0000000000002162                DRV_SENSOR_I2C_Write
+                0x0000000000002192                DRV_SENSOR_I2C_Read
+                0x00000000000021c2                DRV_SENSOR_I2C_ArrayWrite
+                0x000000000000220e                DRV_SENSOR_I2C_BurstWrite
+                0x0000000000002242                DRV_SENSOR_I2C_BurstRead
+                0x0000000000002276                DRV_SENSOR_I2C_ArrayRead
+                0x00000000000022c4                DRV_SENSOR_I2C_Attach
+                0x000000000000230c                DRV_SENSOR_IF_IrControl
+                0x0000000000002334                DRV_SENSOR_IF_SetVifSetIoPad
+                0x0000000000002342                DRV_SENSOR_IF_SetSensorMCLK
+                0x00000000000023c0                _DRV_SENSOR_IF_SetUserDefInfo
+                0x0000000000002544                DRV_SENSOR_IF_GetInfo
+                0x0000000000002634                DRV_SENSOR_IF_ExSensorConvertMclk
+                0x00000000000026dc                _DRV_SENSOR_IF_Register_CallBack
+                0x00000000000026e8                _DRV_SENSOR_IF_UnRegister_CallBack
+                0x00000000000026f8                DRV_SENSOR_IF_GetParllelPinPol
+                0x0000000000002714                DRV_SENSOR_IF_GetParallelPinMsbShift
+                0x0000000000002722                DRV_SENSOR_IF_CtxInit
+                0x0000000000002730                DRV_SENSOR_IF_RegisterSensorI2CSlaveID
+                0x000000000000275c                DRV_SENSOR_IF_RegisterPlaneI2CSlaveID
+                0x000000000000278c                DRV_SENSOR_IF_ExSetMclk
+                0x00000000000027e8                DRV_SENSOR_IF_ExSetLaneNum
+                0x0000000000002818                DRV_SENSOR_IF_ExSetHdrLaneNum
+                0x0000000000002850                DRV_SENSOR_IF_SetAnaLaneSelect
+                0x0000000000002854                DRV_SENSOR_IF_SetAnaLaneSwap
+                0x0000000000002858                DRV_SENSOR_IF_SetExternalConfig
+                0x0000000000002910                DRV_SENSOR_IF_SensorHandleVer
+                0x000000000000291a                DRV_SENSOR_IF_SensorIFVer
+                0x000000000000291e                DRV_SENSOR_IF_SensorI2CVer
+                0x0000000000002928                DRV_SENSOR_IF_GetUserDefInfo
+                0x0000000000002944                DRV_SENSOR_IF_RegisterSensorDriverEx
+                0x0000000000002ab4                DRV_SENSOR_IF_RegisterSensorDriver
+                0x0000000000002aba                DRV_SENSOR_IF_RegisterPlaneDriverEx
+                0x0000000000002c4c                DRV_SENSOR_IF_RegisterPlaneDriver
+                0x0000000000002c52                DRV_SENSOR_IF_Exist
+                0x0000000000002c7c                DRV_SENSOR_IF_DeInit
+                0x0000000000002d00                DRV_SENSOR_IF_StrDefault
+                0x0000000000002d48                DRV_SENSOR_IF_Suspend
+                0x0000000000002ddc                DRV_SENSOR_IF_Resume
+                0x0000000000002e90                DRV_SENSOR_IF_EarlyInitStreamOn
+                0x0000000000002f70                DRV_SENSOR_IF_GetPlaneMode
+                0x0000000000002f90                DRV_SENSOR_IF_GetPlaneInfo
+                0x000000000000317c                DRV_SENSOR_IF_Init
+                0x0000000000003350                DRV_SENSOR_IF_Release
+                0x00000000000033ac                DRV_SENSOR_IF_SetOrien
+                0x0000000000003468                DRV_SENSOR_IF_GetOrien
+                0x0000000000003514                DRV_SENSOR_IF_SetFPS
+                0x00000000000035b4                DRV_SENSOR_IF_GetFPS
+                0x000000000000360c                DRV_SENSOR_IF_SwitchId
+                0x0000000000003610                DRV_SENSOR_IF_GetCurSwitchId
+                0x0000000000003614                DRV_SENSOR_IF_SetRes
+                0x0000000000003678                DRV_SENSOR_IF_QueryResCount
+                0x00000000000036fc                DRV_SENSOR_IF_GetRes
+                0x00000000000037c8                DRV_SENSOR_IF_GetCurRes
+                0x0000000000003890                DRV_SENSOR_IF_CustFunction
+                0x00000000000038f8                DRV_SENSOR_IF_GetAnadecSrcAttr
+                0x00000000000039c4                DRV_SENSOR_IF_SetAnadecSrcAttr
+                0x0000000000003a78                DRV_SENSOR_IF_InitRxPadAttr
+                0x0000000000003cac                DRV_SENSOR_IF_RegBankAddrMap
+                0x0000000000003cb0                DRV_SENSOR_IF_InitCommon
+                0x0000000000003d14                DRV_SENSOR_IF_DeinitCommon
+                0x0000000000003d44                DRV_SENSOR_IF_I2cRead
+                0x0000000000003df8                DRV_SENSOR_IF_I2cWrite
+                0x0000000000003e9c                DrvSensorSetEarlyInitSetting
+                0x0000000000003fec                DRV_SENSOR_IF_GetSnrInfo
+                0x00000000000040e8                DRV_SENSOR_IF_Dev2SnrPadCtxInit
+                0x0000000000004124                DRV_SENSOR_IF_SetDev2SnrPadMap
+                0x0000000000004144                DRV_SENSOR_IF_Dev2SnrPadId
+                0x0000000000004178                DRV_SENSOR_IF_GetPlaneInfoByChn
+                0x0000000000004360                DRV_SENSOR_IF_TryShutter
+                0x0000000000004404                DRV_SENSOR_IF_SetUs
+                0x00000000000044b8                DRV_SENSOR_IF_GetUs
+                0x0000000000004574                DRV_SENSOR_IF_SetGain
+                0x0000000000004628                DRV_SENSOR_IF_TryGain
+                0x00000000000046cc                DRV_SENSOR_IF_GetGain
+                0x000000000000478c                DRV_SENSOR_IF_SetISPConverStatus
+                0x0000000000004840                DRV_SENSOR_IF_AeNotify
+                0x0000000000004910                DRV_SENSOR_IF_GetDevIdBySnrPadId
+                0x000000000000493c                DRV_SENSOR_IF_SetPlaneMode
+                0x0000000000004a14                DRV_SENSOR_IF_EarlyInitSync
+                0x0000000000004a6c                DRV_SENSOR_IF_SnrPad2GroupId
+                0x0000000000004ac0                _DRV_SENSOR_IF_SetSkipFrame
+                0x0000000000004b10                DRV_SENSOR_IF_ShowInfo
+                0x0000000000004eb8                DRV_SENSOR_IF_FrameEndNotify
+                0x0000000000004ed8                DRV_SENSOR_IF_FrameStartNotify
+                0x0000000000004ee2                DRV_SENSOR_IF_RegisterVcmDriver
+                0x0000000000004f68                DRV_SENSOR_IF_ReleaseVcmDriver
+                0x0000000000004f6c                DRV_SENSOR_IF_VcmSetPos
+                0x0000000000004fd4                DRV_SENSOR_IF_VcmGetCurPos
+                0x000000000000503c                DRV_SENSOR_IF_VcmGetMinMaxPos
+                0x00000000000050a8                DRV_SENSORIF_WORK_ThreadWqAdd
+                0x000000000000511e                DRV_SENSORIF_WORK_ThreadWqGet
+                0x0000000000005184                DRV_SENSORIF_WORK_ThreadWqProc
+                0x00000000000051e4                DRV_SENSORIF_WORK_ThreadWqClean
+                0x0000000000005230                DRV_SENSORIF_WORK_ThreadWqInit
+                0x00000000000052b4                DRV_SENSORIF_WORK_ThreadWqDeinit
+                0x00000000000052d4                DRV_SENSORIF_WORK_ThreadWqFlush
+                0x000000000000530c                DRV_SENSOR_ClkInit
+                0x0000000000005344                DRV_SENSOR_ClkEnable
+                0x0000000000005374                DRV_SENSOR_ClkDisable
+                0x000000000000539c                DRV_SENSOR_ClkSetRate
+                0x00000000000053c4                DRV_SENSOR_ClkDeInit
+                0x00000000000053fc                I2C_HACKING_I2CWriteRegisterPair
+                0x00000000000054e8                I2C_HACKING_I2CWriteRegisterBurst
+                0x0000000000005648                I2C_HACKING_I2CReadRegisterBurst
+                0x0000000000005710                I2C_HACKING_I2CReadRegisterPair
+                0x000000000000588c                EXT_log_2
+                0x00000000000058d4                intlog10
+                0x0000000000005900                intpow
+                0x0000000000005932                intsqrt
+                0x00000000000059a0                ufact
+                0x00000000000059cc                round_float
+                0x0000000000005a10                base2_exp_float_pow
+                0x0000000000005ab4                SNRIFLogSetEn
+                0x0000000000005acc                SNRIFLogGetEn
+                0x0000000000005ad8                DrvSensorIfUt
+                0x0000000000005f2c                DRV_CSI_Init
+                0x0000000000005f74                DRV_CSI_Uninit
+                0x0000000000005fbc                DRV_CSI_SetClkDivMac
+                0x0000000000005fc0                DRV_CSI_SetClkPreRate
+                0x0000000000005fd0                DRV_CSI_GetClkPreRate
+                0x0000000000005fe4                DRV_CSI_SetClkRate
+                0x0000000000006020                DRV_CSI_GetRateByIdx
+                0x000000000000605c                DRV_CSI_GetClkDfs
+                0x000000000000609c                DRV_CSI_GetClkRate
+                0x00000000000060dc                DRV_CSI_SetClk
+                0x0000000000006198                DRV_CSI_MacSoftwareReset
+                0x00000000000061a2                DRV_CSI_MacVCEn
+                0x00000000000061ac                DRV_CSI_AtopPdCh
+                0x00000000000061b6                Drv_CSI_SetAnaLaneSwap
+                0x00000000000061ba                Drv_CSI_SetAnaLaneSelect
+                0x00000000000061be                DRV_CSI_SetPreSet
+                0x00000000000061cc                DRV_CSI_SetLane
+                0x0000000000006208                DrvCsiSetVc0HsMode
+                0x000000000000620c                DRV_CSI_SetLongPacket
+                0x0000000000006216                DrvCsiSetClkDataSkip
+                0x0000000000006220                DRV_CSI_SetHdrMode
+                0x000000000000622a                DRV_CSI_SetYuvOrderSwap
+                0x0000000000006234                DRV_CSI_QueryLaneNum
+                0x000000000000624c                DRV_CSI_SetPatternGen
+                0x0000000000006292                DRV_CSI_DbgSetRecvSize
+                0x00000000000062ac                DRV_CSI_DbgChkRecvSize
+                0x0000000000006314                DRV_CSI_DbgShowRecvSize
+                0x00000000000063d8                DRV_CSI_DbgSetMask
+                0x00000000000063dc                DRV_CSI_DbgGetMask
+                0x0000000000006418                DRV_CSI_RptSetMask
+                0x000000000000641e                DRV_CSI_RptGetMask
+                0x000000000000645c                DRV_CSI_ISR_IntRptShow
+                0x00000000000064f4                DRV_CSI_ISR_IntShow
+                0x0000000000006608                DRV_CSI_ISR_IsrHandler
+                0x0000000000006838                DRV_CSI_ClkInit
+                0x0000000000006878                DRV_CSI_ClkSetRate
+                0x00000000000068bc                DRV_CSI_ClkGetRate
+                0x0000000000006914                DRV_CSI_CLKGetCurrentIdx
+                0x0000000000006960                DRV_CSI_CLK_GetRateByIdx
+                0x0000000000006998                DRV_CSI_CLK_GetClkDfs
+                0x00000000000069b8                DRV_CSI_ClkGetNodeRate
+                0x0000000000006a4c                DRV_CSI_ClkEnable
+                0x0000000000006a7c                DRV_CSI_ClkGetEnable
+                0x0000000000006a8c                DRV_CSI_ClkDisable
+                0x0000000000006abc                DRV_CSI_ClkDeInit
+                0x0000000000006ae8                CSI_UT_cmd
+                0x0000000000006b94                CsiLogSetEn
+                0x0000000000006bb0                CsiLogGetEn
+                0x0000000000006c80                HalSnrGetHandle
+                0x0000000000006cbc                HalSnrSetPadMode
+                0x0000000000006cd8                HalSnrGetDualSnrPad
+                0x0000000000006cf0                HalSnrGetDualSnrConfig
+                0x0000000000006d04                HalSensorSetI2CMaster
+                0x0000000000006d2c                HalSensorGetI2CMaster
+                0x0000000000006d50                HalSensorSetI2CPadmux
+                0x0000000000006d6c                HalSensorGetI2CPadmux
+                0x0000000000006d84                HalSensorSetI2CSpeed
+                0x0000000000006d9c                HalSensorGetI2CSpeed
+                0x0000000000006db0                HalVcmSetI2CMaster
+                0x0000000000006dcc                HalVcmGetI2CMaster
+                0x0000000000006de4                HalSnrRegBankAddrMap
+                0x0000000000006e10                HalSnrGetRstGpio
+                0x0000000000006e28                HalSnrGetPdnGpio
+                0x0000000000006e40                HalSnrGetRstPolMode
+                0x0000000000006e54                HalSnrGetPdnPolMode
+                0x0000000000006e68                HalSnrSetParaPinMSBShift
+                0x0000000000006e78                HalSnrGetParaPinMSBShift
+                0x0000000000006e88                HalSnrConvertMclk
+                0x0000000000006f04                HalSensorGetMclkId
+                0x0000000000006f1c                HalSnrGetMclkMax
+                0x0000000000006f26                HalSnrSetIoPad
+                0x0000000000006fa6                HalSnrSetRst
+                0x000000000000700a                HalSnrSetPdwn
+                0x0000000000007068                HalSnrSetVifPclkSource
+                0x00000000000070b6                HalSnrGetDevIdBySnrPadId
+                0x00000000000070ce                HalSnrGetChnBySnrPadId
+                0x00000000000070d2                HalSnrGetSnrPadIdByGroupId
+                0x00000000000070ea                HalSnrShowInfo
+                0x00000000000072c8                _HalCsiGetBankIDbySnrPad
+                0x00000000000072dc                HalCsiAnaHsRxTxAttribute
+                0x0000000000007318                HalCsiAnaMCGConfig
+                0x0000000000007354                HalCsiAnaLpAttribute
+                0x000000000000740c                HalCsiAnaDynGatingClkNsEnable
+                0x0000000000007428                HalCsiAnaPowerDownLptxVreg
+                0x0000000000007444                HalCsiAnaPdHsMode
+                0x0000000000007460                HalCsiAnaPdWholeDphyAnalog
+                0x000000000000747c                HalCsiAnaSetLpRxEnable
+                0x0000000000007518                HalCsiAnaSetHsTxPolarity
+                0x0000000000007580                HalCsiAnaTestModeEnable
+                0x00000000000075b8                HalCsiAnaSetLaneSelect
+                0x000000000000765c                HalCsiAnaSetHsRxData
+                0x00000000000076f8                HalCsiAnaGetDatalaneStatus
+                0x0000000000007760                HalCsiAnaSkipHsInHSRXMode
+                0x0000000000007790                HalCsiAnaDigSoftwareReset
+                0x0000000000007880                HalCsiDigSetLaneSelect
+                0x00000000000078d0                HalCsiDigEnableDataChannelDeskew
+                0x00000000000078f0                HalCsiConvertSnrClkId
+                0x0000000000007906                HalCsiMacDataLaneEnable
+                0x0000000000007948                HalCsiMacVCEn
+                0x0000000000007964                HalCsiMacYuv4228bitOutMode
+                0x0000000000007980                HalCsiMacUserDef
+                0x0000000000007a3c                HalCsiMacVirtualChannelHsyncMode
+                0x0000000000007a98                HalCsiMacCkgMac
+                0x0000000000007ae8                HalCsiMacMcgMac
+                0x0000000000007b24                HalCsiMacSoftwareReset
+                0x0000000000007b44                HalCsiMacDtEnable
+                0x0000000000007b70                HalCsiMacDontCareDt
+                0x0000000000007b90                HalCsiMacHDRType
+                0x0000000000007c48                HalCsiMacGetRptIntStatus
+                0x0000000000007c64                HalCsiMacMaskRptInt
+                0x0000000000007c84                HalCsiMacClearRptInt
+                0x0000000000007ccc                HalCsiMacRptIntMaskGet
+                0x0000000000007ce8                HalCsiMacRptIntMaskSet
+                0x0000000000007d08                HalCsiMacGetErrorIntStatus
+                0x0000000000007d2c                HalCsiMacMaskErrorInt
+                0x0000000000007d64                HalCsiMacErrIntMaskGet
+                0x0000000000007d84                HalCsiMacErrIntMaskSet
+                0x0000000000007dac                HalCsiMacForceErrorInt
+                0x0000000000007de4                HalCsiMacClearErrorInt
+                0x0000000000007e4c                HalCsiMacGetRecvSize
+                0x0000000000007e90                HalCsiMipiRx22Sel
+                0x0000000000007ea4                HalCsiAtopPdCh
+                0x0000000000007ea6                HalCsiAtopPdSel
+                0x0000000000007f24                HalCsiAtopRxInit
+                0x0000000000007f2a                HalCsiSetLaneNum
+                0x0000000000007f3c                HalCsiGetLaneNum
+                0x0000000000007f50                HalCsiAtopPdOff
+                0x0000000000007f98                HalCsiSetCurLaneNum
+                0x0000000000007fac                HalCsiGetCurLaneNum
+                0x0000000000007fc0                HalCsiConvertCsiClk
+                0x0000000000008034                HalCsiRegInit
+                0x0000000000008036                HalCsiRegUninit
+                0x0000000000008038                HalCsiDummy
+                0x000000000000803c                HalCSISetAnaLaneSwap
+                0x0000000000008068                HalCSISetAnaLaneSelect
+                0x0000000000008094                HalCsiHwReset
+                0x00000000000080d6                HalCsiMacInit
+                0x000000000000810c                HalCsiAnaLaneInit
+                0x00000000000081d8                HalCsiAnaSetLane
+                0x0000000000008348                HalCsiShowLaneInfo
+                0x00000000000083ec                HalCsiSetPatGen
+                0x00000000000084e0                SensorNumMaxGet
+                0x00000000000084e4                SENSORIF_EARLYINIT_IsEarlyInitEnabled
+                0x00000000000084e8                SENSORIF_EARLYINIT_StopEarlyInit
+                0x00000000000084ec                SENSORIF_EARLYINIT_ClearEarlyInitStatus
+                0x00000000000084ee                SENSORIF_EARLYINIT_GetEarlyInitInfo
+                0x0000000000008500                DrvCsiDeInitBank
+                0x0000000000008548                DrvCsiInitBank
+                0x00000000000085d0                Csi_ISR
+                0x00000000000085ee                Get1LaneGroupNum
+                0x00000000000085f2                Get2LaneGroupNum
+                0x00000000000085f6                Get4LaneGroupNum
+                0x00000000000085fa                GetCsiMaxSensorNum
+                0x00000000000085fe                GetAnaLaneSwap
+                0x000000000000860c                GetAnaPnSwap
+ .text          0x000000000000861c      0x350 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+                0x0000000000008630                DRV_CSI_MODULE_Isr
+                0x00000000000086d0                csi_devnode_init
+                0x0000000000008920                csi_module_get_dev
+                0x000000000000892c                DRV_CSI_MODULE_Init
+                0x0000000000008950                DRV_CSI_MODULE_Exit
+ .text          0x000000000000896c        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .text          0x000000000000896c      0x224 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+                0x0000000000008a58                SENSORIF_MODULE_SstarSensorIfProbe
+                0x0000000000008ab0                SENSORIF_MODULE_SstarSensorIfRemove
+                0x0000000000008acc                SensorOfPropertyReadU32
+                0x0000000000008b00                SensorOfPropertyReadU32Array
+                0x0000000000008b34                sensorif_module_get_dev
+                0x0000000000008b40                SensorWARN_ON
+                0x0000000000008b50                SensorIoremap
+                0x0000000000008b54                SensorIoUnmap
+                0x0000000000008b58                SENSORIF_MODULE_SstarSensorIfInitDriver
+                0x0000000000008b64                SENSORIF_MODULE_SstarSensorIfExitDriver
+                0x0000000000008b70                sensor_mod_init
+                0x0000000000008b80                sensor_mod_exit
+ *(.gnu.warning)
+
+.text.unlikely  0x0000000000000000       0x10
+ .text.unlikely
+                0x0000000000000000       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000      0x774
+ *(.rodata)
+ .rodata        0x0000000000000000      0x541 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .rodata        0x0000000000000541       0x11 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ *fill*         0x0000000000000552        0x2 
+ .rodata        0x0000000000000554      0x220 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+                0x00000000000005ec                __mod_of__G_ST_SSTAR_SENSOR_IF_MATCH_device_table
+
+.rodata.str1.1  0x0000000000000000     0x172a
+ .rodata.str1.1
+                0x0000000000000000     0x14e1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .rodata.str1.1
+                0x00000000000014e1      0x156 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .rodata.str1.1
+                0x0000000000001637       0xf3 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.rodata.cst4    0x0000000000000000      0x100
+ .rodata.cst4   0x0000000000000000       0xf8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .rodata.cst4   0x00000000000000f8        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .rodata.cst4   0x00000000000000fc        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.extab.text.unlikely
+                0x0000000000000000        0xc
+ .ARM.extab.text.unlikely
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+
+.ARM.exidx.text.unlikely
+                0x0000000000000000        0x8
+ .ARM.exidx.text.unlikely
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+
+__ksymtab_strings
+                0x0000000000000000      0x1e1
+ __ksymtab_strings
+                0x0000000000000000      0x1e1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterPlaneDriver
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterPlaneDriver
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterPlaneDriverEx
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterPlaneDriverEx
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterPlaneI2CSlaveID
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterPlaneI2CSlaveID
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterSensorDriver
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterSensorDriver
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterSensorDriverEx
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterSensorDriverEx
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterSensorI2CSlaveID
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterSensorI2CSlaveID
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_RegisterVcmDriver
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_RegisterVcmDriver
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_Release
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_Release
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_ReleaseVcmDriver
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_ReleaseVcmDriver
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_SensorHandleVer
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_SensorHandleVer
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_SensorI2CVer
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_SensorI2CVer
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+DRV_SENSOR_IF_SensorIFVer
+                0x0000000000000000        0xc
+ ___ksymtab+DRV_SENSOR_IF_SensorIFVer
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+EXT_log_2
+                0x0000000000000000        0xc
+ ___ksymtab+EXT_log_2
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+base2_exp_float_pow
+                0x0000000000000000        0xc
+ ___ksymtab+base2_exp_float_pow
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+g_mi_sensor_internal_apis
+                0x0000000000000000        0xc
+ ___ksymtab+g_mi_sensor_internal_apis
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+intlog10
+                0x0000000000000000        0xc
+ ___ksymtab+intlog10
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+___ksymtab+round_float
+                0x0000000000000000        0xc
+ ___ksymtab+round_float
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.modinfo        0x0000000000000000       0x79
+ .modinfo       0x0000000000000000       0x79 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000      0x2ac
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000      0x27c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .ARM.extab     0x000000000000027c       0x24 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .ARM.extab     0x00000000000002a0        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.exidx      0x0000000000000000      0xce0
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0xbf0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .ARM.exidx     0x0000000000000bf0       0x68 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .ARM.exidx     0x0000000000000c58       0x88 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x8c8
+ *(.data)
+ .data          0x0000000000000000      0x570 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+                0x00000000000000d0                sensor_debug_level
+                0x00000000000000d4                g_mi_sensor_internal_apis
+                0x0000000000000198                g_u32CsiIntEn
+                0x000000000000019c                g_u32CsiInfoEn
+                0x00000000000001e0                g_snrPadmuxModeStr
+                0x0000000000000228                g_snrGpioModeStr
+                0x0000000000000234                SnrPadModeAttr
+                0x0000000000000390                g_au32DaulSnrBindSelect
+                0x0000000000000398                g_asDualSnrPWMConfig
+                0x00000000000003fc                SensorI2cMaster
+                0x0000000000000444                SensorI2cPadMux
+                0x0000000000000448                g_u8VcmI2cMaster
+                0x0000000000000458                SnrRstGpio
+                0x0000000000000464                SnrPdnGpio
+                0x0000000000000470                g_au32CsiAnaLaneSelect
+                0x00000000000004dc                g_au32CsiAnaLanePnSwap
+                0x0000000000000548                g_uSnrPad2BankID
+                0x0000000000000554                g_au32CsiAtopBanks
+                0x0000000000000558                g_au32CsiBanks
+ .data          0x0000000000000570      0x270 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+                0x0000000000000570                g_stCsiFOps
+ .data          0x00000000000007e0        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .data          0x00000000000007e0       0xe8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+                0x00000000000007e0                g_stSensorIfFOps
+
+.data.once      0x0000000000000000        0x1
+ .data.once     0x0000000000000000        0x1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000     0xa84c
+ *(.bss)
+ .bss           0x0000000000000000     0xa844 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+                0x0000000000000004                sensor_debug_file
+                0x0000000000000104                sensor_debug_func
+                0x0000000000000208                g_atSnrBackupParam
+                0x00000000000008e4                g_stModuleCtlAttr
+                0x00000000000008f4                gp_stSensorModDbgParam
+                0x0000000000000918                g_astDrvSensorCtx
+                0x0000000000000a3c                g_astI2cHandle
+                0x0000000000000d48                g_astSensorIfAPI
+                0x000000000000157c                g_stSensorIfWorkPool
+                0x0000000000001684                g_astVcmHandle
+                0x0000000000001780                g_astVcmI2cHandle
+                0x000000000000181c                g_astVcmIfApi
+                0x0000000000001838                g_astSensorHandle
+                0x000000000000a550                g_stSensorIfThreadWqPool
+                0x000000000000a670                g_u32CsiPreClkRate
+                0x000000000000a67c                g_u32CsiPreSet
+                0x000000000000a680                gRecvSizeCheck
+                0x000000000000a6b0                g_csiRptIntCount
+                0x000000000000a704                g_csiErrIntCount
+                0x000000000000a7b8                gCsiClkkHandler
+                0x000000000000a7dc                SensorI2cSpeed
+                0x000000000000a7ec                SnrRstPol
+                0x000000000000a7f8                SnrPdnPol
+                0x000000000000a804                SnrParallelMsbShift
+                0x000000000000a810                SnrMclkSupport37125
+                0x000000000000a81c                g_ptMipiAtop
+                0x000000000000a820                g_ptAna
+                0x000000000000a828                g_au8CsiLaneSupportNum
+                0x000000000000a82c                g_ptMac
+                0x000000000000a834                g_ptDig
+                0x000000000000a83c                g_au8CsiCurrentLaneNum
+                0x000000000000a840                g_ptChipTop
+ .bss           0x000000000000a844        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .bss           0x000000000000a848        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .bss           0x000000000000a848        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x3b8
+ *(.comment)
+ .comment       0x0000000000000000      0x352 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .comment       0x0000000000000352       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .comment       0x0000000000000374       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .comment       0x0000000000000396       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .ARM.attributes
+                0x0000000000000031       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .ARM.attributes
+                0x0000000000000060       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .ARM.attributes
+                0x0000000000000091       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x378
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x308 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_aranges
+                0x0000000000000308       0x28 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_aranges
+                0x0000000000000330       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .debug_aranges
+                0x0000000000000348       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x8ad77
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x6a236 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_info    0x000000000006a236     0xdde2 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_info    0x0000000000078018     0x44a7 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .debug_info    0x000000000007c4bf     0xe8b8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_abbrev   0x0000000000000000     0x63a6
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x4dea /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_abbrev  0x0000000000004dea      0x837 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_abbrev  0x0000000000005621      0x42d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .debug_abbrev  0x0000000000005a4e      0x958 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_line     0x0000000000000000    0x11b94
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0xf73f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_line    0x000000000000f73f      0xf0a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_line    0x0000000000010649      0x521 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .debug_line    0x0000000000010b6a     0x102a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_frame    0x0000000000000000     0x3284
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x2f60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_frame   0x0000000000002f60      0x170 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_frame   0x00000000000030d0      0x1b4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_str      0x0000000000000000    0x7fdbf
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x6b4d5 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_str     0x000000000006b4d5     0x8085 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_str     0x000000000007355a     0x3783 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_export.o
+ .debug_str     0x0000000000076cdd     0x90e2 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_loc      0x0000000000000000     0xf600
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0xea8c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_loc     0x000000000000ea8c      0x3cb /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_loc     0x000000000000ee57      0x7a9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x608
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x448 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/../../obj/uclibc/9.1.0/sensor.o
+ .debug_ranges  0x0000000000000448       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/csi_init.o
+ .debug_ranges  0x0000000000000478      0x190 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/sensor_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/sensor/mi_sensor.o elf32-littlearm)

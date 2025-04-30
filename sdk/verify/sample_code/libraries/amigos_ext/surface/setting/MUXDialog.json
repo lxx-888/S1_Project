@@ -1,0 +1,74 @@
+{
+    "Page":[
+        {
+            "page_name": "MUXModPage",
+            "page_title": "MUX",
+            "component": [
+                {
+                    "name": "MuxBitRateV",
+                    "label": "V Bit Rate",
+                    "component_type": "SpinBox",
+                    "min_value": "0",
+                    "max_value": "999999",
+                    "value_step": "1",
+                    "default_value": "400000",
+                    "output_key": "V_BIT_RATE"
+                },
+                {
+                    "name": "MuxBitRateA",
+                    "label": "A Bit Rate",
+                    "component_type": "SpinBox",
+                    "min_value": "0",
+                    "max_value": "999999",
+                    "value_step": "1",
+                    "default_value": "64000",
+                    "output_key": "A_BIT_RATE"
+                },
+                {
+                    "name": "FrameSize",
+                    "label": "Audio Frame Size",
+                    "component_type": "SpinBox",
+                    "min_value": "0",
+                    "max_value": "9999",
+                    "value_step": "1",
+                    "default_value": "0",
+                    "output_key": "AUDIO_FRAME_SIZE"
+                },
+                {
+                    "name": "Format",
+                    "label": "Format",
+                    "component_type": "ComboBox",
+                    "option_item": [
+                        {
+                            "option_type": "string",
+                            "option_name": "ts"
+                        },
+                        {
+                            "option_type": "page",
+                            "option_name": "mp4",
+                            "option_page": "MUXModFormatParam"
+                        }
+                    ],
+                    "default_value": "mp4",
+                    "output_type": "string",
+                    "output_key": "FORMAT",
+                    "sub_section": "FORMAT_PARAM"
+                }
+            ]
+        },
+        {
+            "page_name": "MUXModFormatParam",
+            "page_title": "Format Param",
+            "page_belong": "Format:mp4",
+            "component": [
+                {
+                    "name": "File",
+                    "label": "File",
+                    "component_type": "LineEdit",
+                    "default_value": "./out.mp4",
+                    "output_key": "FILE"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,637 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0xd918
+ *(.text .stub)
+ .text          0x0000000000000000     0xd840 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+                0x000000000000040c                MI_DEVICE_WrapperFunction_rgn
+                0x0000000000000424                IS_PRINT_MATCH_rgn
+                0x000000000000048c                MI_DEVICE_Instance_rgn
+                0x0000000000000494                MI_DEVICE_GetSelfDir_rgn
+                0x00000000000004a0                AddUTIoctlTable
+                0x00000000000004a2                rgn__module_init
+                0x000000000000056c                rgn__module_exit
+                0x0000000000000fd8                MI_RGN_IMPL_GetAttr
+                0x00000000000010a0                MI_RGN_IMPL_SetBitMap
+                0x0000000000001650                MI_RGN_IMPL_GetCanvasInfo
+                0x00000000000018fc                MI_RGN_IMPL_GetCanvasVirtAddr
+                0x0000000000001a3c                MI_RGN_IMPL_UpdateCanvas
+                0x0000000000001cac                MI_RGN_IMPL_SetDisplayAttr
+                0x0000000000002002                MI_RGN_IMPL_GetDisplayAttr
+                0x0000000000002120                MI_RGN_IMPL_GetLumaVirtAddr
+                0x0000000000002128                MI_RGN_IMPL_SetColorInvertAttr
+                0x0000000000002138                MI_RGN_IMPL_GetColorInvertAttr
+                0x0000000000002140                MI_RGN_IMPL_GetLuma
+                0x0000000000002144                MI_RGN_IMPL_SetEnv
+                0x00000000000021cc                MI_RGN_IMPL_Rmmod
+                0x00000000000021ec                MI_RGN_IMPL_GetInitState
+                0x00000000000021f8                mi_rgn_MemAllocCnt
+                0x000000000000229c                mi_rgn_MemFreeCnt
+                0x0000000000002340                MI_RGN_IMPL_Init
+                0x00000000000024ec                MI_RGN_IMPL_DeInit
+                0x0000000000002548                MI_RGN_IMPL_Create
+                0x0000000000002768                MI_RGN_IMPL_Destroy
+                0x00000000000028a8                MI_RGN_IMPL_AttachToChn
+                0x0000000000002b90                MI_RGN_IMPL_DetachFromChn
+                0x0000000000002cd0                mi_rgn_GetInternalApis
+                0x0000000000003ca4                MI_RGN_DRV_InitBufWork
+                0x0000000000003ca8                MI_RGN_DRV_DeinitBufWork
+                0x0000000000003cc4                MI_RGN_DRV_GetInstance
+                0x0000000000003dc0                MI_RGN_DRV_Init
+                0x0000000000003ddc                MI_RGN_DRV_Deinit
+                0x0000000000003e14                MI_RGN_DRV_SetEnv
+                0x0000000000003e90                MI_RGN_DRV_Rmmod
+                0x000000000000489c                MI_RGN_BUFQ_ExchangeBuf
+                0x0000000000004944                MI_RGN_BUFQ_CreateBufListHead
+                0x00000000000049d0                MI_RGN_BUFQ_MoveBufListHead
+                0x0000000000004a24                MI_RGN_BUFQ_DestroyBufListHead
+                0x0000000000004a2a                MI_RGN_BUFQ_SetEnv
+                0x0000000000004a3c                MI_RGN_BUFQ_Rmmod
+                0x0000000000004cf8                MI_RGN_HAL_IncColorRef
+                0x0000000000004d6c                MI_RGN_HAL_DecColorRef
+                0x0000000000004db0                MI_RGN_HAL_GetColorIndex
+                0x0000000000004de6                MI_RGN_HAL_CalOsdBufInitPara
+                0x0000000000004eac                MI_RGN_HAL_CalCoverMapBufInitPara
+                0x0000000000004f30                MI_RGN_HAL_Active
+                0x0000000000004f4c                MI_RGN_HAL_Deactive
+                0x0000000000004f68                MI_RGN_HAL_SetResolution
+                0x0000000000004fa4                MI_RGN_HAL_Reset
+                0x0000000000004fb6                MI_RGN_HAL_Process
+                0x0000000000005000                MI_RGN_HAL_GopSetPalette
+                0x0000000000005038                MI_RGN_HAL_SetGopColorKey
+                0x000000000000511c                MI_RGN_HAL_ConfigGopGwin
+                0x00000000000052cc                MI_RGN_HAL_SetGopEncMode
+                0x0000000000005350                MI_RGN_HAL_SetGopBaseWin
+                0x000000000000539c                MI_RGN_HAL_DisableGopGwin
+                0x00000000000053f0                MI_RGN_HAL_ConfigMffCoverWin
+                0x00000000000054cc                MI_RGN_HAL_DisableMffWin
+                0x0000000000005528                MI_RGN_HAL_SetMffCmdBuf
+                0x0000000000005568                MI_RGN_HAL_SetMffPalette
+                0x00000000000055cc                MI_RGN_HAL_SetMffCoverMap
+                0x0000000000005618                MI_RGN_HAL_SetMffInputResolution
+                0x0000000000005654                MI_RGN_HAL_DisableMff
+                0x00000000000056a8                MI_RGN_HAL_ConfigMffFrameWin
+                0x000000000000578c                MI_RGN_HAL_CheckInstanceExist
+                0x00000000000057f0                MI_RGN_HAL_GetStrongInstance
+                0x00000000000059b0                MI_RGN_HAL_GetWeakInstance
+                0x0000000000005a20                MI_RGN_HAL_WeakenInstance
+                0x0000000000005ab8                MI_RGN_HAL_Suspend
+                0x0000000000005b04                MI_RGN_HAL_Resume
+                0x0000000000005b50                MI_RGN_HAL_SetEnv
+                0x0000000000005b90                MI_RGN_HAL_Rmmod
+                0x0000000000005ba8                MI_RGN_SYS_CheckBufInfoEmpty
+                0x0000000000005bd0                MI_RGN_SYS_FillRectBuf
+                0x0000000000005d28                MI_RGN_SYS_BlitBuf
+                0x0000000000005e8c                MI_RGN_SYS_InitBuf
+                0x0000000000005ef4                MI_RGN_SYS_Mmap
+                0x0000000000005f74                MI_RGN_SYS_Munmap
+                0x0000000000005fb8                MI_RGN_SYS_FlushCache
+                0x0000000000005ff4                MI_RGN_SYS_Vmap
+                0x0000000000006044                MI_RGN_SYS_UnVmap
+                0x0000000000006068                MI_RGN_SYS_CheckBufSizeAlike
+                0x0000000000006090                MI_RGN_SYS_BufAlloc
+                0x0000000000006130                MI_RGN_SYS_BufFree
+                0x0000000000006168                MI_RGN_SYS_Init
+                0x00000000000061e4                MI_RGN_SYS_Deinit
+                0x00000000000063a8                MI_RGN_PASS_HoldOnBufToRefCnt
+                0x0000000000006424                MI_RGN_PASS_RewindBufToRefCnt
+                0x0000000000006478                MI_RGN_PASS_GiveUpBufToRefCnt
+                0x0000000000006532                MI_RGN_PASS_ExchangeBuf
+                0x0000000000006580                MI_RGN_PASS_InitBufManager
+                0x00000000000072e8                MI_RGN_COMBINE_CheckBlend
+                0x0000000000007450                MI_RGN_COMBINE_Start
+                0x0000000000007468                MI_RGN_COMBINE_QueueWork
+                0x0000000000007494                MI_RGN_COMBINE_FlushWork
+                0x0000000000007618                MI_RGN_COMBINE_Init
+                0x00000000000076a8                MI_RGN_COMBINE_Deinit
+                0x00000000000076c4                MI_RGN_COMBINE_SetEnv
+                0x00000000000076dc                MI_RGN_COMBINE_Rmmod
+                0x00000000000077be                MI_RGN_COMMON_GetChnPortListHead
+                0x0000000000007918                MI_RGN_COMMON_ResetChnPortListHead
+                0x000000000000796c                MI_RGN_COMMON_ForEachHashMapHead
+                0x0000000000007a88                MI_RGN_COMMON_WindowWaitForBufferReady
+                0x0000000000007b34                MI_RGN_COMMON_SetEnv
+                0x0000000000007b48                MI_RGN_COMMON_Rmmod
+                0x00000000000099a0                MI_RGN_OSD_SetEnv
+                0x000000000000a274                MI_RGN_MFF_SetEnv
+                0x000000000000a9bc                MI_RGN_COVER_WindowCreate
+                0x000000000000aabc                MI_RGN_COVER_BitMapUpdate
+                0x000000000000aac4                MI_RGN_COVER_BitMapDone
+                0x000000000000aacc                MI_RGN_COVER_HalConfigCover
+                0x000000000000ab88                MI_RGN_COVER_BufDeinit
+                0x000000000000b12c                MI_RGN_FRAME_WindowCreate
+                0x000000000000b204                MI_RGN_FRAME_HalConfigFrame
+                0x000000000000b582                MHAL_RGN_GetGopNumByType
+                0x000000000000b5c4                MHAL_RGN_GetTargetMax
+                0x000000000000b5c8                MHAL_RGN_SetIrqNum
+                0x000000000000b614                MHAL_RGN_GetInternalApis
+                0x000000000000b744                HAL_RGN_IF_GetChipCapOps
+                0x000000000000b760                HAL_RGN_IF_Create
+                0x000000000000b7e4                HAL_RGN_IF_Destory
+                0x000000000000b828                HAL_RGN_IF_Active
+                0x000000000000b85a                HAL_RGN_IF_Deactive
+                0x000000000000b882                HAL_RGN_IF_Reset
+                0x000000000000b890                HAL_RGN_CMDQ_NormalRegUpdate
+                0x000000000000b94e                HAL_RGN_CMDQ_MemPollRegEq
+                0x000000000000b950                HAL_RGN_CMDQ_MemRegUpdate
+                0x000000000000b9b2                HAL_RGN_CMDQ_WakeWrite2Byte
+                0x000000000000b9b4                HAL_RGN_CMDQ_WakeRegUpdate
+                0x000000000000b9ba                HAL_RGN_CMDQ_WakePollRegEq
+                0x000000000000b9bc                HAL_RGN_CMDQ_WakeWrite2ByteMsk
+                0x000000000000b9be                _HAL_RGN_CMDQ_FillNormalCmdq
+                0x000000000000b9fe                HAL_RGN_CMDQ_NormalWrite2Byte
+                0x000000000000ba0e                HAL_RGN_CMDQ_NormalWrite2ByteMsk
+                0x000000000000ba20                _HAL_RGN_CMDQ_PollNormalRegEq
+                0x000000000000ba60                HAL_RGN_CMDQ_NormalPollRegEq
+                0x000000000000ba72                _HAL_RGN_CMDQ_FillMemCmdq
+                0x000000000000baa4                HAL_RGN_CMDQ_MemWrite2Byte
+                0x000000000000bab4                HAL_RGN_CMDQ_MemWrite2ByteMsk
+                0x000000000000bac6                HAL_RGN_CMDQ_Create
+                0x000000000000bb5c                HAL_RGN_CMDQ_Destory
+                0x000000000000bb7c                HAL_RGN_CMDQ_Enable
+                0x000000000000bb98                HAL_RGN_CMDQ_Disable
+                0x000000000000c02e                HAL_RGN_GOP_SetPalette
+                0x000000000000c06a                HAL_RGN_GOP_SetColorKey
+                0x000000000000c07e                HAL_RGN_GOP_SetBaseWindow
+                0x000000000000c0a0                HAL_RGN_GOP_SetAlphaZeroOpaque
+                0x000000000000c0b0                HAL_RGN_GOP_SetOutputFormat
+                0x000000000000c0c0                HAL_RGN_GOP_SetEncMode
+                0x000000000000c0d0                HAL_RGN_GOP_SetContrast
+                0x000000000000c0e6                HAL_RGN_GOP_SetBrightness
+                0x000000000000c0f6                HAL_RGN_GOP_SetArgb1555AlphaVal
+                0x000000000000c134                HAL_RGN_GOP_GwinSetPixelFormatForVenc
+                0x000000000000c1b4                HAL_RGN_GOP_GwinSetPixelFormat
+                0x000000000000c234                HAL_RGN_GOP_GwinSetPaletteIdx
+                0x000000000000c268                HAL_RGN_GOP_GwinSetWindow
+                0x000000000000c2b6                HAL_RGN_GOP_GwinSetWindowForVencJpe
+                0x000000000000c330                HAL_RGN_GOP_GwinSetBuffer
+                0x000000000000c374                HAL_RGN_GOP_GwinSetBufferForVenc
+                0x000000000000c3aa                HAL_RGN_GOP_GwinSetOnOffForScl
+                0x000000000000c410                HAL_RGN_GOP_GwinSetOnOff
+                0x000000000000c46c                HAL_RGN_GOP_GwinSetAlphaType
+                0x000000000000c4ae                HAL_RGN_GOP_ProcessForVenc
+                0x000000000000c4d6                HAL_RGN_GOP_Process
+                0x000000000000c4fe                HAL_RGN_GOP_GetGopGwinCnt
+                0x000000000000c514                HAL_RGN_GOP_GetGopWidthAlign
+                0x000000000000c51e                HAL_RGN_GOP_GetGopXPosAlign
+                0x000000000000c522                HAL_RGN_GOP_GetGopPitchAlign
+                0x000000000000c526                HAL_RGN_GOP_GetGopNumByType
+                0x000000000000c53a                HAL_RGN_GOP_GetGopIrqNum
+                0x000000000000c550                HAL_RGN_GOP_ClearGopIrq
+                0x000000000000c588                HAL_RGN_GOP_SetGopIrqNum
+                0x000000000000c5a4                HAL_RGN_GOP_SetGopIrq
+                0x000000000000c664                HAL_RGN_GOP_IsSupportGopIrq
+                0x000000000000c66c                HAL_RGN_GOP_IsSupportGopFmt
+                0x000000000000c688                HAL_RGN_GOP_IsSupportGopDiffFmt
+                0x000000000000c6a4                HAL_RGN_GOP_IsSupportGopColorkey
+                0x000000000000c6b8                HAL_RGN_GOP_IsSupportGopOverlap
+                0x000000000000c6bc                HAL_RGN_GOP_IsSupportGopXOverlap
+                0x000000000000c6c0                HAL_RGN_GOP_SetPaletteTbl
+                0x000000000000c820                HAL_RGN_GOP_SetBaseWindowForVencJpe
+                0x000000000000c99c                HAL_RGN_GOP_Reset
+                0x000000000000caa8                HAL_RGN_GOP_ResetForVenc
+                0x000000000000cb42                HAL_RGN_GOP_Activate
+                0x000000000000cb70                HAL_RGN_GOP_Deactivate
+                0x000000000000cb74                HAL_RGN_GOP_Create
+                0x000000000000cc38                HAL_RGN_GOP_Destory
+                0x000000000000cc4e                HAL_RGN_GOP_GetCap
+                0x000000000000d1a0                HAL_RGN_MFF_Process
+                0x000000000000d1ce                HAL_RGN_MFF_VencSetPalette
+                0x000000000000d200                HAL_RGN_MFF_VencSetWinBuffer
+                0x000000000000d210                HAL_RGN_MFF_SetColor
+                0x000000000000d24e                HAL_RGN_MFF_VencSetColor
+                0x000000000000d274                HAL_RGN_MFF_VencSetBorder
+                0x000000000000d2aa                HAL_RGN_MFF_SetOnOff
+                0x000000000000d30a                HAL_RGN_MFF_VencSetOnOff
+                0x000000000000d30e                HAL_RGN_MFF_GetWinCnt
+                0x000000000000d32c                HAL_RGN_MFF_GetWinBufferSize
+                0x000000000000d33a                HAL_RGN_MFF_IsSupportMosaicBlockSize
+                0x000000000000d33e                HAL_RGN_MFF_IsSupportMosaicDiffBlock
+                0x000000000000d342                HAL_RGN_MFF_GetPaletteNum
+                0x000000000000d356                HAL_RGN_MFF_IsSupportColorMode
+                0x000000000000d37a                HAL_RGN_MFF_GetMapPitchAlign
+                0x000000000000d37e                HAL_RGN_MFF_GetHAlign
+                0x000000000000d392                HAL_RGN_MFF_GetVAlign
+                0x000000000000d396                HAL_RGN_MFF_GetFrameMaxBorderSize
+                0x000000000000d39a                HAL_RGN_MFF_GetGroupNum
+                0x000000000000d3ac                HAL_RGN_MFF_GetGroupId
+                0x000000000000d430                HAL_RGN_MFF_VencProcess
+                0x000000000000d498                HAL_RGN_MFF_SetWindow
+                0x000000000000d4e6                HAL_RGN_MFF_VencSetWindow
+                0x000000000000d534                HAL_RGN_MFF_Reset
+                0x000000000000d542                HAL_RGN_MFF_VencReset
+                0x000000000000d54a                HAL_RGN_MFF_IsSupportRotate
+                0x000000000000d54c                HAL_RGN_MFF_IsSupportMap
+                0x000000000000d54e                HAL_RGN_MFF_SetPalette
+                0x000000000000d554                HAL_RGN_MFF_GetCap
+                0x000000000000d5cc                HAL_RGN_MFF_Create
+                0x000000000000d810                HAL_RGN_MFF_Destory
+ .text          0x000000000000d840       0xd8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+                0x000000000000d840                DRV_RGN_MoudleDeviceInit
+                0x000000000000d8d4                DRV_RGN_ModuleDeviceDeinit
+                0x000000000000d8f8                rgn_mod_init
+                0x000000000000d908                rgn_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000      0x374
+ *(.rodata)
+ .rodata        0x0000000000000000      0x334 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .rodata        0x0000000000000334       0x40 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.rodata.str1.1  0x0000000000000000     0x19ab
+ .rodata.str1.1
+                0x0000000000000000     0x1959 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ *fill*         0x0000000000001959        0x1 
+ .rodata.str1.1
+                0x000000000000195a       0x51 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.rodata.cst4    0x0000000000000000      0x1a4
+ .rodata.cst4   0x0000000000000000      0x1a4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+
+__ksymtab_strings
+                0x0000000000000000       0x32
+ __ksymtab_strings
+                0x0000000000000000       0x32 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.modinfo        0x0000000000000000       0x94
+ .modinfo       0x0000000000000000       0x94 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+___ksymtab+MHAL_RGN_GetInternalApis
+                0x0000000000000000        0xc
+ ___ksymtab+MHAL_RGN_GetInternalApis
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+___ksymtab+mi_rgn_GetInternalApis
+                0x0000000000000000        0xc
+ ___ksymtab+mi_rgn_GetInternalApis
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000      0x204
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000      0x204 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .ARM.extab     0x0000000000000204        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.exidx      0x0000000000000000     0x1178
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000     0x1158 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .ARM.exidx     0x0000000000001158       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x4d0
+ *(.data)
+ .data          0x0000000000000000      0x2d0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+                0x00000000000000d0                rgn_debug_level
+                0x0000000000000194                g_miRgnInternalApis
+                0x00000000000001c8                g_u32ColorKeyMask
+                0x00000000000001dc                g_stMhalRgnInternalApis
+ .data          0x00000000000002d0      0x200 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0xebc
+ *(.bss)
+ .bss           0x0000000000000000      0xeb8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+                0x0000000000000004                rgn_debug_file
+                0x0000000000000104                rgn_debug_func
+                0x000000000000024c                g_atInitDrvRefCnt
+                0x000000000000029c                g_bSupportOsdBlending
+                0x00000000000002c4                g_stMhalChipCapOps
+                0x000000000000042c                g_hSysDrvHandle
+                0x0000000000000844                g_astRgnGopPlaletteEntry
+                0x0000000000000c44                g_u32DebugLevel
+ .bss           0x0000000000000eb8        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x286
+ *(.comment)
+ .comment       0x0000000000000000      0x264 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .comment       0x0000000000000264       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x270
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x240 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_aranges
+                0x0000000000000240       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x7e3fc
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x7521f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_info    0x000000000007521f     0x91dd /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_abbrev   0x0000000000000000     0x58b5
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x5243 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_abbrev  0x0000000000005243      0x672 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_line     0x0000000000000000    0x15632
+ *(.debug_line)
+ .debug_line    0x0000000000000000    0x14b6f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_line    0x0000000000014b6f      0xac3 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_frame    0x0000000000000000     0x461c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x457c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_frame   0x000000000000457c       0xa0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_str      0x0000000000000000    0x74b99
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x6e78b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_str     0x000000000006e78b     0x640e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_loc      0x0000000000000000    0x19bc4
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000    0x19abc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_loc     0x0000000000019abc      0x108 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x938
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x918 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/../../obj/uclibc/9.1.0/rgn.o
+ .debug_ranges  0x0000000000000918       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/rgn_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/rgn/mi_rgn.o elf32-littlearm)

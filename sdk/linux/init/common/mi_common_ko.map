@@ -1,0 +1,722 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x3484
+ *(.text .stub)
+ .text          0x0000000000000000     0x3414 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+                0x0000000000000404                number_write
+                0x0000000000000414                number_show
+                0x0000000000000420                debug_write
+                0x000000000000043c                debug_show
+                0x0000000000000448                version_show
+                0x000000000000044c                MI_DEVICE_GetClass
+                0x0000000000000458                MI_DEVICE_GetProcModuleDir
+                0x0000000000000464                MI_DEVICE_GetProcCommonModuleDir
+                0x0000000000000470                MI_DEVICE_GetProcHalDir_Tag
+                0x0000000000000480                MI_DEVICE_SetProcHalDir_Tag
+                0x0000000000000490                MI_DEVICE_RemoteWrapper
+                0x0000000000000496                MI_DEVICE_Register
+                0x0000000000000504                MI_DEVICE_Unregister
+                0x0000000000000558                MI_DEVICE_SetTaskExiting
+                0x0000000000000570                MI_DEVICE_SetTaskExitDone
+                0x000000000000061c                MI_DEVICE_NotifyMiSysExit
+                0x000000000000061e                MI_DEVICE_RegisterToAdaptor
+                0x0000000000000620                MI_DEVICE_UnregisterToAdaptor
+                0x0000000000000622                core_module_init
+                0x0000000000000754                core_module_exit
+                0x00000000000007bc                MI_COMMON_ModuleIdToPrefixName
+                0x0000000000000c58                MI_COMMON_GetResKeyVal
+                0x0000000000000c70                MI_COMMON_ProcessInit
+                0x0000000000000cd0                MI_COMMON_ProcessDeInit
+                0x0000000000000dbc                MI_COMMON_FindResourcePidByKey
+                0x0000000000000e40                MI_COMMON_CheckResourceExist
+                0x0000000000000ed0                MI_COMMON_AddResource
+                0x0000000000000ff8                MI_COMMON_DelResource
+                0x00000000000010b4                MI_COMMON_ProcessRegisterEarlyFreeCb
+                0x00000000000010c0                MI_COMMON_ProcessExit
+                0x0000000000001c04                cJSON_GetErrorPtr
+                0x0000000000001c14                cJSON_Version
+                0x0000000000001c38                cJSON_InitHooks
+                0x0000000000001c74                cJSON_Delete
+                0x0000000000001f5a                cJSON_ParseWithOpts
+                0x000000000000202c                cJSON_Parse
+                0x0000000000002034                cJSON_Print
+                0x0000000000002036                cJSON_GetArraySize
+                0x0000000000002046                cJSON_GetArrayItem
+                0x0000000000002052                cJSON_GetObjectItem
+                0x0000000000002058                cJSON_GetObjectItemCaseSensitive
+                0x000000000000205e                cJSON_HasObjectItem
+                0x000000000000206c                cJSON_IsInvalid
+                0x0000000000002078                cJSON_IsFalse
+                0x0000000000002084                cJSON_IsTrue
+                0x0000000000002090                cJSON_IsBool
+                0x000000000000209e                cJSON_IsNull
+                0x00000000000020aa                cJSON_IsNumber
+                0x00000000000020b8                cJSON_IsString
+                0x00000000000020c6                cJSON_GetStringValue
+                0x00000000000020d4                cJSON_IsArray
+                0x00000000000020e2                cJSON_IsObject
+                0x00000000000020f0                cJSON_IsRaw
+                0x000000000000216c                _mi_common_CjsonMemoryFree
+                0x00000000000021d0                _mi_common_CjsonMemoryAlloc
+                0x0000000000002228                mi_common_CjsonDumpInfoCustomerCjson
+                0x0000000000002254                mi_common_CjsonParse
+                0x0000000000002258                mi_common_CjsonHasObjectItem
+                0x000000000000225c                mi_common_CjsonGetObjectItem
+                0x0000000000002260                mi_common_CjsonGetArraySize
+                0x0000000000002264                mi_common_CjsonGetArrayItem
+                0x0000000000002268                mi_common_CjsonPrint
+                0x00000000000022c0                mi_common_CjsonDelete
+                0x00000000000022c4                mi_common_CjsonFreeCustomerCjson
+                0x0000000000002350                mi_common_CjsonLoad
+                0x0000000000002424                mi_common_CjsonAddCustomerCjson
+                0x00000000000024ac                mi_common_CjsonGetCustomerCjson
+                0x00000000000025bc                mi_common_CjsonFreeAllCustomerCjson
+                0x00000000000025fc                mi_common_GetConfigJsonPath
+                0x0000000000002604                _createCjsonProc
+                0x0000000000002640                _mi_common_CjsonMemoryInit
+                0x0000000000002710                _mi_common_CjsonMemoryDeinit
+                0x0000000000002744                mi_common_CjsonInitCustomerCjson
+                0x00000000000027f8                mi_common_CjsonDeInitCustomerCjson
+                0x00000000000028c4                mi_common_ModParamInit
+                0x0000000000002954                mi_common_ModParamDeInit
+                0x000000000000296c                mi_common_ModParamGetCjsonObjectItem
+                0x00000000000029a8                MI_COMMON_MODPARAM_GETVALUE
+                0x00000000000029fc                MI_COMMON_MODPARAM_GETSTRING
+                0x0000000000002a1c                MI_COMMON_MODPARAM_GETARRAY
+                0x0000000000002e1a                ClipRectAlloc
+                0x0000000000002e1e                FreeClipRect
+                0x0000000000002eec                mi_common_RgnsubIsEmptyClipRgn
+                0x0000000000002ef6                IsRectEmpty
+                0x0000000000002f0e                mi_common_RgnsubEmptyClipRgn
+                0x0000000000002f3a                mi_common_RgnsubInitClipRgn
+                0x00000000000031a0                SetClipRgn
+                0x00000000000031ea                ClipRgnCopy
+                0x0000000000003258                mi_common_RgnsubSubtractRgn
+                0x00000000000032d4                UnionRegion
+                0x0000000000003374                mi_common_RgnsubAddClipRect
+                0x00000000000033e4                mi_common_RgnsubDbgDumpRgn
+                0x00000000000033ee                mi_common_RgnsubInitRgn
+                0x0000000000003408                mi_common_RgnsubDeinitRgn
+ .text          0x0000000000003414       0x70 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+                0x0000000000003414                MI_DEVICE_IsMmExist
+                0x000000000000342c                MI_DEVICE_GetTgid
+                0x000000000000343e                MI_DEVICE_IsCurrentExiting
+                0x0000000000003452                MI_DEVICE_GetPid
+                0x0000000000003464                common_mod_init
+                0x0000000000003474                common_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0xb8
+ *(.rodata)
+ .rodata        0x0000000000000000       0x75 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ *fill*         0x0000000000000075        0x3 
+ .rodata        0x0000000000000078       0x40 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.rodata.str1.1  0x0000000000000000      0xa9d
+ .rodata.str1.1
+                0x0000000000000000      0xa9d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+
+.rodata.cst4    0x0000000000000000       0x44
+ .rodata.cst4   0x0000000000000000       0x44 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+
+__ksymtab_strings
+                0x0000000000000000      0x4a4
+ __ksymtab_strings
+                0x0000000000000000      0x4a4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.modinfo        0x0000000000000000       0x6f
+ .modinfo       0x0000000000000000       0x6f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_AddResource
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_AddResource
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_CheckResourceExist
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_CheckResourceExist
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_DelResource
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_DelResource
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_FindResourcePidByKey
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_FindResourcePidByKey
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_GetResKeyVal
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_GetResKeyVal
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_MODPARAM_GETARRAY
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_MODPARAM_GETARRAY
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_MODPARAM_GETSTRING
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_MODPARAM_GETSTRING
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_MODPARAM_GETVALUE
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_MODPARAM_GETVALUE
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_ModuleIdToPrefixName
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_ModuleIdToPrefixName
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_ProcessExit
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_ProcessExit
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_COMMON_ProcessRegisterEarlyFreeCb
+                0x0000000000000000        0xc
+ ___ksymtab+MI_COMMON_ProcessRegisterEarlyFreeCb
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_GetClass
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_GetClass
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_GetProcHalDir_Tag
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_GetProcHalDir_Tag
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_GetProcModuleDir
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_GetProcModuleDir
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_GetTgid
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_GetTgid
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_IsMmExist
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_IsMmExist
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_NotifyMiSysExit
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_NotifyMiSysExit
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_Register
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_Register
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_RemoteWrapper
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_RemoteWrapper
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_SetProcHalDir_Tag
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_SetProcHalDir_Tag
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+MI_DEVICE_Unregister
+                0x0000000000000000        0xc
+ ___ksymtab+MI_DEVICE_Unregister
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+debug_show
+                0x0000000000000000        0xc
+ ___ksymtab+debug_show
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+debug_write
+                0x0000000000000000        0xc
+ ___ksymtab+debug_write
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonDelete
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonDelete
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonFreeCustomerCjson
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonFreeCustomerCjson
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonGetArrayItem
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonGetArrayItem
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonGetArraySize
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonGetArraySize
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonGetCustomerCjson
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonGetCustomerCjson
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonGetObjectItem
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonGetObjectItem
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonHasObjectItem
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonHasObjectItem
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonLoad
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonLoad
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonParse
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonParse
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_CjsonPrint
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_CjsonPrint
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_GetConfigJsonPath
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_GetConfigJsonPath
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_ModParamGetCjsonObjectItem
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_ModParamGetCjsonObjectItem
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubAddClipRect
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubAddClipRect
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubDbgDumpRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubDbgDumpRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubDeinitRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubDeinitRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubEmptyClipRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubEmptyClipRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubInitClipRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubInitClipRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubInitRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubInitRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubIsEmptyClipRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubIsEmptyClipRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+mi_common_RgnsubSubtractRgn
+                0x0000000000000000        0xc
+ ___ksymtab+mi_common_RgnsubSubtractRgn
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+number_show
+                0x0000000000000000        0xc
+ ___ksymtab+number_show
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+number_write
+                0x0000000000000000        0xc
+ ___ksymtab+number_write
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+___ksymtab+version_show
+                0x0000000000000000        0xc
+ ___ksymtab+version_show
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0x9c
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0x9c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .ARM.extab     0x000000000000009c        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.exidx      0x0000000000000000      0x5e0
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x5b0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .ARM.exidx     0x00000000000005b0       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x158
+ *(.data)
+ .data          0x0000000000000000      0x158 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+                0x000000000000004c                gp_jsonPath
+                0x0000000000000058                config_json_path
+                0x00000000000000d8                g_ModParamPath
+ .data          0x0000000000000158        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x124
+ *(.bss)
+ .bss           0x0000000000000000      0x124 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+                0x0000000000000004                g_miTaskInExitingEvent
+                0x0000000000000008                g_bTaskInExiting
+                0x0000000000000120                g_ModParam_cJSON
+ .bss           0x0000000000000124        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x110
+ *(.comment)
+ .comment       0x0000000000000000       0xee /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .comment       0x00000000000000ee       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x110
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0xe0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_aranges
+                0x00000000000000e0       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x13003
+ *(.debug_info)
+ .debug_info    0x0000000000000000     0x986e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_info    0x000000000000986e     0x9795 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_abbrev   0x0000000000000000     0x1fc4
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x19ad /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_abbrev  0x00000000000019ad      0x617 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_line     0x0000000000000000     0x5bfb
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x5256 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_line    0x0000000000005256      0x9a5 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_frame    0x0000000000000000     0x15e8
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x1558 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_frame   0x0000000000001558       0x90 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_str      0x0000000000000000     0xc8b9
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x53c5 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_str     0x00000000000053c5     0x74f4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_loc      0x0000000000000000     0x71c8
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x71c8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x360
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x340 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/../../obj/uclibc/9.1.0/common.o
+ .debug_ranges  0x0000000000000340       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/common_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/common/mi_common.o elf32-littlearm)

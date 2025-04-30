@@ -1,0 +1,593 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x7990
+ *(.text .stub)
+ .text          0x0000000000000000     0x76a0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+                0x000000000000042c                DrvAudInit
+                0x00000000000004a8                DrvAudDeInit
+                0x00000000000004f4                DrvAudResume
+                0x0000000000000502                DrvAudSuspend
+                0x000000000000050c                DrvAudConfigI2s
+                0x00000000000005fc                DrvAudEnableI2sNoneInput
+                0x0000000000000616                DrvAudEnableI2s
+                0x000000000000065c                DrvAudDirectDmaIsOnlyEvenCh
+                0x0000000000000670                DrvAudEnableAtop
+                0x0000000000000692                DrvAudConfigSrcInputClock
+                0x0000000000000706                DrvAudConfigDmaParam
+                0x00000000000007e0                DrvAudGetDmaSampleRate
+                0x00000000000007f0                DrvAudOpenDma
+                0x00000000000009d8                DrvAudPrepareDma
+                0x0000000000000a40                DrvAudDmaIntEnable
+                0x0000000000000a44                DrvAudStartDma
+                0x0000000000000acc                DrvAudStopDma
+                0x0000000000000b24                DrvAudPauseDma
+                0x0000000000000b68                DrvAudResumeDma
+                0x0000000000000bac                DrvAudCloseDma
+                0x0000000000000c08                DrvAudIsXrun
+                0x0000000000000c24                DrvAudWritePcm
+                0x0000000000000db4                DrvAudReadPcm
+                0x0000000000000f44                DrvAudGetBufCurrDataLen
+                0x0000000000000f84                DrvAudAoSetChannelModeDynamic
+                0x00000000000012ec                MhalAudioSetMicHpf
+                0x000000000000130c                MhalAudioResume
+                0x000000000000132c                MhalAudioSuspend
+                0x0000000000002a62                MHAL_AUDIO_Module_Init
+                0x0000000000002a88                MHAL_AUDIO_Module_DeInit
+                0x0000000000002ab0                MHAL_AUDIO_GetInternalApi
+                0x0000000000003b08                HalAudSetSrcOutSampleRate
+                0x0000000000003bd8                HalAudMainDeInit
+                0x0000000000003c38                HalAudAoDetach
+                0x0000000000003ca4                HalAudSetMux
+                0x0000000000003d44                HalAudSetDirectPath
+                0x0000000000003e94                HalAudSetAoPath
+                0x0000000000003f60                HalAudSetAiPath
+                0x0000000000003f94                HalAudSrcSetRate
+                0x0000000000003ff4                HalAudDirectDmaRateSet
+                0x0000000000004080                HalAudAtopOpen
+                0x00000000000040ec                HalAudAtopClose
+                0x0000000000004170                HalAudAtopMicAmpGain
+                0x00000000000041c8                HalAudAtopSetAdcGain
+                0x0000000000004220                HalAudAtopSetAdcMux
+                0x00000000000045a8                HalAudI2sSaveTdmWsPgm
+                0x00000000000045e0                HalAudI2sGetTdmWsPgm
+                0x00000000000045e8                HalAudI2sGetTdmWsWidth
+                0x00000000000045f0                HalAudI2sSaveTdmWsInv
+                0x0000000000004628                HalAudI2sSaveTdmBckInv
+                0x0000000000004660                HalAudFrequencyOffsetMonitorControl
+                0x0000000000004664                HalAudDmaSaveCache
+                0x00000000000046e8                HalAudDelayControl
+                0x0000000000004794                HalAudI2sSaveTdmShortFF
+                0x00000000000047cc                HalAudI2sGetTdmBckInv
+                0x00000000000047d4                HalAudI2sGetTdmShortFF
+                0x00000000000047dc                HalAudI2sGetFreOffset
+                0x00000000000047e4                HalAudI2sGetFreOffsetVal
+                0x00000000000047e8                HalAudGetAoSrcMixInfo
+                0x0000000000004804                HalAudGetAoPathInfo
+                0x00000000000048a8                HalAudI2sGetTdmWsInv
+                0x00000000000048b0                HalAudI2sGetTdmChSwap
+                0x00000000000048b8                HalAudI2sSaveTdmWsWidth
+                0x00000000000048f0                HalAudI2sSetRxMode
+                0x00000000000048f4                HalAudI2sSaveTdmChSwap
+                0x000000000000495c                HalAudI2sSaveTxTdmActiveSlot
+                0x0000000000004968                HalAudI2sGetTxTdmActiveSlot
+                0x0000000000004978                HalAudI2sSetTdmDetails
+                0x0000000000004ad4                HalAudI2sSetRate
+                0x0000000000004afc                HalAudI2sSetClkRef
+                0x0000000000004b34                HalAudI2sSetTdmMode
+                0x0000000000004b44                HalAudI2sSetMsMode
+                0x0000000000004be0                HalAudI2sSetFmt
+                0x0000000000004c58                HalAudI2sSetWidth
+                0x0000000000004cd8                HalAudI2sSetChannel
+                0x0000000000004d8c                HalAudI2sSetWireMode
+                0x0000000000004dec                HalAudI2sSetTdmSlotConfig
+                0x0000000000004e34                HalAudI2sEnableNoneInput
+                0x0000000000004e6c                HalAudI2sEnableMck
+                0x0000000000004f08                HalAudI2sSetMck
+                0x0000000000004f88                HalAudI2sDynamicChSwap
+                0x0000000000005004                HalAudSetHpf
+                0x0000000000005040                HalAudI2sOpenClkGate
+                0x00000000000050ac                HalAudI2sEnableBck
+                0x0000000000005134                HalAudSetBachPLL
+                0x00000000000051dc                HalAudDmaReset
+                0x00000000000051f2                HalAudDmaEnable
+                0x0000000000005294                HalAudDmaPause
+                0x000000000000529a                HalAudDmaResume
+                0x00000000000052a0                HalAudDmaIntEnable
+                0x00000000000052dc                HalAudDmaIntLocalEnable
+                0x000000000000532c                HalAudDmaGetInt
+                0x000000000000535c                HalAudDmaClearInt
+                0x00000000000053ec                HalAudDmaGetFlags
+                0x000000000000541c                HalAudDmaThdIntEnable
+                0x000000000000544c                HalAudDmaThdValue
+                0x000000000000547c                HalAudDmaGetThdInt
+                0x00000000000054ac                HalAudDmaGetThdFlags
+                0x0000000000005508                HalAudDmaThdIntClr
+                0x0000000000005538                HalAudDmaGetLevelCnt
+                0x0000000000005550                HalAudDmaGetRawLevelCnt
+                0x000000000000555a                HalAudDmaTrigLevelCnt
+                0x00000000000055bc                HalAudAdjustLevelCount
+                0x00000000000055c0                HalAudDmaSetPhyAddr
+                0x00000000000056cc                HalAudDmaAiSetThreshold
+                0x0000000000005728                HalAudDmaAoSetThreshold
+                0x0000000000005784                HalAudAiSetClkRefAndMch
+                0x00000000000058a0                HalAudAoSetClkRef
+                0x0000000000005938                HalAudAoSetChannelMode
+                0x0000000000005946                HalAudConfigSrcInputClock
+                0x00000000000059a8                HalAudAoSetClkUnRef
+                0x00000000000059fc                HalAudDmaMonoEnable
+                0x0000000000005a54                HalAudDpgaCtrl
+                0x0000000000005ad2                HalAudMainInit
+                0x0000000000005afa                HalAudDpgaSetGain
+                0x0000000000005bf0                HalAudDpgaSetGainOffset
+                0x0000000000005c92                HalAudDmaSetRate
+                0x0000000000005cd4                HalAudDpgaSetGainFading
+                0x0000000000005d78                HalAudDigMicEnable
+                0x0000000000005de8                HalAudDigMicSetChannel
+                0x0000000000005e58                HalAudDigMicSetRate
+                0x0000000000005fec                HalAudDigMicSetGain
+                0x0000000000006058                HalAudDmaSineGenEnable
+                0x0000000000006130                HalAudDmaSineGenSetFreq
+                0x000000000000619c                HalAudDmaSineGenSetGain
+                0x000000000000620c                HalAudDmaSineGenSetting
+                0x0000000000006274                HalAudDmaSineGenGetEnable
+                0x00000000000062e0                HalAudDmaSineGenGetSetting
+                0x0000000000006344                HalAudHdmiEanble
+                0x0000000000006348                HalAudHdmiEanbleRx
+                0x000000000000634c                HalAudAiSetGain
+                0x000000000000640c                HalAudAoSetGain
+                0x0000000000006488                HalAudAiSetIfMute
+                0x000000000000648c                HalAudAoSetIfMute
+                0x00000000000064b8                HalAudAiSetIfSampleRate
+                0x0000000000006620                HalAudAoSetIfSampleRate
+                0x00000000000066d4                HalAudAiSetDpgaGain
+                0x00000000000067b0                HalAudAoSetDpgaGain
+                0x000000000000688c                HalAudAiSetDpgaMute
+                0x000000000000692c                HalAudAoSetDpgaMute
+                0x00000000000069e4                HalAudConfigDigMicSampleRate
+                0x0000000000006a68                HalAudConfigDigMicChNum
+                0x0000000000006abc                HalAudConfigSrcParam
+                0x0000000000006b3c                HalAudAoIfMultiAttachAction
+                0x0000000000006b84                HalAudDmaGetHwAddr
+                0x0000000000006bc8                HalAudDmaLocalDebug
+                0x0000000000006c54                HalAudDmaImiToDmaW1
+                0x0000000000006c58                HalAudDmaImiWaddrStart
+                0x0000000000006c5c                HalAudDmaImiWaddrEnd
+                0x0000000000006c60                HalAudDmaImiInit
+                0x0000000000006c64                HalAudVadSetValue
+                0x0000000000006c68                HalAudDirectSetDpgaGain
+                0x0000000000006c6c                HalAudConfigDigMicParam
+                0x0000000000006c70                HalDtsI2sSetRxMode
+                0x0000000000006c72                HalDtsSetHpf
+                0x0000000000006c90                HalSetHpf
+                0x0000000000006cb4                HalDtsDmicBckMode
+                0x0000000000006cc8                HalDtsDmicBckExtMode
+                0x0000000000006cd4                HalDtsDmicDelay
+                0x0000000000006ce0                HalDtsKeepAdcPowerOn
+                0x0000000000006cec                HalDtsKeepDacPowerOn
+                0x0000000000006cf8                HalDtsI2sRxShortFF
+                0x0000000000006d04                HalDtsI2sTxShortFF
+                0x0000000000006d10                HalDtsAdcOutSel
+                0x0000000000006d1c                HalDtsAdcChInmux
+                0x0000000000006d28                HalAudSetI2SDriving
+                0x0000000000006d2a                HalAudGetI2SDriving
+                0x0000000000006d2e                HalAudGetAdcOutSel
+                0x0000000000006d44                HalAudGetAdjustParam
+                0x0000000000006d78                HalAudDmaGetRDMAHwAddr
+                0x0000000000006d9e                HalAudDmaGetWDMAHwAddr
+                0x0000000000006dca                HalAudGetDmaIrqCnt
+                0x0000000000006df4                HalAudGetI2sStatus
+                0x0000000000006e38                HalAudSetDtsStatus
+                0x0000000000006e4c                HalAudGainResume
+                0x0000000000006e90                HalBachSysSetBankBaseAddr
+                0x0000000000006ea0                HalBachWriteRegByte
+                0x0000000000006ecc                HalBachWriteReg2Byte
+                0x0000000000006ef4                HalBachWriteReg
+                0x0000000000006f58                HalBachReadReg2Byte
+                0x0000000000006f6c                HalBachReadRegByte
+                0x0000000000006f88                HalBachReadReg
+                0x0000000000007250                DrvAudApiIrqInit
+                0x000000000000725c                DrvAudApiIrqDeInit
+                0x0000000000007260                DrvAudApiIrqSetDmaStopCb
+                0x000000000000726c                DrvAudApiIrqRequest
+                0x0000000000007290                DrvAudApiIrqFree
+                0x00000000000072a4                DrvAudApiIoAddress
+                0x00000000000072ac                HalAudApiAoAmpEnable
+                0x0000000000007350                HalAudApiDtsInit
+                0x0000000000007690                HalAudApiGetIrqId
+ .text          0x00000000000076a0      0x2f0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+                0x00000000000076d8                _GetU32InfoFromDtsByType
+                0x000000000000784c                _GetArrayInfoFromDtsByType
+                0x00000000000078c8                AudClkEnable
+                0x000000000000798c                aio_mod_init
+                0x000000000000798e                aio_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000      0xb8c
+ *(.rodata)
+ .rodata        0x0000000000000000      0xb38 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+                0x0000000000000a3a                g_aHpfCutOffFreq
+                0x0000000000000aba                g_aMicInCombineGainTable
+ .rodata        0x0000000000000b38       0x54 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.rodata.str1.1  0x0000000000000000     0x16b2
+ .rodata.str1.1
+                0x0000000000000000     0x139a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .rodata.str1.1
+                0x000000000000139a      0x318 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.rodata.cst4    0x0000000000000000       0x98
+ .rodata.cst4   0x0000000000000000       0x94 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .rodata.cst4   0x0000000000000094        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+__ksymtab_strings
+                0x0000000000000000       0x1b
+ __ksymtab_strings
+                0x0000000000000000       0x1b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.modinfo        0x0000000000000000       0x25
+ .modinfo       0x0000000000000000       0x25 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+___ksymtab+MHAL_AUDIO_GetInternalApi
+                0x0000000000000000        0xc
+ ___ksymtab+MHAL_AUDIO_GetInternalApi
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000      0x294
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000      0x27c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .ARM.extab     0x000000000000027c       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.exidx      0x0000000000000000      0xad0
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0xa98 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .ARM.exidx     0x0000000000000a98       0x38 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000       0xf4
+ *(.data)
+ .data          0x0000000000000000       0xf4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+                0x0000000000000000                g_stMhalAudioInternalApi
+ .data          0x00000000000000f4        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0xd20
+ *(.bss)
+ .bss           0x0000000000000000      0xd20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+                0x0000000000000000                g_aDmaParam
+                0x0000000000000230                g_aRuntimeData
+                0x0000000000000828                g_AudDmaParam
+ .bss           0x0000000000000d20        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x154
+ *(.comment)
+ .comment       0x0000000000000000      0x132 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .comment       0x0000000000000132       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .ARM.attributes
+                0x0000000000000031       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x138
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x108 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_aranges
+                0x0000000000000108       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x20030
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x16ae1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_info    0x0000000000016ae1     0x954f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_abbrev   0x0000000000000000     0x1b8e
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x1458 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_abbrev  0x0000000000001458      0x736 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_line     0x0000000000000000     0xa421
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x9707 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_line    0x0000000000009707      0xd1a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_frame    0x0000000000000000     0x298c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x2880 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_frame   0x0000000000002880      0x10c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_str      0x0000000000000000    0x13e97
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0xd6d6 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_str     0x000000000000d6d6     0x67c1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_loc      0x0000000000000000    0x1498a
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000    0x1425b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_loc     0x000000000001425b      0x72f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x38
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/../../obj/uclibc/9.1.0/aio.o
+ .debug_ranges  0x0000000000000018       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/aio_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/aio/mi_aio.o elf32-littlearm)

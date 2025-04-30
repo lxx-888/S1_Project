@@ -1,0 +1,451 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x4f0c
+ *(.text .stub)
+ .text          0x0000000000000000     0x4eec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+                0x0000000000000000                MI_AO_IOCTL_Write
+                0x00000000000007d0                MI_DEVICE_WrapperFunction_ao
+                0x00000000000007e8                IS_PRINT_MATCH_ao
+                0x0000000000000850                MI_DEVICE_Instance_ao
+                0x0000000000000858                MI_DEVICE_GetSelfDir_ao
+                0x0000000000000864                AddUTIoctlTable
+                0x0000000000000866                ao__module_init
+                0x0000000000000930                ao__module_exit
+                0x0000000000002728                _MI_AO_IMPL_AllDeviceIsClosed
+                0x000000000000274c                MI_AO_IMPL_Init
+                0x000000000000278c                MI_AO_IMPL_DeInit
+                0x00000000000027d4                MI_AO_IMPL_GetChipDevNum
+                0x00000000000027fc                MI_AO_IMPL_InitGlobalData
+                0x0000000000002984                MI_AO_IMPL_DeInitGlobalData
+                0x00000000000029e8                MI_AO_IMPL_GetDevAttr
+                0x0000000000002aa4                MI_AO_IMPL_Open
+                0x0000000000002db0                MI_AO_IMPL_Close
+                0x0000000000002ef4                _MI_AO_IMPL_SetChannelMode
+                0x000000000000301c                MI_AO_IMPL_SetChannelMode
+                0x0000000000003084                MI_AO_IMPL_AttachIf
+                0x00000000000033c8                MI_AO_IMPL_DetachIf
+                0x0000000000003544                MI_AO_IMPL_QueryDmaBufferStatus
+                0x0000000000003674                MI_AO_IMPL_GetDevBuf
+                0x0000000000003720                MI_AO_IMPL_Write
+                0x00000000000038d0                MI_AO_IMPL_Start
+                0x0000000000003974                MI_AO_IMPL_Stop
+                0x0000000000003a04                MI_AO_IMPL_Pause
+                0x0000000000003a98                MI_AO_IMPL_Resume
+                0x0000000000003b30                MI_AO_IMPL_SetVolume
+                0x0000000000003cdc                MI_AO_IMPL_GetVolume
+                0x0000000000003dd8                MI_AO_IMPL_SetMute
+                0x0000000000003f30                MI_AO_IMPL_GetMute
+                0x000000000000402c                MI_AO_IMPL_SetIfVolume
+                0x00000000000040e4                MI_AO_IMPL_GetIfVolume
+                0x00000000000041a0                MI_AO_IMPL_SetIfMute
+                0x000000000000423c                MI_AO_IMPL_GetIfMute
+                0x00000000000042c4                MI_AO_IMPL_SetI2sConfig
+                0x0000000000004580                MI_AO_IMPL_GetI2sConfig
+                0x0000000000004638                MI_AO_IMPL_AdjustSpeed
+                0x000000000000467c                MI_AO_IMPL_GetLatency
+                0x00000000000046fc                MI_AO_IMPL_OpenWithCfgFile
+                0x00000000000048fc                MI_AO_IMPL_Dup
+                0x0000000000004a5c                MI_AO_IMPL_GetIfIndex
+                0x0000000000004a70                _MI_AO_IMPL_MiDevToMhalDev
+                0x0000000000004a80                _MI_AO_IMPL_GetMhalChannelModeFromMiChannelMode
+                0x0000000000004a8a                MI_AO_IMPL_I2sIfToI2sSet
+                0x0000000000004a9e                MI_AO_IMPL_IfToStr
+                0x0000000000004b38                _MI_AO_IMPL_GetMhalIfsFromMiIf
+                0x0000000000004bcc                MI_AO_IMPL_MhalGetIfToStr
+                0x0000000000004ce4                MI_AO_IMPL_MhalGetLeftIfToStr
+                0x0000000000004cee                MI_AO_IMPL_MhalGetRightIfToStr
+                0x0000000000004cf8                MI_AO_IMPL_MhalGetCurrDataLen
+                0x0000000000004d14                MI_AO_IMPL_MhalDpgaMute
+                0x0000000000004d42                MI_AO_IMPL_MhalDpgaGain
+                0x0000000000004d70                MI_AO_IMPL_MhalSetIfMute
+                0x0000000000004dc0                MI_AO_IMPL_MhalSetIfGain
+                0x0000000000004e10                MI_AO_IMPL_MhalSineGenStart
+                0x0000000000004e60                MI_AO_IMPL_MhalSineGenStop
+                0x0000000000004e76                MI_AO_IMPL_MhalSetChannelMode
+                0x0000000000004e98                MI_AO_IMPL_MhalSetI2sTxChSwap
+ .text          0x0000000000004eec       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+                0x0000000000004eec                ao_mod_init
+                0x0000000000004efc                ao_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000      0x12b
+ *(.rodata)
+ .rodata        0x0000000000000000       0xea /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ *fill*         0x00000000000000ea        0x2 
+ .rodata        0x00000000000000ec       0x3f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.rodata.str1.1  0x0000000000000000     0x210f
+ .rodata.str1.1
+                0x0000000000000000     0x210f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+
+.rodata.cst4    0x0000000000000000       0x84
+ .rodata.cst4   0x0000000000000000       0x84 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.modinfo        0x0000000000000000       0x7e
+ .modinfo       0x0000000000000000       0x7e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0x54
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0x54 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .ARM.extab     0x0000000000000054        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.ARM.exidx      0x0000000000000000      0x480
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x470 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .ARM.exidx     0x0000000000000470       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x1a8
+ *(.data)
+ .data          0x0000000000000000      0x1a8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+                0x0000000000000128                ao_debug_level
+ .data          0x00000000000001a8        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x2d9
+ *(.bss)
+ .bss           0x0000000000000000      0x2d9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+                0x0000000000000008                ao_debug_file
+                0x0000000000000108                ao_debug_func
+                0x0000000000000208                gp_pImplStatus
+                0x000000000000020c                g_aIfInfo
+                0x0000000000000284                g_aI2sTxConfig
+                0x00000000000002cc                gp_stMiAoModRefDbgOpsParam
+                0x00000000000002d0                g_au8I2sTxRefCnt
+ .bss           0x00000000000002d9        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x88
+ *(.comment)
+ .comment       0x0000000000000000       0x66 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .comment       0x0000000000000066       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x90
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_aranges
+                0x0000000000000060       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x18a62
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x145d1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_info    0x00000000000145d1     0x4491 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_abbrev   0x0000000000000000     0x1231
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0xd4f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_abbrev  0x0000000000000d4f      0x4e2 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_line     0x0000000000000000     0x6822
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x61da /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_line    0x00000000000061da      0x648 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_frame    0x0000000000000000     0x15e4
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x1594 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_frame   0x0000000000001594       0x50 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_str      0x0000000000000000    0x132b9
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x10075 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_str     0x0000000000010075     0x3244 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_loc      0x0000000000000000     0x812d
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x812d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x228
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x208 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/../../obj/uclibc/9.1.0/ao.o
+ .debug_ranges  0x0000000000000208       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/ao_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ao/mi_ao.o elf32-littlearm)

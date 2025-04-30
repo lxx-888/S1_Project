@@ -1,0 +1,11 @@
+prefix=/home/zhenya.hong/dev_i6dc_bringup-cardv/sdk/verify/CardvUI/ffmpeg/fdk-aac-2.0.0/output/glibc/9.1.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Fraunhofer FDK AAC Codec Library
+Description: AAC codec library
+Version: 2.0.0
+Libs: -L${libdir} -lfdk-aac 
+Libs.private: 
+Cflags: -I${includedir}

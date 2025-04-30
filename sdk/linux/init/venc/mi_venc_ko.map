@@ -1,0 +1,1055 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000    0x2f17c
+ *(.text .stub)
+ .text          0x0000000000000000    0x2f0cc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+                0x0000000000000f70                MI_DEVICE_WrapperFunction_venc
+                0x0000000000000f88                IS_PRINT_MATCH_venc
+                0x0000000000000ff0                MI_DEVICE_Instance_venc
+                0x0000000000000ff8                MI_DEVICE_GetSelfDir_venc
+                0x0000000000001004                AddUTIoctlTable
+                0x0000000000001006                venc__module_init
+                0x00000000000010d0                venc__module_exit
+                0x00000000000013cc                _MI_VENC_DEBUG_SetProcfsOps
+                0x0000000000001430                MI_VENC_DEBUG_InitProcfsParam
+                0x00000000000014c8                MI_VENC_DEBUG_DeInitProcfsParam
+                0x000000000000154c                MI_VENC_Debug_InitProcFs
+                0x0000000000001608                MI_VENC_Debug_DeinitProcFs
+                0x0000000000001654                MI_VENC_DEBUG_AutoUpdateStatTimeIntvl
+                0x0000000000001720                MI_VENC_DEBUG_StartRecordStatTimeIntvl
+                0x0000000000001774                MI_VENC_DEBUG_EndRecordStatTimeIntvl
+                0x0000000000001850                MI_VENC_DEBUG_UpdateStatTimeInfo
+                0x00000000000018c4                MI_VENC_DEBUG_GetStatTimeInfo
+                0x0000000000001910                MI_VENC_DEBUG_InitFlowStatTimeIntvl
+                0x000000000000193c                MI_VENC_DEBUG_InitStatTimeInfo
+                0x0000000000001974                MI_VENC_DEBUG_DumpInputBufIfOutputRaised
+                0x0000000000001aa4                MI_VENC_DEBUG_DumpInputBuf
+                0x0000000000001e4c                MI_VENC_DEBUG_DumpOutputBuf
+                0x0000000000001f98                MI_VENC_DEBUG_ShowOutInfo
+                0x0000000000001fe0                MI_VENC_DEBUG_DumpCustMap
+                0x000000000000214c                MI_VENC_DEBUG_UpdateForceResetFrameCount
+                0x0000000000002170                MI_VENC_DEBUG_NeedForceReset
+                0x00000000000021d8                MI_VENC_DEBUG_IsProcfsEnableRecover
+                0x00000000000021f4                MI_VENC_DEBUG_DumpMhalRegWhenHang
+                0x00000000000021f6                MI_VENC_DEBUG_AllocDevDbgFsInfoHandle
+                0x0000000000002280                MI_VENC_DEBUG_FreeDevDbgFsInfoHandle
+                0x00000000000022c4                MI_VENC_DEBUG_AllocChnDbgFsInfoHandle
+                0x0000000000002370                MI_VENC_DEBUG_FreeChnDbgFsInfoHandle
+                0x00000000000023d4                MI_VENC_DEBUG_SetStartDumpOut
+                0x00000000000023f4                MI_VENC_DEBUG_InitBufferFullRecordList
+                0x0000000000002410                MI_VENC_DEBUG_AddBufferFullRecord
+                0x000000000000242c                MI_VENC_DEBUG_DelBufferFullRecord
+                0x0000000000002474                MI_VENC_DEBUG_IsDropInputTask
+                0x000000000000248c                MI_VENC_DEBUG_IsDropOutputTask
+                0x00000000000024a4                MI_VENC_DEBUG_IsDumpOut
+                0x00000000000024c4                MI_VENC_DEBUG_IsFrcChangedDumpMode
+                0x0000000000002500                MI_VENC_DEBUG_IsDbgSupFrmInfoMode
+                0x0000000000002520                MI_VENC_DEBUG_IsDbgSupFrmWrnMode
+                0x0000000000002540                MI_VENC_DEBUG_IsDbgFrmLostInfoMode
+                0x0000000000002560                MI_VENC_DEBUG_IsDbgFrmLostWrnMode
+                0x0000000000002580                OpenFile
+                0x00000000000025bc                WriteFile
+                0x00000000000025c0                CloseFile
+                0x00000000000025ca                _MI_VENC_MapMemToFile
+                0x0000000000002660                mi_venc_ResetSw
+                0x000000000000267e                mi_venc_InitSw
+                0x00000000000026ae                mi_venc_RecSw
+                0x0000000000002708                MI_VENC_MODPARAM_Init
+                0x0000000000002868                MI_VENC_MODPARAM_GetHandle
+                0x0000000000003b14                MI_VENC_IMPL_GetDefaultDevMaxResolution
+                0x0000000000003b2e                MI_VENC_IMPL_UpdateStatTimeInfo
+                0x0000000000003b32                MI_VENC_IMPL_Insmod
+                0x0000000000003b4c                MI_VENC_IMPL_Rmmod
+                0x0000000000003b68                MI_VENC_IMPL_Init
+                0x0000000000003bcc                MI_VENC_IMPL_DeInitDev
+                0x0000000000003c04                MI_VENC_IMPL_DeInit
+                0x0000000000003c58                MI_VENC_IMPL_DupChn
+                0x0000000000003ccc                MI_VENC_IMPL_ResetChn
+                0x0000000000003e2c                MI_VENC_IMPL_StartRecvPicEx
+                0x00000000000041f8                MI_VENC_IMPL_StartRecvPic
+                0x0000000000004228                MI_VENC_IMPL_StopRecvPic
+                0x0000000000004564                MI_VENC_IMPL_DestroyChn
+                0x00000000000048d0                MI_VENC_IMPL_Query
+                0x0000000000004abc                _MI_VENC_IMPL_SetParamRcAdvance
+                0x0000000000004f3c                MI_VENC_IMPL_SetParams
+                0x0000000000005810                MI_VENC_IMPL_GetParamRcAdvance
+                0x00000000000059b8                MI_VENC_IMPL_GetPollData
+                0x0000000000005a60                MI_VENC_IMPL_GetParams
+                0x0000000000005e74                MI_VENC_IMPL_SetChnAttr
+                0x0000000000006214                MI_VENC_IMPL_GetStream
+                0x000000000000632c                MI_VENC_IMPL_ReleaseStream
+                0x0000000000006494                MI_VENC_IMPL_ReleaseFrame
+                0x0000000000006564                MI_VENC_IMPL_InitDev
+                0x00000000000066c8                MI_VENC_IMPL_CreateChn
+                0x0000000000006cc4                MI_VENC_IMPL_SetParamPenalty
+                0x0000000000006d0c                MI_VENC_IMPL_SetParamScalinglist
+                0x0000000000006d54                MI_VENC_IMPL_SetParamDefloat
+                0x0000000000006d9c                MI_VENC_IMPL_SetParamDumpBuffer
+                0x0000000000006edc                MI_VENC_RGN_NotifyFrameDone
+                0x0000000000006f80                MI_VENC_RGN_CloseGwin
+                0x0000000000007030                MI_VENC_RGN_Process
+                0x000000000000714c                MI_VENC_RGN_DestroyMemCmdq
+                0x000000000000717e                MI_VENC_RGN_AllocMemCmdq
+                0x00000000000071da                MI_VENC_RGN_FreeMemCmdq
+                0x0000000000007216                MI_VENC_RGN_OnSuspend
+                0x0000000000007264                MI_VENC_RGN_OnResume
+                0x00000000000078ac                MI_VENC_CORE_GetDevResHandle
+                0x00000000000080cc                MI_VENC_CORE_GetDevResByHalDev
+                0x0000000000008108                MI_VENC_CORE_GetChnResHandle
+                0x00000000000081ae                MI_VENC_CORE_FoundChipIdx
+                0x00000000000081b8                MI_VENC_CORE_IsFrameLost
+                0x00000000000083b8                MI_VENC_CORE_IsSuperFrame
+                0x0000000000008430                MI_VENC_CORE_ReportChnFps
+                0x00000000000084b0                MI_VENC_CORE_CheckChnAttr
+                0x00000000000084f0                MI_VENC_CORE_ValidateResolution
+                0x000000000000883e                MI_VENC_CORE_ValidBufferSize
+                0x0000000000008bc4                MI_VENC_CORE_VerifyFps
+                0x0000000000008cbc                MI_VENC_CORE_SetResolution
+                0x0000000000008d20                MI_VENC_CORE_CheckYuvOutputBufSize
+                0x0000000000008db0                MI_VENC_CORE_ReleaseFd
+                0x0000000000008dc4                MI_VENC_CORE_PollFdState
+                0x0000000000008e38                MI_VENC_CORE_SetPollState
+                0x0000000000008e54                MI_VENC_CORE_CreateRingPool
+                0x0000000000008f60                MI_VENC_CORE_EncodeSmoothWindowInit
+                0x0000000000008f72                MI_VENC_CORE_EncodeTimeDeinit
+                0x0000000000008f8a                MI_VENC_CORE_EncodeTimeRecordStart
+                0x0000000000008fa4                MI_VENC_CORE_EncodeTimeRecordEnd
+                0x0000000000008fd4                MI_VENC_CORE_GetSmoothEncodeTime
+                0x0000000000008fda                MI_VENC_CORE_MhalReleaseFrame
+                0x000000000000901c                MI_VENC_CORE_GetBspRingBuffer
+                0x0000000000009028                MI_VENC_CORE_ReleaseBspRingBuffer
+                0x0000000000009160                MI_VENC_CORE_ReleaseRingPoolRecords
+                0x0000000000009268                MI_VENC_CORE_FreeCustMap
+                0x00000000000092e8                MI_VENC_CORE_FreeRingPool
+                0x000000000000937c                MI_VENC_CORE_AllocChnMemory
+                0x00000000000094a8                MI_VENC_CORE_FreeChnMemory
+                0x000000000000952c                MI_VENC_CORE_GetResolution
+                0x0000000000009580                MI_VENC_CORE_ClearInterAttrIfResChange
+                0x0000000000009620                MI_VENC_CORE_ClearUserAttrIfResChange
+                0x00000000000096c0                MI_VENC_CORE_CheckResolution
+                0x0000000000009740                MI_VENC_CORE_AddRecordToBspRingList
+                0x000000000000983a                MI_VENC_CORE_AppendContentTailRecord
+                0x00000000000098e0                MI_VENC_CORE_JpeRecordBspRingInfo
+                0x0000000000009ab8                MI_VENC_CORE_GetJpeDropRecordCnt
+                0x0000000000009ae8                MI_VENC_CORE_ReleaseJpeDropRecord
+                0x0000000000009b20                MI_VENC_CORE_ProcessTaskDone
+                0x0000000000009c84                MI_VENC_CORE_ResetChnRes
+                0x0000000000009c90                MI_VENC_CORE_WorkerThreadTimeoutMonitor
+                0x0000000000009cac                MI_VENC_CORE_GetFreeTaskInfo
+                0x0000000000009d18                MI_VENC_CORE_PutTaskInfo
+                0x0000000000009d50                MI_VENC_CORE_AddTaskInfo
+                0x0000000000009d76                MI_VENC_CORE_SetInputPortSideBindMsg
+                0x0000000000009e04                MI_VENC_CORE_SetInputPortBufExtConf
+                0x0000000000009f2c                MI_VENC_CORE_SetRestartInterval
+                0x0000000000009ff0                MI_VENC_CORE_ConfigVeAttr
+                0x000000000000a044                MI_VENC_CORE_ConfigInstance
+                0x000000000000a0b8                MI_VENC_CORE_SetRoiCfg
+                0x000000000000a144                _MI_VENC_CORE_CalculateVuiTimingInfo
+                0x000000000000a1ca                MI_VENC_CORE_StreamOnAllChannel
+                0x000000000000a2ac                MI_VENC_CORE_DisableChannel
+                0x000000000000a394                MI_VENC_CORE_EnableChannel
+                0x000000000000a468                MI_VENC_CORE_EnableSliceIrq
+                0x000000000000a590                MI_VENC_CORE_UpdateUserAttr
+                0x000000000000a5c8                MI_VENC_CORE_UpdateUbrParam
+                0x000000000000a760                MI_VENC_CORE_ExecUserRcFunc
+                0x000000000000a800                MI_VENC_CORE_ConfigFrcPort
+                0x000000000000a8fc                MI_VENC_CORE_TransSysInputTaskToCommonBufferInfo
+                0x000000000000aa00                MI_VENC_CORE_PreResetCodec
+                0x000000000000aadc                MI_VENC_CORE_StreamOffAllChannel
+                0x000000000000ab80                MI_VENC_CORE_InitModRes
+                0x000000000000aba0                MI_VENC_CORE_DeInitChnOsRes
+                0x000000000000abc6                MI_VENC_CORE_FreeChnResHandle
+                0x000000000000ac74                MI_VENC_CORE_GetModuleRes
+                0x000000000000ac7c                MI_VENC_CORE_AllocChnResHandle
+                0x000000000000ad30                MI_VENC_CORE_AllocDevResHandle
+                0x000000000000ad9c                MI_VENC_CORE_FreeDevResHandle
+                0x000000000000ae4c                MI_VENC_CORE_DestroyDevice
+                0x000000000000af88                MI_VENC_CORE_DeInitDev
+                0x000000000000b034                MI_VENC_CORE_DeinitDevInChannel
+                0x000000000000b0c8                MI_VENC_CORE_GetCustomMapSize
+                0x000000000000b0e2                MI_VENC_CORE_SetCustomMap
+                0x000000000000b22c                MI_VENC_CORE_SetDynamicAttr
+                0x000000000000ba28                MI_VENC_CORE_PmTryWake
+                0x000000000000ba64                MI_VENC_CORE_PmTrySleep
+                0x000000000000baa0                MI_VENC_CORE_CreateDevice
+                0x000000000000bc3c                MI_VENC_PASS_OnPreProcessInputTask
+                0x000000000000c2bc                MI_VENC_PASS_EnqueueInputTask
+                0x000000000000cf98                MI_VENC_PASS_BarrierInputTask
+                0x000000000000d094                MI_VENC_PASS_CheckInputTaskStatus
+                0x000000000000d49c                MI_VENC_PASS_DequeueInputTask
+                0x000000000000dc0c                MI_VENC_PASS_CheckOutputTaskStatus
+                0x000000000000dc48                MI_VENC_PASS_DequeueOutputTask
+                0x000000000000dc80                MI_VENC_PASS_NeedIndividualWorkThread
+                0x000000000000dcae                MI_VENC_PASS_OnGetInputPortBindCapability
+                0x000000000000dd84                MI_VENC_PASS_OnGetOutputPortBindCapability
+                0x000000000000dd98                MI_VENC_PASS_OnBindInputPort
+                0x000000000000e284                MI_VENC_PASS_OnBindInputPortPost
+                0x000000000000e288                MI_VENC_PASS_OnUnBindInputPort
+                0x000000000000e28c                MI_VENC_PASS_OnUnBindInputPortPost
+                0x000000000000e414                MI_VENC_PASS_OnBindOutputPort
+                0x000000000000e418                MI_VENC_PASS_OnUnBindOutputPort
+                0x000000000000e41c                MI_VENC_PASS_OnInputPortFrcChanged
+                0x000000000000e518                MI_VENC_PASS_OnCusFrcChanged
+                0x000000000000e57c                MI_VENC_PASS_OnPmSuspendNotify
+                0x000000000000e5f0                MI_VENC_PASS_OnPmResumeNotify
+                0x000000000000e5f4                MI_VENC_PASS_OnSuspend
+                0x000000000000e714                MI_VENC_PASS_OnResume
+                0x000000000000e7a8                MI_VENC_PASS_RejectCmdq
+                0x000000000000e830                MI_VENC_PASS_ResetDevPass
+                0x000000000000ea50                MI_VENC_DRVCFG_MiSysVFlushInvCache
+                0x000000000000ea9c                MI_VENC_DRVCFG_GetMiDeviceConfigHandle
+                0x000000000000eaac                MI_VENC_DRVCFG_GetHalDevCb
+                0x000000000000eac0                MI_VENC_DRVCFG_MhalVencEncDone
+                0x000000000000eb54                MI_VENC_DRVCFG_MhalVencEncodeCancel
+                0x000000000000ebac                MI_VENC_DRVCFG_MhalVencEncodeAddOutBuff
+                0x000000000000ebfc                _MI_VENC_DRVCFG_VencCodecIsrHandle
+                0x000000000000f188                MI_VENC_DRVCFG_DriverProbe
+                0x000000000000f18c                MI_VENC_DRVCFG_DriverRemove
+                0x000000000000f190                MI_VENC_DRVCFG_JPE_DriverProbe
+                0x000000000000f194                MI_VENC_DRVCFG_JPE_DriverRemove
+                0x000000000000f198                MI_VENC_PLATFORM_GetChipIdx
+                0x000000000000f1a4                MI_VENC_PLATFORM_SetChipIdx
+                0x000000000000f1b0                HalVcodecMathIntMin
+                0x000000000000f1b8                HalVcodecMathIntMax
+                0x000000000000f1c0                HalVcodecMathIntAbs
+                0x000000000000f1c8                HalVcodecMathIntClip3
+                0x000000000000f1de                HalVcodecMathUintMin
+                0x000000000000f1e6                HalVcodecMathUintMax
+                0x000000000000f1ee                HalVcodecMathUintClip3
+                0x000000000000f204                HalVcodecMathI64Clip3
+                0x000000000000f22c                HalVcodecMathU64Clip3
+                0x000000000000f254                HalVcodecMathCeilLog2
+                0x000000000000f26c                VenLogOut
+                0x000000000000f2d4                VenLogOutKmsg
+                0x000000000000f33c                VenLogE
+                0x000000000000f3a4                VenLogW
+                0x000000000000f414                VenLogKmsg
+                0x000000000000f494                VenLogI
+                0x000000000000f508                VenLogD
+                0x000000000000f57c                HalVcodecDumpReg
+                0x000000000000f60c                HalVcodecDumpRegx16
+                0x000000000000f68c                HalVcodecDumpRegx32
+                0x000000000000f70c                HalVcodecCheckVer
+                0x000000000000f738                HalVcodecDumpBuffer
+                0x0000000000011434                MI_VENC_Wrapper_SetModParam
+                0x0000000000011500                MI_VENC_WRAPPER_DriverRemove
+                0x0000000000011570                MI_VENC_WRAPPER_DriverProbe
+                0x0000000000011634                MI_VENC_wrapper_StreamOn
+                0x0000000000011680                MI_VENC_wrapper_StreamOff
+                0x00000000000116d4                MI_VENC_Wrapper_SetResolution
+                0x00000000000117cc                MI_VENC_Wrapper_SetCrop
+                0x000000000001180c                MI_VENC_Wrapper_SetParamRef
+                0x0000000000011998                MI_VENC_Wrapper_SetRoiCfg
+                0x0000000000011ab4                MI_VENC_Wrapper_SetCustomerMapBuffer
+                0x0000000000011b74                MI_VENC_Wrapper_SetParamRc
+                0x0000000000011b9c                MI_VENC_Wrapper_SetParamRcAdvance
+                0x0000000000011bb2                MI_VENC_Wrapper_SetRecRefRing
+                0x0000000000011bc6                MI_VENC_Wrapper_SetFrameConfig
+                0x0000000000011bde                MI_VENC_Wrapper_SetUserData
+                0x0000000000011be6                MI_VENC_Wrapper_SetBindNextInst
+                0x0000000000011cac                MI_VENC_Wrapper_SetProfile
+                0x0000000000011d18                MI_VENC_Wrapper_SetDevClk
+                0x0000000000011d9c                MI_VENC_Wrapper_CreateDevice
+                0x0000000000011e50                MI_VENC_Wrapper_DestroyDevice
+                0x0000000000011ed8                MI_VENC_Wrapper_Suspend
+                0x0000000000011f08                MI_VENC_Wrapper_Resume
+                0x0000000000011f3c                MI_VENC_Wrapper_SetDevMmaCb
+                0x0000000000011f98                MI_VENC_Wrapper_SetVui
+                0x00000000000120bc                MI_VENC_Wrapper_SetParamDefloat
+                0x0000000000012138                MI_VENC_Wrapper_SetParamDeflicker
+                0x0000000000012190                MI_VENC_Wrapper_SetDevIsrCb
+                0x000000000001219a                MI_VENC_Wrapper_SetDevMaxRes
+                0x0000000000012234                MI_VENC_Wrapper_DevPreReset
+                0x0000000000012288                MI_VENC_Wrapper_DevReset
+                0x00000000000124a0                MI_VENC_Wrapper_GetDevCmdqBufLen
+                0x00000000000124d4                MI_VENC_Wrapper_CreateInstance
+                0x000000000001268c                MI_VENC_Wrapper_DestoryInstance
+                0x0000000000012714                MI_VENC_Wrapper_SetIntraRefresh
+                0x000000000001274a                MI_VENC_Wrapper_SetDblk
+                0x0000000000012788                MI_VENC_Wrapper_SetSplitCtl
+                0x00000000000127bc                MI_VENC_Wrapper_SetTrans
+                0x00000000000127f4                MI_VENC_Wrapper_SetRealTimeFps
+                0x0000000000012804                MI_VENC_Wrapper_SetInputMode
+                0x000000000001282a                MI_VENC_Wrapper_SetInputCompressMode
+                0x0000000000012894                MI_VENC_Wrapper_GetResolution
+                0x00000000000128a4                MI_VENC_Wrapper_SetHskMode
+                0x00000000000128b6                MI_VENC_Wrapper_GetNextFrameAttr
+                0x00000000000128da                MI_VENC_Wrapper_EncodeOneFrame
+                0x0000000000012b34                MI_VENC_Wrapper_GetHalDefaultParam
+                0x0000000000012b48                MI_VENC_Wrapper_EncodeFrameDone
+                0x00000000000131ba                MI_VENC_Wrapper_EncodeAddOutBuff
+                0x0000000000013248                MI_VENC_Wrapper_CheckInstanceStatus
+                0x00000000000132f0                MI_VENC_Wrapper_SetParamDumpBuffer
+                0x0000000000013326                MI_VENC_WrapperSetParamPenalty
+                0x000000000001337e                MI_VENC_Wrapper_SetParamScalinglist
+                0x0000000000013454                MI_VENC_Wrapper_DebugSetProcRcParams
+                0x0000000000013690                DrvVenc50MmaGetST_VencMiuProtectAttr
+                0x0000000000013698                DrvVenc50MmaAttrParametersInit
+                0x00000000000136b8                DrvVenc50MmaAttrParametersDeinit
+                0x00000000000136d8                DrvVenc50MmaMiuProtectEnable
+                0x0000000000013800                DrvVenc50MmaMiuProtectDisable
+                0x0000000000013930                DrvVenc50AllocateBuf
+                0x0000000000013a38                DrvVenc50FreeBuf
+                0x0000000000013ddc                DrvVencRamlogRegist
+                0x0000000000013e34                DrvVencRamlogUnRegist
+                0x0000000000013e70                DrvVencRamlogInit
+                0x0000000000013e88                DrvVencStarRamlogthread
+                0x0000000000013f58                DrvVencRamlogDeInit
+                0x0000000000013fb8                _DrvVencDevCheckRegSize
+                0x0000000000013ff4                DrvVenc50AllocDev
+                0x0000000000014080                DrvVenc50GetDev
+                0x00000000000140b0                DrvVenc50ReleaseDev
+                0x000000000001412c                DrvVencDevHandle2DevId
+                0x000000000001415c                _DrvVencDevGetDefaultRegValue
+                0x000000000001416e                _DrvVencDevSetRiskInfo
+                0x00000000000141b0                _DrvVencDevBankInit
+                0x0000000000014208                _DrvVencDevEncGpCtrlInit
+                0x0000000000014216                _DrvVencDevEncGpCtrlDeInit
+                0x0000000000014224                _DrvVencDevFirmWareInit
+                0x000000000001436c                _DrvVencDevCdfTableInit
+                0x0000000000014370                _DrvVencDevFirmWareRelease
+                0x0000000000014378                DrvVencDevFire
+                0x00000000000143cc                DrvVencDevDone
+                0x00000000000143ec                DrvVencDevStreamOff
+                0x000000000001442c                DrvVencDev50Init
+                0x0000000000014444                DrvVencDev50Release
+                0x0000000000014540                DrvVencDevInit
+                0x0000000000014780                DrvVencDevSuspend
+                0x0000000000014798                DrvVencDevResume
+                0x00000000000147fe                DrvVencAddOutBuffer
+                0x0000000000014806                DrvVencPreReset
+                0x0000000000014822                DrvVencAbortFrame
+                0x000000000001482a                DrvVencEnableHskMode
+                0x0000000000014854                DrvVencDebugWriteDumpDbg
+                0x000000000001485c                DrvVencDebugWriteDumpRiscReg
+                0x0000000000014864                DrvVencDebugWriteDumpDebugReg
+                0x000000000001486c                DrvVencSetTraceEventDump
+                0x00000000000148dc                DrvVencDumpTraceToFile
+                0x0000000000015bb0                DrvVencCtxSetSplitPenalty
+                0x0000000000015bf8                _DrvVencCtxSetDefaultSeqParam
+                0x0000000000015d30                DrvVencDumpBuffer
+                0x000000000001634e                DrvVencCtxTransSadScaleRatio
+                0x00000000000163b6                DrvVencCtxSetHwAdvanceConfig
+                0x00000000000164cc                DrvVencCtxInitRegMapBufAddr
+                0x00000000000164fc                DrvVencCtxEncRiscCfg
+                0x0000000000016548                DrvVencCtxEncDone
+                0x00000000000166c8                DrvVencCtxCheckStatus
+                0x00000000000166ec                DrvVencCtxRelease
+                0x00000000000167dc                DrvVencCtxStreamOn
+                0x0000000000016964                DrvVencCtxStreamOff
+                0x00000000000169ac                DrvVencCtxAcquire
+                0x0000000000016b1c                DrvVencCtxForceIFrame
+                0x0000000000016b52                DrvVencCtxIntraRefresh
+                0x0000000000016b80                DrvVencCtxEncFire
+                0x0000000000016c4c                DrvVencCtxShowRcParaInfo
+                0x0000000000016c5c                _DrvVencProcShowDevInfo
+                0x0000000000017118                _DrvVencProcShowCtxInfo
+                0x0000000000017dc8                MI_VENC_Wrapper_Venc50ProcShowExlog
+                0x0000000000017dfc                MI_VENC_Wrapper_Venc50ProcWriteRamlog
+                0x0000000000017e16                MI_VENC_Wrapper_Venc50ProcWriteRclog
+                0x0000000000017e2c                MI_VENC_Wrapper_Venc50ProcShowLogCtl
+                0x0000000000017e40                MI_VENC_Wrapper_Venc50ProcWriteLogCtl
+                0x0000000000017fec                MI_VENC_Wrapper_Venc50ProcShowVcoreClk
+                0x0000000000017ff0                MI_VENC_Wrapper_Venc50ProcWriteVcoreClk
+                0x0000000000018012                MI_VENC_Wrapper_Venc50ProcShowRiscvClk
+                0x0000000000018016                MI_VENC_Wrapper_Venc50ProcWriteRiscvClk
+                0x000000000001801c                _DrvVencClkRate
+                0x0000000000018070                DrvVencDevResourceClkSpecialDisable
+                0x0000000000018088                DrvVencDevResourceClkVenPll
+                0x00000000000180b0                DrvVencDevResourceClkOn
+                0x00000000000180d0                DrvVencDevResourceClkSet
+                0x0000000000018110                DrvVencDevResourceInit
+                0x0000000000018288                DrvVencDevResourceDeInit
+                0x0000000000018292                DrvVencDevResourceRequestIrq
+                0x0000000000018296                DrvVencDevResourceFreeIrq
+                0x00000000000183a4                _DrvVencClkOn
+                0x00000000000183ce                _DrvVencClkSet
+                0x0000000000018448                _DrvVencResourceInit
+                0x00000000000185c0                _DrvVencResourceDeInit
+                0x0000000000018600                _DrvVencRequestIrq
+                0x0000000000018630                _DrvVencFreeIrq
+                0x0000000000018e9c                HalMheOpsEncBuf
+                0x0000000000018f48                HalMheOpsEncCfg
+                0x0000000000018fd8                HalMheOpsEncDone
+                0x0000000000019268                HalMheOpsStreamOn
+                0x0000000000019298                HalMheOpsRelease
+                0x00000000000192c8                HalMheOpsAcquire
+                0x000000000001a192                HalMheSyntaxInit
+                0x000000000001a1cc                HalMheSyntaxSeqCfg
+                0x000000000001a354                HalMheSyntaxEncSliceHeader
+                0x000000000001ab28                HalMfeOpsEncBuf
+                0x000000000001ac34                HalMfeOpsEncCfg
+                0x000000000001acc4                HalMfeOpsEncDone
+                0x000000000001af08                HalMfeOpsStreamOn
+                0x000000000001af38                HalMfeOpsRelease
+                0x000000000001af68                HalMfeOpsAcquire
+                0x000000000001ba5c                HalMfeSyntaxInit
+                0x000000000001ba8a                HalMfeSyntaxSeqCfg
+                0x000000000001bbfc                HalMfeSyntaxEncSliceHeader
+                0x000000000001bce4                HalMfeSyntaxEncodeReorderRef
+                0x000000000001bd98                HalMfeSyntaxIsStRefLt
+                0x000000000001bdc8                HalMfeSyntaxEncodeMmco
+                0x000000000001c968                HalVencDpbManaOneFrame
+                0x000000000001cdf2                HalVencDpbUpdateFrame
+                0x000000000001ced6                HalVencDpbDoneFrame
+                0x000000000001cfd4                HalVencDpbInit
+                0x000000000001cff8                HalVencDpbDeinit
+                0x000000000001d2b8                HalVencIosEncGpCtrlInit
+                0x000000000001d354                HalVencIosEncGpCtrlDeInit
+                0x000000000001d360                HalVencIosGetDefaultRegValue
+                0x000000000001d46c                HalVencIosFirmWareInit
+                0x000000000001d6dc                HalVencIosFirmWareDeInit
+                0x000000000001d74c                HalVencIosFire
+                0x000000000001d80c                HalVencIosRelease
+                0x000000000001d83c                HalVencIosStreamOff
+                0x000000000001d864                HalVencIosAcquire
+                0x000000000001d8b8                HalVencIsrHandlerPartB
+                0x000000000001d8d6                HalVencIosAddOutBuffer
+                0x000000000001d8fe                HalVencPreReset
+                0x000000000001d92e                HalVencIosAbortFrame
+                0x000000000001da84                HalVencIosEnableHskMode
+                0x000000000001da9c                HalVencIosDebugDumpDbgWriteFile
+                0x000000000001db84                HalVencIosDebugDumpRiscReg
+                0x000000000001dd70                HalVencIosDebugDumpDebugReg
+                0x000000000001dffc                HalVencIsrHandlerPartA
+                0x000000000001e1ac                HalVencIosSetTraceDumpParams
+                0x000000000001e2c8                HalVencIosDumpBufToFile
+                0x000000000001e358                HalVencIosGetTraceDumpReg
+                0x0000000000020588                HalVenOpsCaculateTmvpScale
+                0x000000000002063c                HalVencOpsVenCfg
+                0x0000000000020684                HalVencOpsRiscvFrameCfg
+                0x0000000000020770                HalVencOpsEncDone
+                0x00000000000209b0                HalVencOpsCheckStatus
+                0x0000000000020d8e                HalVencRcDone
+                0x0000000000020edc                HalVencRcRegUnsignedToSigend
+                0x0000000000020efc                HalVencRcFire
+                0x000000000002166c                HalVencRcSeqInit
+                0x0000000000021710                HalVencRcInit
+                0x0000000000021790                HalVencRcDeflickerInit
+                0x00000000000217f0                HalVencRcSetSadDefaultParameter
+                0x0000000000021804                HalVencRcSetHalAlgDefaultParameter
+                0x000000000002187c                HalVencRcGetHalDefaultParam
+                0x000000000002188e                HalVencRcShowParaInfo
+                0x0000000000021898                ss_et_calc_avg_cost
+                0x00000000000218c6                ss_bw_calc_frame_lvl_dsr
+                0x0000000000023c98                ss_rc_cvbr_longterm_init
+                0x0000000000024928                ss_rc_init
+                0x00000000000249a4                get_and_update_bits_bumpy_model_status
+                0x00000000000249e4                update_bits_bumpy_model
+                0x0000000000024aac                ss_rc_seq_init
+                0x0000000000024b0c                ss_rc_seq_change
+                0x0000000000024b9c                ss_rc_pic_init
+                0x0000000000025f2e                update_lambda_factor
+                0x00000000000261e8                ss_rc_pic_end
+                0x0000000000026498                ss_rc_calc_fixPt_lambda_from_qp
+                0x000000000002657c                ss_rc_get_hevc_lambda_setting
+                0x0000000000026920                ss_rc_get_avc_lambda_setting
+                0x0000000000026b58                ss_rc_get_av1_lambda_setting
+                0x0000000000026d70                ss_rc_get_bpp_lut
+                0x0000000000026eb0                ss_rc_get_lambda_lut
+                0x000000000002707c                ss_rc_get_pic_bits_from_qp
+                0x00000000000270a8                ss_config_show_ven_para_info
+                0x00000000000271ce                fw_util_queue_init
+                0x00000000000271dc                fw_util_queue_put
+                0x00000000000271ec                fw_util_queue_get
+                0x0000000000027204                fw_util_queue_read
+                0x000000000002721c                fw_util_queue_last_idx
+                0x0000000000027244                fw_util_queue_empty
+                0x000000000002725c                fw_util_queue_full
+                0x0000000000027274                fw_util_queue_valid
+                0x0000000000027282                fw_util_abs
+                0x000000000002728a                fw_util_min
+                0x0000000000027292                fw_util_umin
+                0x000000000002729a                fw_util_max
+                0x00000000000272a2                fw_util_min_max
+                0x00000000000272ec                fw_util_min_64b
+                0x0000000000027304                fw_util_max_64b
+                0x000000000002731c                fw_util_min_max_64b
+                0x0000000000027348                fw_util_round_divide
+                0x0000000000027354                fw_util_min_max_ui
+                0x0000000000027362                fw_util_divide_ceil
+                0x000000000002736e                fw_util_sqrt
+                0x0000000000027392                fw_util_msb
+                0x00000000000273aa                fw_util_msb_u64
+                0x00000000000273e0                fw_util_ceil_log2
+                0x00000000000273ee                fw_util_align_floor
+                0x00000000000273fa                fw_util_align_ceil
+                0x0000000000027402                fw_util_square
+                0x0000000000027406                FINIT_U64
+                0x0000000000027444                FCONVERTtoI
+                0x0000000000027470                FCONVERTtoS
+                0x0000000000027510                FABS
+                0x0000000000027536                FEQ
+                0x000000000002755a                FSIG
+                0x0000000000027562                SWFINIT
+                0x0000000000027568                SWFINT
+                0x000000000002759a                SWFADD
+                0x00000000000275de                SWFSUB
+                0x0000000000027622                FMIN
+                0x0000000000027650                FMAX
+                0x0000000000027680                FMINMAX
+                0x000000000002769c                FGE
+                0x00000000000276b2                FGT
+                0x00000000000276cc                SWFMUL
+                0x00000000000276e2                SWFDIV
+                0x000000000002770e                SWFSQRT
+                0x00000000000277e4                SWFLOG2_wPrecision
+                0x000000000002784c                SWFPOW2_wPrecision
+                0x000000000002793c                rc_reset_rdq_model
+                0x0000000000027a20                rc_init_rdq_model
+                0x0000000000027b40                rc_change_rdq_model_status
+                0x0000000000027b5e                rc_update_rdq_model
+                0x0000000000027d9c                rc_calc_lambda_from_rdq_model
+                0x0000000000027e24                ss_set_defloat_param
+                0x0000000000027e4c                ss_set_rc_defloat_sensitivity
+                0x0000000000027e7c                ss_deflicker_calc_hevc_sao_offset_max
+                0x0000000000027eb0                ss_get_deflicker_param
+                0x0000000000027eec                ss_get_deflicker_rc_param
+                0x0000000000027f08                ss_deflicker_motion_sad_calcFactor
+                0x0000000000027f5c                ss_deflicker_motion_sad_calcSADFactor
+                0x0000000000028e00                GradIQP_update_cond
+                0x0000000000028fc4                rc_calc_bpp_from_qp
+                0x0000000000029004                calc_pic_qp
+                0x0000000000029280                rc_get_lambda
+                0x00000000000292aa                use_lambda_from_model
+                0x00000000000292d6                init_qp_filter
+                0x0000000000029312                update_qp_filter
+                0x00000000000293b0                reset_r_model_bpp_dqp
+                0x00000000000295fc                init_rc_models
+                0x000000000002961a                reset_r_model_seq_param
+                0x0000000000029630                update_rc_models
+                0x00000000000297b8                alloc_gop_bit
+                0x000000000002a26c                MI_JPE_Wrapper_SetModParam
+                0x000000000002a2a0                DrvJpeGetDeviceHandle
+                0x000000000002a2c0                MI_JPE_Wrapper_SetDevClk
+                0x000000000002a2f0                MI_JPE_Wrapper_CreateDevice
+                0x000000000002a394                MI_JPE_Wrapper_DestroyDevice
+                0x000000000002a3f0                MI_JPE_Wrapper_Suspend
+                0x000000000002a430                MI_JPE_Wrapper_Resume
+                0x000000000002a440                MI_JPE_Wrapper_ForcePower
+                0x000000000002a486                MI_JPE_WRAPPER_DriverRemove
+                0x000000000002a4c0                MI_JPE_WRAPPER_DriverProbe
+                0x000000000002a5e8                MI_JPE_Wrapper_SetDevMmaCb
+                0x000000000002a648                MI_JPE_Wrapper_SetDevIsrCb
+                0x000000000002a650                MI_JPE_Wrapper_DevReset
+                0x000000000002a660                MI_JPE_Wrapper_GetDevCmdqBufLen
+                0x000000000002a66a                MI_JPE_Wrapper_CreateInstance
+                0x000000000002a6c0                MI_JPE_Wrapper_DestroyInstance
+                0x000000000002a6e0                MI_JPE_Wrapper_SetUserData
+                0x000000000002a6e6                MI_JPE_Wrapper_SetRestartInterval
+                0x000000000002a71a                MI_JPE_Wrapper_SetParamRc
+                0x000000000002a75a                MI_JPE_Wrapper_SetResolution
+                0x000000000002a7e0                MI_JPE_Wrapper_SetCrop
+                0x000000000002a82a                MI_JPE_Wrapper_SetInputCompressMode
+                0x000000000002a82e                MI_JPE_Wrapper_StreamOn
+                0x000000000002a8c4                MI_JPE_Wrapper_StreamOff
+                0x000000000002a8e0                MI_JPE_Wrapper_SetFrameConfig
+                0x000000000002a90c                MI_JPE_Wrapper_ReleaseFrame
+                0x000000000002a930                MI_JPE_Wrapper_GetResolution
+                0x000000000002a958                MI_JPE_Wrapper_EncodeOneFrame
+                0x000000000002aad0                MI_JPE_Wrapper_BarrierOneFrame
+                0x000000000002ac0c                MI_JPE_Wrapper_EncodeFrameDone
+                0x000000000002aca4                MI_JPE_Wrapper_EncodeAddOutBuff
+                0x000000000002acec                MI_JPE_Wrapper_EncodeCancel
+                0x000000000002acfc                MI_JPE_Wrapper_QueryBufSize
+                0x000000000002ad10                MI_JPE_Wrapper_CheckInstanceStatus
+                0x000000000002b35c                _DrvJpeCtxGetAlignSize
+                0x000000000002b4c0                DrvJpeCtxUpdateBspRingReadPtr
+                0x000000000002b5f4                DrvJpeCtxGetCurrEncTask
+                0x000000000002b642                DrvJpeCtxStreamOn
+                0x000000000002b728                DrvJpeCtxAcquire
+                0x000000000002b7f4                DrvJpeCtxRelease
+                0x000000000002b884                DrvJpeCtxQueryInternalBufferSize
+                0x000000000002b8c6                DrvJpeCtxReset
+                0x000000000002b964                DrvJpeCtxEncodeFrame
+                0x000000000002baf0                DrvJpeCtxEncodeDone
+                0x000000000002bc68                DrvJpeCtxEncodeCancel
+                0x000000000002bcd4                DrvJpeCtxCheckInstanceStatus
+                0x000000000002bdf4                DrvJpeDevRegister
+                0x000000000002be24                DrvJpeDevUnregister
+                0x000000000002be5c                DrvJpeDevCreate
+                0x000000000002bf44                DrvJpeDevDestroy
+                0x000000000002bf9c                DrvJpeDevReset
+                0x000000000002c020                DrvJpeDevCheckTaskUsed
+                0x000000000002c052                DrvJpeDevPowerOn
+                0x000000000002c0a2                DrvJpeDevEncDone
+                0x000000000002c108                DrvJpeDevIsr
+                0x000000000002c17c                DrvJpeDevAddOutBuff
+                0x000000000002c234                DrvJpeDevEncCancel
+                0x000000000002c2b8                DrvJpeDevEncFire
+                0x000000000002c316                DrvJpeDevSetBank
+                0x000000000002c332                DrvJpeDevDebugDump
+                0x000000000002c6ea                DrvJpeMarkerInit
+                0x000000000002c754                DrvJpeMarkerRelease
+                0x000000000002c790                DrvJpeMarkerEncHeader
+                0x000000000002cc26                DrvJpeRcInit
+                0x000000000002cc60                DrvJpeRcSeqInit
+                0x000000000002ce50                DrvJpeRcPicInit
+                0x000000000002cf84                _DrvJpeRcStatic
+                0x000000000002cf9e                DrvJpeRcPicEnd
+                0x000000000002d060                DrvJpeRcUtilFinit
+                0x000000000002d066                DrvJpeRcUtilFloatAdd
+                0x000000000002d0aa                DrvJpeRcUtilFloatSub
+                0x000000000002d0ee                DrvJpeRcUtilFloatMul
+                0x000000000002d104                DrvJpeRcUtilFloatDiv
+                0x000000000002d130                DrvJpeRcUtilFloatLog2
+                0x000000000002d186                DrvJpeRcUtilFloatPower2
+                0x000000000002d264                DrvJpeRcUtilFloatInt
+                0x000000000002d296                DrvJpeRcUtilFloatMin
+                0x000000000002d2c4                DrvJpeRcUtilFloatMax
+                0x000000000002d2f4                DrvJpeRcUtilFloatMinMax
+                0x000000000002d9e8                _DrvJpeProcShowDevInfo
+                0x000000000002da28                _DrvJpeProcShowCtxInfo
+                0x000000000002db1c                DrvJpeGetBestClkRate
+                0x000000000002db3e                DrvJpeClkSetCycle
+                0x000000000002db8c                DrvJpeSetDefaultClkAttribute
+                0x000000000002dbc8                DrvJpeClkGetResourceMem
+                0x000000000002dbcc                DrvJpeClkGetResourceIrq
+                0x000000000002dbf8                DrvJpeClkEnableClock
+                0x000000000002dc2c                DrvJpeClkDeinit
+                0x000000000002dc66                DrvJpeSetSStarClkRate
+                0x000000000002dc8e                DrvJpeClkInit
+                0x000000000002dcec                MI_VENC_Wrapper_ShowJpeClock
+                0x000000000002dde4                MI_VENC_Wrapper_SetJpeClock
+                0x000000000002de38                HalJpeOpsParseToRegTable
+                0x000000000002e270                _HalJpeOpsDumpReg
+                0x000000000002e272                HalJpeOpsGetDumpRegValue
+                0x000000000002e3ba                HalJpeIosRelease
+                0x000000000002e3e0                HalJpeIosAcquire
+                0x000000000002e41c                _HalJpeIosClearIrq
+                0x000000000002e43a                HalJpeIosEncFire
+                0x000000000002ed78                HalJpeIosAddOutBuf
+                0x000000000002eddc                HalJpeIosAddBufTriggerHw
+                0x000000000002edfa                HalJpeIosDebugReadReg
+                0x000000000002ee00                HalJpeIosDebugDump
+                0x000000000002eef0                HalJpeIosIsr
+                0x000000000002f068                HalJpeIosResetHw
+                0x000000000002f076                HalJpeIosMaskIrq
+                0x000000000002f09a                HalJpeIosResetFrameIdx
+                0x000000000002f0b8                HalJpeIosForceCmdqIrq
+ .text          0x000000000002f0cc       0xb0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+                0x000000000002f0cc                DrvVencOfFindCompatibleNode
+                0x000000000002f0d0                DrvVencOfDeviceIsAvailable
+                0x000000000002f0d8                DrvVencOfFindProperty
+                0x000000000002f0dc                DrvVencMsysOfPropertyReadU32Index
+                0x000000000002f0e0                DrvVencCallUserModeHelper
+                0x000000000002f0e6                DrvVencCamClkGetHw
+                0x000000000002f0ea                DrvVencCamClkGetParentByIndex
+                0x000000000002f0f6                DrvVencCamOfIrqToResource
+                0x000000000002f0fa                DrvVencCamOfAddressToResource
+                0x000000000002f158                DrvVencCamIrqOfParseAndMap
+                0x000000000002f15c                venc_mod_init
+                0x000000000002f16c                venc_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000     0x6af5
+ *(.rodata)
+ .rodata        0x0000000000000000     0x6a94 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+                0x0000000000005e58                level_bw_table
+ .rodata        0x0000000000006a94       0x61 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.rodata.cst4    0x0000000000000000      0x2a8
+ .rodata.cst4   0x0000000000000000      0x2a4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .rodata.cst4   0x00000000000002a4        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.rodata.str1.1  0x0000000000000000     0xe17a
+ .rodata.str1.1
+                0x0000000000000000     0xe161 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .rodata.str1.1
+                0x000000000000e161       0x19 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+__ksymtab_strings
+                0x0000000000000000       0x10
+ __ksymtab_strings
+                0x0000000000000000       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.modinfo        0x0000000000000000       0x84
+ .modinfo       0x0000000000000000       0x84 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+___ksymtab+g_stVencUserCb
+                0x0000000000000000        0xc
+ ___ksymtab+g_stVencUserCb
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000      0x348
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000      0x330 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .ARM.extab     0x0000000000000330       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.exidx      0x0000000000000000     0x2160
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000     0x2100 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .ARM.exidx     0x0000000000002100       0x60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0xb6c
+ *(.data)
+ .data          0x0000000000000000      0xb6c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+                0x00000000000002b8                venc_debug_level
+                0x00000000000002bc                g_stMiVencModParam
+                0x00000000000006fc                g_u32VenLogLevel
+                0x0000000000000700                g_s32VencHandshakeEnable
+                0x0000000000000704                g_u16BwLv
+                0x0000000000000708                g_u32ScdnMode
+                0x000000000000070c                g_u16MaxFrameSizeRatio
+                0x000000000000070e                g_u16VenMiuPChn
+                0x00000000000009a8                g_s32TimeOutIrqEnable
+                0x00000000000009ac                g_u8QnsTable
+ .data          0x0000000000000b6c        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x380
+ *(.bss)
+ .bss           0x0000000000000000      0x380 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+                0x0000000000000004                venc_debug_file
+                0x0000000000000104                venc_debug_func
+                0x0000000000000210                g_stModRes
+                0x0000000000000258                g_stVencUserCb
+                0x0000000000000268                g_u64Remainder
+                0x0000000000000270                g_s32VenMemProbeAllcCnt
+                0x0000000000000274                g_s32VenMemAllcReleaseCnt
+                0x0000000000000278                g_u32CustAvcSps
+                0x000000000000027c                g_u16FullRangRoiQpMap
+                0x00000000000002d4                stDrvVencRamlog
+                0x0000000000000308                g_u32RcLogCtx
+                0x000000000000030c                g_u32RcLogLevel
+                0x0000000000000310                rc_log_ctrl
+                0x0000000000000358                g_s32HwFrameCycleEnable
+ .bss           0x0000000000000380        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x6e8
+ *(.comment)
+ .comment       0x0000000000000000      0x6c6 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .comment       0x00000000000006c6       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .ARM.attributes
+                0x0000000000000031       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x680
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x650 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_aranges
+                0x0000000000000650       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000   0x13a0b7
+ *(.debug_info)
+ .debug_info    0x0000000000000000   0x1308ef /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_info    0x00000000001308ef     0x97c8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_abbrev   0x0000000000000000     0xb7ec
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0xb144 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_abbrev  0x000000000000b144      0x6a8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_line     0x0000000000000000    0x3ee3e
+ *(.debug_line)
+ .debug_line    0x0000000000000000    0x3e32f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_line    0x000000000003e32f      0xb0f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_frame    0x0000000000000000     0x9cc0
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x9b9c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_frame   0x0000000000009b9c      0x124 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_str      0x0000000000000000   0x103aee
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0xfd0e9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_str     0x00000000000fd0e9     0x6a05 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_loc      0x0000000000000000    0x4832c
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000    0x47f0a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_loc     0x0000000000047f0a      0x422 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000     0x1f00
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000     0x1ee0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/../../obj/uclibc/9.1.0/venc.o
+ .debug_ranges  0x0000000000001ee0       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/venc_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/venc/mi_venc.o elf32-littlearm)

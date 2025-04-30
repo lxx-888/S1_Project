@@ -1,0 +1,10 @@
+config VERIFY_CARDV_UI
+    bool "cardv_ui"
+    default n
+    help
+        whether to compile or not
+
+config verify_cardv_ui
+    string
+    default enable if VERIFY_CARDV_UI
+    default disable if !VERIFY_CARDV_UI

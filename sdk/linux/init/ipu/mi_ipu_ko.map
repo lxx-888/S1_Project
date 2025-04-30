@@ -1,0 +1,560 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x6ab4
+ *(.text .stub)
+ .text          0x0000000000000000     0x69e8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+                0x0000000000000180                MI_DEVICE_WrapperFunction_ipu
+                0x000000000000019c                IS_PRINT_MATCH_ipu
+                0x0000000000000200                MI_DEVICE_Instance_ipu
+                0x0000000000000208                MI_DEVICE_GetSelfDir_ipu
+                0x0000000000000214                AddUTIoctlTable
+                0x0000000000000216                ipu__module_init
+                0x00000000000002e0                ipu__module_exit
+                0x0000000000001950                MI_IPU_IMPL_DeviceLock
+                0x000000000000196c                MI_IPU_IMPL_DeviceUnlock
+                0x0000000000001984                MI_IPU_IMPL_DeviceAliveStatus
+                0x0000000000001994                MI_IPU_IMPL_GetChannelId
+                0x00000000000019e4                MI_IPU_IMPL_PutChannelId
+                0x0000000000001a44                MI_IPU_IMPL_GetFwInfo
+                0x0000000000001a58                MI_IPU_IMPL_SetFwInfo
+                0x0000000000001a6c                MI_IPU_IMPL_CreateDev
+                0x0000000000001b6c                MI_IPU_IMPL_DestroyDev
+                0x0000000000001c24                MI_IPU_IMPL_ResetDev
+                0x0000000000001ca8                MI_IPU_IMPL_RecoverDevStat
+                0x0000000000001d2c                MI_IPU_IMPL_CheckImgEfuse
+                0x0000000000001d30                MI_IPU_IMPL_SyncInterProcessRes
+                0x0000000000001d4c                MI_IPU_IMPL_CreateCHN
+                0x0000000000001ee0                MI_IPU_IMPL_DestroyCHN
+                0x0000000000001fe0                MI_IPU_IMPL_Invoke
+                0x000000000000216c                MI_IPU_IMPL_SetLibVer
+                0x0000000000002180                MI_IPU_IMPL_CancelInvoke
+                0x00000000000021a8                MI_IPU_Invoke_ByKernel
+                0x0000000000002480                MI_IPU_TrackThreadInit
+                0x00000000000024e8                MI_IPU_TrackThreadExit
+                0x00000000000025b8                MI_IPU_Init
+                0x00000000000026f4                MI_IPU_Deinit
+                0x0000000000002820                MI_IPU_CCIF_dev_init
+                0x0000000000002848                MI_IPU_CCIF_dev_deinit
+                0x0000000000003408                hal_swdisp_isr_handle
+                0x0000000000003450                Swdisp_Pa2Va
+                0x00000000000034fc                MI_IPU_Init_GlobalVar
+                0x0000000000003594                MI_IPU_Deinit_GlobalVar
+                0x0000000000003604                MI_IPU_DevInUse_Lock
+                0x0000000000003614                MI_IPU_DevInUse_Unlock
+                0x0000000000003624                MI_IPU_Mapping_Riu_ChipTop_IPU_Space
+                0x000000000000369c                MI_IPU_Unmap_ChipTop_IPU_Space
+                0x00000000000036c4                MI_IPU_Shutdown_SysTop
+                0x00000000000036d4                MI_IPU_SaveDevPower
+                0x0000000000003744                MI_IPU_RestoreDevPower
+                0x0000000000003824                MI_IPU_Update_IpuLog_Param
+                0x000000000000383c                MI_IPU_Update_SerialMode
+                0x0000000000003850                _MI_IPU_Memset_DTCM
+                0x000000000000388c                MI_IPU_Create_Dev
+                0x00000000000039c0                MI_IPU_Destroy_Dev
+                0x0000000000003abc                MI_IPU_Suspend_Dev
+                0x0000000000003ad8                MI_IPU_Resume_Dev
+                0x0000000000003af4                MI_IPU_Track_SuspendQueue_Process
+                0x0000000000003b38                MI_IPU_Reset_Dev
+                0x0000000000003bac                MI_IPU_Recover_DevStat
+                0x0000000000003bd0                MI_IPU_PostTask
+                0x0000000000004888                MI_IPU_CancelTask
+                0x0000000000004910                MI_IPU_Get_Util
+                0x0000000000004924                MI_IPU_Invoke_Done
+                0x0000000000004a40                invoke_done_notify_cpu
+                0x0000000000004aa8                hal_ipudone_to_riscv_isr
+                0x0000000000004af8                MI_IPU_CancelTaskDone
+                0x0000000000004b5c                MI_IPU_WakeUp_Pending_Task
+                0x0000000000004cf4                get_core_mask_of_queue
+                0x0000000000004d0e                update_core_stat_of_queue
+                0x0000000000004d62                enqueue_task_pure
+                0x0000000000004d88                dequeue_task_pure
+                0x0000000000004dae                enqueue_task
+                0x0000000000004de8                dequeue_task
+                0x0000000000004e28                wake_up_next_task
+                0x0000000000004ef8                wake_up_first_task
+                0x0000000000004f70                wake_up_task
+                0x0000000000004fc8                give_up_task
+                0x000000000000500e                MI_IPU_Calc_Task_Weight
+                0x0000000000005010                recover_core_stat_of_queue
+                0x000000000000503e                suspend_task_queue
+                0x0000000000005080                resume_task_queue
+                0x00000000000050ca                update_task_queue
+                0x0000000000005122                check_core_stat_of_queue
+                0x000000000000515a                cancel_task
+                0x000000000000522c                swdisp_io_remap
+                0x0000000000005230                sgs_swdisp_initOfflineInfo
+                0x0000000000005244                sgs_swdisp_dispatchCallbackOffline
+                0x0000000000005298                sgs_swdisp_deinitOfflineInfo
+                0x00000000000052b0                Get_SR256_Value
+                0x00000000000052d6                Set_SR256_Value
+                0x00000000000052fc                sgs_swdisp_RoiPooling_param
+                0x00000000000058f0                sgs_swdisp_PsRoiPooling_param
+                0x0000000000005c94                Hal_Ipu_CtrlInit
+                0x0000000000005cfc                Hal_Ipu_ClearSwdispIrq
+                0x0000000000005d18                Hal_Ipu_GetSwdispIrqStatus
+                0x0000000000005d30                Hal_Ipu_UnmaskSwdispIrq
+                0x0000000000005d4c                Hal_Ipu_MaskSwdispIrq
+                0x0000000000005d68                Hal_Ipu_GetSwdispTask
+                0x0000000000005d88                Hal_Ipu_Trigger
+                0x0000000000005dec                Hal_Ipu_GetIpuDoneIrqStat
+                0x0000000000005e04                Hal_Ipu_ClearIpuDoneIrq
+                0x0000000000005e1c                Hal_Ipu_UnmaskIpuDoneIrq
+                0x0000000000005e34                Hal_Ipu_GetEndTaskIrqStat
+                0x0000000000005e4c                Hal_Ipu_TriggerEndTask
+                0x0000000000005e6c                Hal_Ipu_FinishEndTask
+                0x0000000000005e84                Hal_Ipu_UnmaskEndTaskIrq
+                0x0000000000005e9c                Hal_Ipu_GetIpuDoneCycle
+                0x0000000000005eb4                Hal_Ipu_EnabePipoArb
+                0x0000000000005ee2                Hal_Ipu_DmaParaInit
+                0x0000000000005f7c                Hal_Ipu_DmaStatisticsEnable
+                0x0000000000005fac                Hal_Ipu_DmaStatisticsReset
+                0x0000000000005fd4                Hal_Ipu_DmaGetMemStatisticsInBytes
+                0x0000000000005fd8                Hal_Ipu_L3DmaGetMemStatisticsInBytes
+                0x0000000000005fda                Hal_Ipu_DmaSetMmucfg
+                0x0000000000006010                Hal_Ipu_MonitorBusClkInit
+                0x0000000000006030                Hal_Ipu_DmaGetEmiStatisticsByMonitorBus
+                0x0000000000006060                Hal_Ipu_SrWriteEnable
+                0x000000000000607c                Hal_Ipu_SrWriteDisable
+                0x0000000000006098                Hal_Ipu_TimerStart
+                0x00000000000060d0                Hal_Ipu_LogStart
+                0x0000000000006134                Hal_Ipu_GetLogBufferFullStatus
+                0x000000000000614c                Hal_Ipu_LogStop
+                0x00000000000062a6                Hal_Ipu_GetDevInstance
+                0x00000000000062b4                Hal_Ipu_TimerInit
+                0x00000000000062c2                Hal_Ipu_WorkModeInit
+                0x00000000000062f0                Hal_Ipu_Get_Br
+                0x000000000000630c                Hal_Ipu_SetIO
+                0x0000000000006388                Hal_Ipu_PowerOn
+                0x000000000000642c                Hal_Ipu_MaskDlaIrq
+                0x0000000000006438                Hal_Ipu_ConfigIrq
+                0x0000000000006468                Hal_Ipu_ChipTopReleaseDla
+                0x0000000000006478                Hal_Ipu_DisableIsoEn
+                0x000000000000648c                Hal_Ipu_ChipTopPowerOn
+                0x00000000000064c4                Hal_Ipu_PowerOnByCore
+                0x00000000000064e0                Hal_Ipu_DisableIpu
+                0x00000000000064e2                Hal_Ipu_PowerOffByCore
+                0x00000000000064e6                Hal_Ipu_ChipTopPowerOff
+                0x0000000000006506                Hal_Ipu_MtcmosPowerOff
+                0x000000000000659c                Hal_Ipu_MtcmosPowerOn
+                0x0000000000006650                Hal_Ipu_TopClockOn
+                0x000000000000666e                Hal_Ipu_TopClockOff
+                0x000000000000668c                Hal_Ipu_Memcpy_toio
+                0x00000000000066c2                Hal_Ipu_Memcpy_fromio
+                0x0000000000006700                Hal_Ipu_SrSetValue
+                0x00000000000067c4                Hal_Ipu_SrGetValue
+                0x000000000000688c                Hal_Ipu_CmodelSetMmuEmiAddr
+                0x00000000000068c0                Hal_Ipu_DevInit
+                0x0000000000006940                Hal_Ipu_ScalingFreq
+                0x0000000000006994                Hal_Ipu_ChipTopPowerOnPrivate
+                0x00000000000069a4                Hal_Ipu_PowerOnPll
+                0x00000000000069b0                Hal_Ipu_PowerOffPll
+                0x00000000000069bc                Hal_Ipu_ClearL2Mem
+                0x00000000000069d0                Hal_Ipu_ClearBiasMem
+                0x00000000000069e4                MI_IPU_CheckIpuTimeout
+                0x00000000000069e6                MI_IPU_ShowIpuStatus
+ .text          0x00000000000069e8       0xcc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+                0x00000000000069e8                MI_IPU_Scaling_Freq
+                0x00000000000069f4                MI_IPU_ParseIrq
+                0x0000000000006a48                MI_IPU_GetPllClk
+                0x0000000000006a80                MI_IPU_LinuxInit
+                0x0000000000006a90                MI_IPU_Iounmap_Wrapper
+                0x0000000000006a94                ipu_mod_init
+                0x0000000000006aa4                ipu_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0x69
+ *(.rodata)
+ .rodata        0x0000000000000000       0x14 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .rodata        0x0000000000000014       0x55 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.rodata.str1.1  0x0000000000000000     0x16d0
+ .rodata.str1.1
+                0x0000000000000000     0x1685 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .rodata.str1.1
+                0x0000000000001685       0x4b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.rodata.cst4    0x0000000000000000       0x84
+ .rodata.cst4   0x0000000000000000       0x84 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+
+__ksymtab_strings
+                0x0000000000000000       0x2d
+ __ksymtab_strings
+                0x0000000000000000       0x2d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.modinfo        0x0000000000000000       0xb0
+ .modinfo       0x0000000000000000       0xb0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+___ksymtab+MI_IPU_Invoke_ByKernel
+                0x0000000000000000        0xc
+ ___ksymtab+MI_IPU_Invoke_ByKernel
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+___ksymtab+MI_IPU_Scaling_Freq
+                0x0000000000000000        0xc
+ ___ksymtab+MI_IPU_Scaling_Freq
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+__param         0x0000000000000000       0x64
+ __param        0x0000000000000000       0x64 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0xc0
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0xc0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .ARM.extab     0x00000000000000c0        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.exidx      0x0000000000000000      0x908
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x8d0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .ARM.exidx     0x00000000000008d0       0x38 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x100
+ *(.data)
+ .data          0x0000000000000000      0x100 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+                0x00000000000000c8                ipu_debug_level
+                0x00000000000000fc                _gpstDev
+ .data          0x0000000000000100        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000     0x13c8
+ *(.bss)
+ .bss           0x0000000000000000     0x13c4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+                0x0000000000000000                ipu_debug_file
+                0x0000000000000100                ipu_debug_func
+                0x0000000000000758                freqExpe
+                0x000000000000075c                perfMonitor
+ .bss           0x00000000000013c4        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x2a8
+ *(.comment)
+ .comment       0x0000000000000000      0x286 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .comment       0x0000000000000286       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .ARM.attributes
+                0x0000000000000031       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x280
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x250 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_aranges
+                0x0000000000000250       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x8a147
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x80827 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_info    0x0000000000080827     0x9920 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_abbrev   0x0000000000000000     0x4230
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x3b38 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_abbrev  0x0000000000003b38      0x6f8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_line     0x0000000000000000     0xb70d
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0xab73 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_line    0x000000000000ab73      0xb9a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_frame    0x0000000000000000     0x22f8
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x2234 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_frame   0x0000000000002234       0xc4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_str      0x0000000000000000    0x69bc1
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x6324f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_str     0x000000000006324f     0x6972 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_loc      0x0000000000000000     0xc601
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0xc3e4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_loc     0x000000000000c3e4      0x21d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x220
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x200 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/../../obj/uclibc/9.1.0/ipu.o
+ .debug_ranges  0x0000000000000200       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/ipu_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ipu/mi_ipu.o elf32-littlearm)

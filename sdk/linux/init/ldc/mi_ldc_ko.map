@@ -1,0 +1,580 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x997c
+ *(.text .stub)
+ .text          0x0000000000000000     0x9750 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+                0x00000000000004d0                MI_DEVICE_WrapperFunction_ldc
+                0x00000000000004e8                IS_PRINT_MATCH_ldc
+                0x0000000000000550                MI_DEVICE_Instance_ldc
+                0x0000000000000558                MI_DEVICE_GetSelfDir_ldc
+                0x0000000000000564                AddUTIoctlTable
+                0x0000000000000566                ldc__module_init
+                0x0000000000000630                ldc__module_exit
+                0x0000000000000c80                DRV_LDC_InitKernelModule
+                0x0000000000000c82                DRV_LDC_DeInitKernelModule
+                0x0000000000000c84                DRV_LDC_CreateDevice
+                0x0000000000000d34                DRV_LDC_DestroyDevice
+                0x0000000000000d88                DRV_LDC_GetDevConfig
+                0x0000000000000e4c                DRV_LDC_GetDevCapability
+                0x0000000000000eac                DRV_LDC_CreateInstance
+                0x0000000000000f34                DRV_LDC_DestroyInstance
+                0x0000000000000f78                DRV_LDC_SetFrmAttr
+                0x0000000000001158                DRV_LDC_SetWDmaAttr
+                0x0000000000001270                DRV_LDC_Trigger
+                0x00000000000013b8                DRV_LDC_LdcWaitEvent
+                0x0000000000001454                DRV_LDC_IsrProc
+                0x000000000000145e                DRV_LDC_Reset
+                0x0000000000001480                DRV_LDC_EnableClock
+                0x00000000000014d8                DRV_LDC_DisableClock
+                0x00000000000018f2                HalLdcResetModule
+                0x000000000000194c                HalLdcInitModule
+                0x0000000000001a44                HalLdcUnInitModule
+                0x0000000000001a6c                _HalLdcSetFrameAttr
+                0x0000000000001f58                HalLdcSetFrameAttr
+                0x0000000000001fbc                HalLdcSetWdmaAttr
+                0x0000000000002140                HalLdcTrigDeWrap
+                0x00000000000021f4                HalLdcGetCurExecInstId
+                0x0000000000002200                HalLdcIsr
+                0x0000000000002254                HalLdcGetCycle
+                0x0000000000002264                DRV_LDC_GetDeviceClkNode
+                0x0000000000002270                DRV_LDC_InitClk
+                0x0000000000002340                DRV_LDC_DeInitClk
+                0x00000000000023b4                MI_LDC_COMMON_GetLdcModRes
+                0x00000000000023bc                MI_LDC_COMMON_GetLdcDevInfo
+                0x0000000000002434                MI_LDC_COMMON_GetLdcChnCnt
+                0x0000000000002488                MI_LDC_COMMON_GetLdcChnInfo
+                0x00000000000024dc                MI_LDC_COMMON_ChannelWriteLock
+                0x0000000000002564                MI_LDC_COMMON_ChannelWriteUnlock
+                0x00000000000025e0                MI_LDC_COMMON_ChannelReadLock
+                0x0000000000002644                MI_LDC_COMMON_ChannelReadUnlock
+                0x0000000000002698                MI_LDC_COMMON_ChannelLockOperate
+                0x00000000000026e0                MI_LDC_COMMON_GetLdcAttachedChn
+                0x00000000000027f0                MI_LDC_COMMON_TraceTime
+                0x0000000000002844                MI_LDC_COMMON_TimeDiff
+                0x0000000000002862                MI_LDC_COMMON_GetFileSize
+                0x00000000000028b4                MI_LDC_COMMON_ReadFile
+                0x0000000000002968                MI_LDC_COMMON_WriteFile
+                0x0000000000002a38                MI_LDC_COMMON_Memcpy
+                0x0000000000002a6c                MI_LDC_COMMON_InitMmaMgmt
+                0x0000000000002a84                MI_LDC_COMMON_DeInitMmaMgmt
+                0x0000000000002a8c                MI_LDC_COMMON_FreeMmaNodeFromList
+                0x0000000000002b10                MI_LDC_COMMON_AddMmaNodeToList
+                0x0000000000002b78                MI_LDC_COMMON_FlushCache
+                0x0000000000002bb8                MI_LDC_COMMON_MmaFree
+                0x0000000000002c60                MI_LDC_COMMON_CheckAndFreeAllMmaNode
+                0x0000000000002d58                MI_LDC_COMMON_MemFree
+                0x0000000000002dae                MI_LDC_COMMON_MmaAlloc
+                0x0000000000002ef4                MI_LDC_COMMON_MemAlloc
+                0x0000000000002f24                MI_LDC_COMMON_Vmap
+                0x0000000000002f44                MI_LDC_COMMON_UnVmap
+                0x0000000000002f78                MI_LDC_COMMON_FuncNotSupport
+                0x0000000000002f9c                MI_LDC_DEBUG_PassWriteInTaskFile
+                0x000000000000313c                MI_LDC_DEBUG_PassWriteOutTaskFile
+                0x00000000000032e8                MI_LDC_DEBUG_PassGetBufCnt
+                0x0000000000003884                MI_LDC_DIS_WaitTaskDone
+                0x0000000000003938                MI_LDC_DIS_InitHwRes
+                0x0000000000003964                MI_LDC_DIS_DeInitHwRes
+                0x0000000000003990                MI_LDC_DIS_CheckHwDone
+                0x00000000000039c4                MI_LDC_DIS_CheckAlgoDone
+                0x0000000000003a34                MI_LDC_DIS_SetHwProcessParam
+                0x0000000000003a60                MI_LDC_DIS_TriggerHw
+                0x0000000000003a8c                MI_LDC_DIS_GetHwExpInfo
+                0x0000000000003ab8                MI_LDC_DIS_ResetHw
+                0x0000000000003ae4                MI_LDC_DIS_DumpDebugFile
+                0x0000000000003b1c                MI_LDC_DIS_SetAlgoInitParam
+                0x0000000000003b48                MI_LDC_DIS_SetTSMRes
+                0x0000000000003b6a                MI_LDC_DIS_Init
+                0x0000000000003ca0                MI_LDC_DIS_DeInit
+                0x0000000000003d48                MI_LDC_DIS_Process
+                0x0000000000003e30                MI_LDC_DIS_InitDbgOps
+                0x0000000000004478                MI_LDC_DRV_RgnAddRect
+                0x00000000000044b4                MI_LDC_DRV_FillBufNotReady
+                0x0000000000004554                MI_LDC_DRV_InBufClearPadding
+                0x00000000000045d0                MI_LDC_DRV_OutBufClearPadding
+                0x000000000000466c                MI_LDC_DRV_LDCParseTile
+                0x0000000000004964                MI_LDC_DRV_BinId2FrameId
+                0x0000000000004a62                MI_LDC_DRV_LdcProcess
+                0x0000000000004c04                MI_LDC_DRV_LdcIsr
+                0x000000000000544c                MI_LDC_IMPL_DoLutDirectTask
+                0x0000000000005468                MI_LDC_IMPL_SetBatchCfg
+                0x00000000000058d4                MI_LDC_IMPL_StartChannel
+                0x00000000000058d6                MI_LDC_IMPL_AttachToChn
+                0x00000000000058f0                MI_LDC_IMPL_StopChannel
+                0x00000000000058f4                MI_LDC_IMPL_DetachFromChn
+                0x0000000000005910                MI_LDC_IMPL_GetOutputPortAttr
+                0x00000000000059e0                MI_LDC_IMPL_SetOutputPortAttr
+                0x0000000000005ac0                MI_LDC_IMPL_GetInputPortAttr
+                0x0000000000005b88                MI_LDC_IMPL_SetInputPortAttr
+                0x0000000000005c3c                MI_LDC_IMPL_UnbindAllInputport
+                0x0000000000005d0c                MI_LDC_IMPL_CreateDevice
+                0x0000000000005e74                MI_LDC_IMPL_DestroyDevice
+                0x0000000000005fd4                MI_LDC_IMPL_QueryChannelShareData
+                0x0000000000006048                MI_LDC_IMPL_CreateChannel
+                0x0000000000006384                MI_LDC_IMPL_DestroyChannel
+                0x0000000000006584                MI_LDC_IMPL_Init
+                0x0000000000006610                MI_LDC_IMPL_DeInit
+                0x00000000000066c0                MI_LDC_IMPL_DoneDisEvent
+                0x0000000000006760                MI_LDC_IMPL_WaitDisEvent
+                0x0000000000006876                MI_LDC_IMPL_MmaAlloc
+                0x00000000000068f4                MI_LDC_IMPL_MmaFree
+                0x0000000000006960                MI_LDC_IMPL_DrvInsmod
+                0x000000000000698c                MI_LDC_IMPL_DrvRmmod
+                0x00000000000069b8                MI_LDC_IMPL_Insmod
+                0x0000000000006a78                MI_LDC_IMPL_Rmmod
+                0x0000000000006bd8                MI_LDC_MODPARAM_ModparamInit
+                0x0000000000006be2                MI_LDC_MODPARAM_ModparamDeinit
+                0x0000000000006c22                MI_LDC_PASS_Skip
+                0x00000000000085a4                MI_LDC_PASS_DealWithOuputPortSideBandMsg
+                0x0000000000008bc8                MI_LDC_PASS_ModuleonGetInterBindInputPortPassId
+                0x0000000000008c6c                MI_LDC_PASS_ModuleonGetInterBindOutputPortPassId
+                0x0000000000009230                MI_LDC_RES_ViewResInit
+                0x000000000000924a                MI_LDC_RES_ViewResDeinit
+                0x00000000000092cc                MI_LDC_RES_GetViewResNum
+                0x00000000000092ec                MI_LDC_RES_AddViewRes
+                0x0000000000009374                MI_LDC_RES_GetSuitableViewRes
+                0x00000000000094a0                MI_LDC_RES_CopySuitableViewRes
+                0x00000000000096e0                MI_LDC_RES_PutViewRes
+                0x0000000000009714                MI_LDC_RES_ReleaseViewRes
+ .text          0x0000000000009750       0xd8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+                0x0000000000009750                DRV_LDC_OfFindCompatibleNode
+                0x00000000000097a0                DRV_LDC_DeviceGetResourceIrq
+                0x0000000000009808                ldc_mod_init
+                0x0000000000009818                ldc_mod_exit
+ .text          0x0000000000009828       0xa4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+                0x0000000000009828                DRV_DIS_INIT_OfFindCompatibleNode
+                0x0000000000009878                DRV_DIS_INIT_GetResourceIrq
+ .text          0x00000000000098cc       0xb0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+                0x00000000000098cc                DRV_Multiband_OfFindCompatibleNode
+                0x000000000000991c                DRV_Multiband_DeviceGetResourceIrq
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0x4c
+ *(.rodata)
+ .rodata        0x0000000000000000        0x9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ *fill*         0x0000000000000009        0x3 
+ .rodata        0x000000000000000c       0x40 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.rodata.cst4    0x0000000000000000       0xb4
+ .rodata.cst4   0x0000000000000000       0x9c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .rodata.cst4   0x000000000000009c        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .rodata.cst4   0x00000000000000a4        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .rodata.cst4   0x00000000000000ac        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.rodata.str1.1  0x0000000000000000     0x2700
+ .rodata.str1.1
+                0x0000000000000000     0x26bd /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ *fill*         0x00000000000026bd        0x1 
+ .rodata.str1.1
+                0x00000000000026be       0x16 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .rodata.str1.1
+                0x00000000000026d4       0x16 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .rodata.str1.1
+                0x00000000000026ea       0x16 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.modinfo        0x0000000000000000       0x81
+ .modinfo       0x0000000000000000       0x81 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0xb4
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0xb4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .ARM.extab     0x00000000000000b4        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .ARM.extab     0x00000000000000b4        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .ARM.extab     0x00000000000000b4        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.ARM.exidx      0x0000000000000000      0x9d8
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x998 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .ARM.exidx     0x0000000000000998       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .ARM.exidx     0x00000000000009b8       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .ARM.exidx     0x00000000000009c8       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x3f8
+ *(.data)
+ .data          0x0000000000000000      0x3f8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+                0x00000000000000e0                ldc_debug_level
+                0x00000000000000e8                g_mStLdcClkOptionTbl
+                0x0000000000000110                g_stModParam
+                0x0000000000000158                g_astDevPassOps
+ .data          0x00000000000003f8        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .data          0x00000000000003f8        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .data          0x00000000000003f8        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0xdcc
+ *(.bss)
+ .bss           0x0000000000000000      0xdcc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+                0x0000000000000004                ldc_debug_file
+                0x0000000000000104                ldc_debug_func
+                0x0000000000000204                g_u32LdcReTriggerCount
+                0x0000000000000c04                gp_LdcDeviceHandle
+                0x0000000000000ccc                g_stLdcDbgRes
+                0x0000000000000cd8                g_stLdcModRes
+ .bss           0x0000000000000dcc        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .bss           0x0000000000000dcc        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .bss           0x0000000000000dcc        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x220
+ *(.comment)
+ .comment       0x0000000000000000      0x1ba /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .comment       0x00000000000001ba       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .comment       0x00000000000001dc       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .comment       0x00000000000001fe       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .ARM.attributes
+                0x0000000000000031       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .ARM.attributes
+                0x0000000000000060       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .ARM.attributes
+                0x000000000000008f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x208
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x198 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_aranges
+                0x0000000000000198       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_aranges
+                0x00000000000001c8       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_aranges
+                0x00000000000001e8       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x80b4a
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x6202c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_info    0x000000000006202c     0x9176 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_info    0x000000000006b1a2     0x8a06 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_info    0x0000000000073ba8     0xcfa2 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_abbrev   0x0000000000000000     0x51c5
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x3f83 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_abbrev  0x0000000000003f83      0x665 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_abbrev  0x00000000000045e8      0x5c6 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_abbrev  0x0000000000004bae      0x617 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_line     0x0000000000000000    0x1126f
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0xf2d0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_line    0x000000000000f2d0      0xa6c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_line    0x000000000000fd3c      0x98b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_line    0x00000000000106c7      0xba8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_frame    0x0000000000000000     0x2d40
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x2bec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_frame   0x0000000000002bec       0x9c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_frame   0x0000000000002c88       0x5c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_frame   0x0000000000002ce4       0x5c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_str      0x0000000000000000    0x6e413
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x5abea /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_str     0x000000000005abea     0x6488 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_str     0x0000000000061072     0x57b3 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_str     0x0000000000066825     0x7bee /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_loc      0x0000000000000000    0x14284
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000    0x13f0e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_loc     0x0000000000013f0e      0x145 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+ .debug_loc     0x0000000000014053      0x101 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/dis/dis_init.o
+ .debug_loc     0x0000000000014154      0x130 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/multiband/multiband_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x610
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x5f0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/../../obj/uclibc/9.1.0/ldc.o
+ .debug_ranges  0x00000000000005f0       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/ldc/ldc_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ldc/mi_ldc.o elf32-littlearm)

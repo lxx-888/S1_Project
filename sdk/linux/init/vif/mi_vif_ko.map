@@ -1,0 +1,915 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0xdd94
+ *(.text .stub)
+ .text          0x0000000000000000     0xdb24 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+                0x0000000000000000                MI_VIF_IOCTL_CreateDevGroup
+                0x0000000000000070                MI_VIF_IOCTL_DestroyDevGroup
+                0x00000000000000e8                MI_VIF_IOCTL_GetDevGroupAttr
+                0x0000000000000110                MI_VIF_IOCTL_SetDevGroupAttr
+                0x0000000000000138                MI_VIF_IOCTL_CallBackTaskRegister
+                0x0000000000000190                MI_VIF_IOCTL_CallBackTaskUnRegister
+                0x00000000000005c4                MI_DEVICE_WrapperFunction_vif
+                0x00000000000005dc                IS_PRINT_MATCH_vif
+                0x0000000000000644                MI_DEVICE_Instance_vif
+                0x000000000000064c                MI_DEVICE_GetSelfDir_vif
+                0x0000000000000658                AddUTIoctlTable
+                0x000000000000065a                vif__module_init
+                0x0000000000000724                vif__module_exit
+                0x000000000000091a                MI_VIF_DEBUG_GetWdmaInt
+                0x0000000000000954                mi_vif_InputMaskRealtime
+                0x0000000000000958                DRV_VIF_GetSensorFrmCnt64
+                0x0000000000000cda                MI_VIF_PASS_OnBindInputPort
+                0x0000000000000cde                MI_VIF_PASS_OnUnBindInputPort
+                0x0000000000000ce2                _MI_VIF_IMPL_SensorResume
+                0x0000000000000e40                MI_VIF_PASS_OnGetOutputPortBindCapability
+                0x0000000000000e6a                MI_VIF_IMPL_HwTimerHandler
+                0x0000000000000f0c                MI_VIF_TRANS_PixelToString
+                0x00000000000010dc                MI_VIF_DEBUG_SetClk
+                0x0000000000001118                MI_VIF_DEBUG_GetClk
+                0x0000000000001144                MI_VIF_DEBUG_GetClkRateByIdx
+                0x000000000000114c                MI_VIF_DEBUG_GetClkDfs
+                0x0000000000001156                MI_VIF_DEBUG_GetInts
+                0x00000000000011f8                MI_VIF_DEBUG_GetInfo
+                0x0000000000001270                mi_vif_InputMask
+                0x0000000000001286                mi_vif_GetInputMask
+                0x0000000000001300                MI_VIF_DRVCFG_PortStatQuery
+                0x0000000000001330                MI_VIF_DRVCFG_PatGen
+                0x00000000000013e4                MI_VIF_DRVCFG_DataGen
+                0x00000000000013f2                mi_vif_KeepUserSensorShutterGain
+                0x0000000000001434                mi_vif_GetUserSensorShutterGain
+                0x000000000000146c                mi_vif_GetRealtimeWorkCh
+                0x0000000000001b28                MI_VIF_IMPL_LockDev
+                0x0000000000001bc0                MI_VIF_IMPL_UnLockDev
+                0x00000000000021e0                MI_VIF_CHECK_IsYuv422
+                0x0000000000002268                MI_VIF_CHECK_IsBayer
+                0x0000000000002274                MI_VIF_CHECK_NeedCrop
+                0x000000000000228e                MI_VIF_CHECK_DevIdVaild
+                0x000000000000229c                MI_VIF_CHECK_GroupCreateDevSupport
+                0x00000000000022d0                MI_VIF_CHECK_GroupAttr
+                0x0000000000002330                MI_VIF_CHECK_DestroyDevGroup
+                0x000000000000237c                MI_VIF_CHECK_EnableDev
+                0x00000000000023c8                MI_VIF_CHECK_DisableDev
+                0x0000000000002414                MI_VIF_CHECK_BufferListAvailable
+                0x00000000000024c8                MI_VIF_CHECK_AllPortbEn
+                0x0000000000002518                MI_VIF_CHECK_OutputBuffInfo
+                0x000000000000251c                MI_VIF_CHECK_CanUnmask
+                0x0000000000002594                MI_VIF_CHECK_ParamChange
+                0x0000000000002604                MI_VIF_CHECK_EnqueueInfo
+                0x000000000000265c                MI_VIF_CHECK_IsFrameMode
+                0x0000000000002682                MI_VIF_CHECK_RealtimeBindCheck
+                0x00000000000026f0                MI_VIF_PASS_OnBindOutputPort
+                0x00000000000027a4                MI_VIF_CHECK_AllDevSuspend
+                0x00000000000027e8                MI_VIF_DEBUG_GetDevDebugLevel
+                0x000000000000280c                MI_VIF_DEBUG_WriteFile
+                0x00000000000028b4                MI_VIF_DEBUG_DumpFrame
+                0x0000000000002b18                MI_VIF_DEBUG_LimitChangeRange
+                0x0000000000002b72                MI_VIF_DEBUG_ChangeBuf
+                0x0000000000002ce4                MI_VIF_DEBUG_GetBufCnt
+                0x0000000000002e30                MI_VIF_DEBUG_PrepareOutTaskMetaInfo
+                0x0000000000002e34                MI_VIF_DEBUG_CheckOutputTaskStatusDev
+                0x0000000000002eec                MI_VIF_DEBUG_API
+                0x0000000000002ff4                MI_VIF_DRVCFG_GetSensorStatus
+                0x0000000000003048                MI_VIF_DRVCFG_Init
+                0x000000000000304c                MI_VIF_DRVCFG_Deinit
+                0x0000000000003056                MI_VIF_DRVCFG_StreamOnOff
+                0x0000000000003190                MI_VIF_PASS_OnUnBindOutputPort
+                0x000000000000327c                _MI_VIF_IMPL_SkipFrame
+                0x00000000000032ec                MI_VIF_DRVCFG_GetStreamStatus
+                0x000000000000332c                MI_VIF_DRVCFG_PortEnable
+                0x00000000000033f4                MI_VIF_DRVCFG_PortDisable
+                0x00000000000034b4                MI_VIF_DRVCFG_PortCfg
+                0x00000000000035fc                MI_VIF_DRVCFG_QueueFrameBuffer
+                0x00000000000036e4                MI_VIF_DRVCFG_QueryFrameInfo
+                0x00000000000036e8                MI_VIF_DRVCFG_GroupSetConfig
+                0x000000000000378c                MI_VIF_DRVCFG_GroupEnable
+                0x00000000000037c8                MI_VIF_DRVCFG_GroupDisable
+                0x0000000000003808                MI_VIF_DRVCFG_DevEnable
+                0x0000000000003868                MI_VIF_DRVCFG_DevDisable
+                0x00000000000038b0                MI_VIF_DRVCFG_Suspend
+                0x0000000000003918                MI_VIF_PASS_OnSuspend
+                0x0000000000003a3c                MI_VIF_MODPARAM_ModuleCtlAttrPrint
+                0x0000000000003a3e                MI_VIF_MODPARAM_PortCtlAttrInit
+                0x0000000000003b28                MI_VIF_MODPARAM_DevCtlAttrInit
+                0x0000000000003c10                MI_VIF_MODPARAM_GroupCtlAttrInit
+                0x0000000000003cf8                MI_VIF_MODPARAM_ModuleCtlAttrInit
+                0x0000000000003db4                MI_VIF_MODPARAM_ModuleCtlInit
+                0x0000000000003df4                MI_VIF_MODPARAM_ModuleCtlDeInit
+                0x0000000000003e14                MI_VIF_MODPARAM_InitExtraCtlParam
+                0x0000000000003e40                MI_VIF_PASS_FifoFullForceDrop
+                0x0000000000003e94                MI_VIF_PASS_Lock
+                0x0000000000003f2c                MI_VIF_PASS_UnLock
+                0x0000000000003fc4                MI_VIF_PASS_OnPollingAsyncOutputTaskConfigDev
+                0x00000000000040b0                MI_VIF_PASS_OnPrepareAsyncOutputTaskMetaInfo
+                0x0000000000004174                MI_VIF_PASS_BarrierOutputTaskDev
+                0x00000000000041c0                MI_VIF_PASS_DequeueOutputTaskDev
+                0x000000000000428c                MI_VIF_PLATFORM_OutputPortSupport
+                0x0000000000004294                MI_VIF_CHECK_GroupCreateDevPortSupport
+                0x00000000000042d8                MI_VIF_CHECK_EnableOutputPort
+                0x000000000000434c                MI_VIF_IMPL_EnableOutputPort
+                0x000000000000452c                MI_VIF_IMPL_DisableOutputPort
+                0x00000000000046fc                MI_VIF_PLATFORM_DevPixelSupport
+                0x0000000000004718                MI_VIF_CHECK_DevAttr
+                0x0000000000004770                MI_VIF_PLATFORM_OutputPortPixelSupport
+                0x0000000000004792                MI_VIF_TRANS_PixelFormatToBayerId
+                0x00000000000047bc                MI_VIF_TRANS_PixelFormatToDataPrec
+                0x0000000000004878                MI_VIF_CHECK_PortAttr
+                0x00000000000049c0                MI_VIF_DRVCFG_DevSetConfig
+                0x0000000000004b14                MI_VIF_DRVCFG_Resume
+                0x0000000000004c60                MI_VIF_IMPL_SetOutputPortAttr
+                0x0000000000004de4                _MI_VIF_TRANS_SysFrameBuffSave
+                0x0000000000004eaa                _MI_VIF_TRANS_SysMultiPlaneBuffSave
+                0x0000000000004f7a                MI_VIF_TRANS_SysOutputTaskToCommonBufferInfo
+                0x0000000000005140                MI_VIF_TRANS_OuputEventTypeToInfo
+                0x0000000000005244                MI_VIF_TRANS_IspDevToVifRealtimeDev
+                0x0000000000005248                MI_VIF_WORK_ThreadWqAdd
+                0x00000000000055c8                MI_VIF_WORK_ThreadWqGet
+                0x0000000000005630                MI_VIF_WORK_ThreadWqProc
+                0x00000000000056b0                MI_VIF_WORK_ThreadWqClean
+                0x0000000000005708                MI_VIF_WORK_ThreadWqInit
+                0x0000000000005794                MI_VIF_WORK_ThreadWqFlush
+                0x00000000000057d4                MI_VIF_WORK_ThreadWqDeinit
+                0x0000000000005806                MI_VIF_IMPL_DisableHwTimer
+                0x0000000000005840                MI_VIF_IMPL_EnableHwTimer
+                0x000000000000597c                _MI_VIF_IMPL_SensorSuspend
+                0x00000000000059fc                MI_VIF_IMPL_BuffDoneCheck
+                0x0000000000005bfa                _MI_VIF_IMPL_FrameEndCallback
+                0x0000000000005d00                _MI_VIF_IMPL_FrameStartCallback
+                0x0000000000005f24                _MI_VIF_IMPL_FrameLineCountCallback
+                0x0000000000005f40                _MI_VIF_IMPL_FifoFullCallback
+                0x0000000000005f72                _MI_VIF_IMPL_ChnEventCallback
+                0x0000000000005f96                _MI_VIF_IMPL_UpdatePortEvent
+                0x0000000000005fd4                _MI_VIF_IMPL_OutputEventCallback
+                0x0000000000006104                MI_VIF_IMPL_TimerFunc
+                0x0000000000006106                _MI_VIF_IMPL_GroupCfg
+                0x000000000000613c                _MI_VIF_IMPL_DevCfg
+                0x00000000000061d0                _MI_VIF_IMPL_PortCfg
+                0x0000000000006248                MI_VIF_IMPL_StreamOnOff
+                0x000000000000632c                MI_VIF_DRVCFG_SensorSTR
+                0x0000000000006494                MI_VIF_DRVCFG_PreSuspend
+                0x0000000000006534                MI_VIF_PASS_OnPmSuspendNotify
+                0x00000000000066ac                MI_VIF_DRVCFG_ExitPreSuspend
+                0x0000000000006744                MI_VIF_PASS_OnPmResumeNotify
+                0x00000000000067c4                MI_VIF_PASS_OnOutputPortBufReleaseDev
+                0x00000000000068d0                MI_VIF_PASS_CheckOutputTaskStatusDev
+                0x0000000000006994                MI_VIF_PASS_EnqueueOutputTaskDev
+                0x0000000000006cd0                MI_VIF_IMPL_Insmod
+                0x0000000000006ce0                MI_VIF_IMPL_Init
+                0x0000000000006e80                MI_VIF_IMPL_CreateDevGroup
+                0x00000000000070e8                MI_VIF_IMPL_SetDevGroupAttr
+                0x00000000000071dc                MI_VIF_IMPL_GetDevGroupAttr
+                0x000000000000724c                MI_VIF_IMPL_SetDevAttr
+                0x000000000000734c                MI_VIF_IMPL_GetDevAttr
+                0x00000000000073dc                MI_VIF_IMPL_EnableDev
+                0x0000000000007514                MI_VIF_IMPL_DisableDev
+                0x0000000000007698                MI_VIF_IMPL_DestroyDevGroup
+                0x0000000000007924                MI_VIF_IMPL_DeInit
+                0x00000000000079e4                MI_VIF_IMPL_GetOutputPortAttr
+                0x0000000000007a94                MI_VIF_IMPL_Query
+                0x0000000000007bec                MI_VIF_IMPL_GetDevStatus
+                0x0000000000007c98                MI_VIF_IMPL_CallBackTaskRegister
+                0x0000000000007dcc                MI_VIF_IMPL_CallBackTaskUnRegister
+                0x0000000000007f04                MI_VIF_IMPL_SleepModeParamUpdate
+                0x0000000000007f32                MI_VIF_PASS_OnResume
+                0x0000000000007fec                _MI_VIF_IMPL_SetAeShutterGain
+                0x0000000000008064                _MI_VIF_IMPL_SetFastAeStatus
+                0x0000000000008188                MI_VIF_IMPL_CustFunction
+                0x00000000000081d8                MI_VIF_IMPL_ResumeEarly
+                0x00000000000081e8                MI_VIF_IMPL_SuspendLate
+                0x000000000000822e                VIF_DEV2STR
+                0x000000000000823c                DRV_VIF_DEVICE_Create
+                0x000000000000825e                DRV_VIF_DEVICE_Relese
+                0x0000000000008264                DRV_VIF_DEVICE_Init
+                0x0000000000008280                DRV_VIF_DEVICE_Deinit
+                0x000000000000829a                DRV_VIF_DEVICE_RegisterSubdev
+                0x00000000000082b2                DRV_VIF_DEVICE_UnregisterSubdev
+                0x00000000000082c6                DRV_VIF_DEVICE_GetSubdev
+                0x00000000000082e2                DRV_VIF_SubdevCeate
+                0x0000000000008316                DRV_VIF_SubdevRelease
+                0x0000000000008330                _DRV_VIF_SubdevGetPrivSize
+                0x0000000000008340                _DRV_VIF_SubdevOpsMemalloc
+                0x000000000000836c                _DRV_VIF_SubdevOpsMemrelease
+                0x0000000000008382                DRV_VIF_SUBDEV_Init
+                0x00000000000083dc                DRV_VIF_SUBDEV_DeInit
+                0x0000000000008424                DRV_VIF_SUBDEV_Enable
+                0x0000000000008458                DRV_VIF_SUBDEV_Disable
+                0x000000000000847e                DRV_VIF_SUBDEV_Reset
+                0x0000000000008486                DRV_VIF_SUBDEV_ChnSetFormat
+                0x00000000000084aa                DRV_VIF_SUBDEV_ChnSetCrop
+                0x00000000000084ce                DRV_VIF_SUBDEV_ChnSetCount
+                0x00000000000084e4                DRV_VIF_SUBDEV_ChnSetStreamSel
+                0x00000000000084fa                DRV_VIF_SUBDEV_ChnSetFps
+                0x0000000000008516                DRV_VIF_SUBDEV_ChnGetSource
+                0x00000000000085ac                DRV_VIF_LinkInit
+                0x000000000000860c                DRV_VIF_LinkGetSubdevByOutputId
+                0x0000000000008620                DRV_VIF_LinkGetOutputType
+                0x0000000000008648                _DRV_VIF_LinkAddPathNode
+                0x000000000000867c                _DRV_VIF_CreateFrameLink
+                0x00000000000086fc                _DRV_VIF_CreateRealIspLink
+                0x0000000000008780                _DRV_VIF_CreateRealSclLink
+                0x0000000000008786                DRV_VIF_LinkDestroy
+                0x00000000000087dc                DRV_VIF_LinkDeInit
+                0x0000000000008814                DRV_VIF_FindLinkBySubdev
+                0x0000000000008854                DRV_VIF_FindLinkBySrcSubdev
+                0x0000000000008880                DRV_VIF_LinkCreate
+                0x0000000000008968                DRV_VIF_LinkResetByAff
+                0x0000000000008a1c                DRV_VIF_FindLinkByDestSubdev
+                0x0000000000008a48                DRV_VIF_FindSrcSubdevByDestSubdev
+                0x0000000000008b3c                DRV_VIF_DevtreeCreate
+                0x0000000000008b78                DRV_VIF_DevtreeRelease
+                0x0000000000008b98                DRV_VIF_GetDevHandle
+                0x0000000000008bac                DRV_VIF_GetSubDevHandle
+                0x0000000000008bfc                DRV_VIF_EventInit
+                0x0000000000008c2c                DRV_VIF_EventDeInit
+                0x0000000000008c40                ISPSCL_ISRCB_RegisterCallback
+                0x0000000000008c84                ISPSCL_ISRCB_UnRegisterCallback
+                0x0000000000008c9c                DRV_VIF_RegisterEventCb
+                0x0000000000008cb8                DRV_VIF_UnRegisterEventCb
+                0x0000000000008cd8                DRV_VIF_RegisterFrameEventCb
+                0x0000000000008cfc                DRV_VIF_UnRegisterFrameEventCb
+                0x0000000000008d1c                DRV_VIF_RunEventCb
+                0x0000000000008d4c                DRV_VIF_RunFrameEventCb
+                0x0000000000008dec                DRV_VIF_StaticIsrInfo
+                0x0000000000008e76                DRV_VIF_EventIspVifIsr
+                0x0000000000008f3a                DRV_VIF_EventIspDmaIsr
+                0x0000000000009078                DRV_VIF_ShowIsrStat
+                0x00000000000091bc                DRV_VIF_ShowWdmaIsrStat
+                0x00000000000092c8                DRV_VIF_ShowAffIsrStat
+                0x0000000000009370                DRV_VIF_EventIsr
+                0x0000000000009384                DRV_VIF_LogEn
+                0x000000000000939c                DRV_VIF_GetLogLv
+                0x00000000000093b2                DRV_VIF_Init
+                0x00000000000093e2                DRV_VIF_Deinit
+                0x0000000000009408                DRV_VIF_GetDrvCap
+                0x000000000000945a                DRV_VIF_InputCfg
+                0x000000000000947c                DRV_VIF_SensorCfg
+                0x0000000000009480                DRV_VIF_EnableInput
+                0x0000000000009498                DRV_VIF_DisableInput
+                0x00000000000094b0                DRV_VIF_ChnCfg
+                0x000000000000957c                DRV_VIF_EnableChn
+                0x000000000000958e                DRV_VIF_DisableChn
+                0x00000000000095a0                DRV_VIF_QueryChnInfo
+                0x00000000000095a4                DRV_VIF_OutputCfg
+                0x00000000000096c0                DRV_VIF_EnableOutput
+                0x00000000000096f8                DRV_VIF_DisableOutput
+                0x0000000000009720                DRV_VIF_QueryOutputInfo
+                0x00000000000097d4                DRV_VIF_QueueBuff
+                0x000000000000980c                DRV_VIF_QueryBuffInfo
+                0x0000000000009894                DRV_VIF_DequeueBuff
+                0x0000000000009898                DRV_VIF_StreamOnOff
+                0x00000000000098bc                DRV_VIF_GetStreamStatus
+                0x00000000000098dc                DRV_VIF_PatGenConfig
+                0x0000000000009b6c                DRV_VIF_DataGenEnable
+                0x0000000000009bdc                DRV_VIF_VirtualGetDrvCap
+                0x0000000000009c06                DRV_VIF_VirtualTransToPhyId
+                0x0000000000009c12                DRV_VIF_VirtualOutputCfg
+                0x0000000000009c58                DRV_VIF_VirtualEnableOutput
+                0x0000000000009c66                DRV_VIF_VirtualDisableOutput
+                0x0000000000009c74                DRV_VIF_VirtualQueryOutputInfo
+                0x0000000000009c82                DRV_VIF_VirtualQueryBuffInfo
+                0x0000000000009c96                DRV_VIF_Group2DevId
+                0x0000000000009c9e                DRV_VIF_Dev2ChnId
+                0x0000000000009ca4                DRV_VIF_GetDevIDByPipeID
+                0x0000000000009cd2                DRV_VIF_SetFifoControlMode
+                0x0000000000009ce8                DRV_VIF_SwitchRealtimeVifCh
+                0x0000000000009d38                DRV_VIF_GetRealtimeWorkCh
+                0x0000000000009d52                DRV_VIF_COMMON_ChnId2DevId
+                0x0000000000009d54                DRV_VIF_COMMON_InputMaskFrameSync
+                0x0000000000009d56                DRV_VIF_COMMON_TriggerMaskChange
+                0x0000000000009d5a                DRV_VIF_COMMON_InputMask
+                0x0000000000009d60                DRV_VIF_COMMON_GetInputMask
+                0x0000000000009d66                DRV_VIF_Dev2GroupId
+                0x0000000000009d6e                DRV_VIF_SetNucConfig
+                0x0000000000009d72                DRV_VIF_SetNucSyncWord
+                0x0000000000009d76                DRV_VIF_SetNucClk
+                0x0000000000009d7a                DRV_VIF_SetNucDeInit
+                0x0000000000009d80                VifRegBitShift
+                0x0000000000009d98                DRV_VIF_SwIdMappingPhyId
+                0x0000000000009dc0                DRV_VIF_PhyIdMappingSwId
+                0x0000000000009de8                DRV_VIF_ClkCtrl
+                0x0000000000009e10                DRV_VIF_ClkSetRate
+                0x0000000000009e5c                DRV_VIF_ClkGetRate
+                0x0000000000009e76                DRV_VIF_ClkGetPreRate
+                0x0000000000009e94                DRV_VIF_ClkSetPreRate
+                0x0000000000009eb0                DRV_VIF_CLKGetCurrentIdx
+                0x0000000000009f24                DRV_VIF_CLK_GetRateByIdx
+                0x0000000000009f4a                DRV_VIF_CLK_GetClkDfs
+                0x0000000000009f90                DRV_VIF_ClkGetNodeRate
+                0x0000000000009fcc                DRV_VIF_FrameCalculatePts
+                0x000000000000a0a0                HAL_VIF_GetGrpId
+                0x000000000000a0c6                HAL_VIF_SetChnBaseAddr
+                0x000000000000a0f0                HAL_VIF_GetChnBaseAddr
+                0x000000000000a100                HAL_VIF_Init
+                0x000000000000a1e4                HAL_VIF_DeInit
+                0x000000000000a1f0                HAL_VIF_GetHandle
+                0x000000000000a23c                HAL_VIF_SensorSwReset
+                0x000000000000a24e                HAL_VIF_IfStatusReset
+                0x000000000000a260                HAL_VIF_SensorChannelEnable
+                0x000000000000a272                HAL_VIF_MaskFrameSync
+                0x000000000000a2a4                HAL_VIF_SensorMask
+                0x000000000000a324                HAL_VIF_GetSensorMask
+                0x000000000000a358                HAL_VIF_SensorMaskSel
+                0x000000000000a398                HAL_VIF_SensorBitSwap
+                0x000000000000a3ac                HAL_VIF_SensorHsyncPolarity
+                0x000000000000a3e2                HAL_VIF_SensorVsyncPolarity
+                0x000000000000a418                HAL_VIF_SensorHsyncPolarityBt656
+                0x000000000000a43e                HAL_VIF_SensorVsyncPolarityBt656
+                0x000000000000a464                HAL_VIF_SensorFormatGroup
+                0x000000000000a4c0                HAL_VIF_SelectSource
+                0x000000000000a530                HAL_VIF_SensorRgbIn
+                0x000000000000a544                HAL_VIF_SensorYc16Bit
+                0x000000000000a558                HAL_VIF_SensorHsDly
+                0x000000000000a56c                HAL_VIF_Crop
+                0x000000000000a5ce                HAL_VIF_CropEnable
+                0x000000000000a610                HAL_VIF_Vif2IspLineCnt0
+                0x000000000000a686                HAL_VIF_Vif2IspLineCnt1
+                0x000000000000a6fc                HAL_VIF_Vif2IspPixCnt
+                0x000000000000a772                HAL_VIF_LiCh
+                0x000000000000a786                HAL_VIF_LiModeEn
+                0x000000000000a79a                HAL_VIF_PatTgenEn
+                0x000000000000a7b0                HAL_VIF_PatDgenEn
+                0x000000000000a7c6                HAL_VIF_PatSensorArray
+                0x000000000000a7dc                HAL_VIF_PatDeRate
+                0x000000000000a7f2                HAL_VIF_PatDgen4PMode
+                0x000000000000a80a                HAL_VIF_PatGenInit
+                0x000000000000a936                HAL_VIF_SetPclkSource
+                0x000000000000a998                HAL_VIF_SetPatternGenPclkSrc
+                0x000000000000a9ca                HAL_VIF_PatternGenPclkSrc
+                0x000000000000a9ce                HAL_VIF_GetVifInfo
+                0x000000000000a9fa                HAL_VIF_ShowInfo
+                0x000000000000abac                HAL_VIF_GetInfo
+                0x000000000000acd6                HAL_VIF_ItuTdmEnable
+                0x000000000000acf4                HAL_VIF_AffMerge
+                0x000000000000ad28                VifSysRegV2R
+                0x000000000000ad34                VifRegWM
+                0x000000000000ad82                HAL_VIF_FifoMuxSelectWM
+                0x000000000000adba                HAL_VIF_FifoMuxSelect
+                0x000000000000ae7a                HAL_VIF_VcMux2PipeSelectMask
+                0x000000000000b056                HAL_VIF_PipeReset
+                0x000000000000b17c                HAL_VIF_AffReset
+                0x000000000000b226                HAL_VIF_AffClkEnable
+                0x000000000000b340                HAL_VIF_MaskFifoVsync2T
+                0x000000000000b342                HAL_VIF_FrameMask
+                0x000000000000b412                HAL_VIF_PatFdEn
+                0x000000000000b42a                HAL_VIF_ClearSwWdmaDoneStatus
+                0x000000000000b444                HAL_VIF_GetSwWdmaDoneStatus
+                0x000000000000b45c                HAL_VIF_IrqClkEn
+                0x000000000000b480                HAL_VIF_PipeCropEnable
+                0x000000000000b4a0                HAL_VIF_PipeCrop
+                0x000000000000b626                HAL_VIF_PipePixelRecoveryRangeEnable
+                0x000000000000b646                HAL_VIF_PipePixelRecoveryRange
+                0x000000000000b67e                HAL_VIF_PipeRawStoreMode
+                0x000000000000b71e                HAL_VIF_GetVifToIspRealtimePipe
+                0x000000000000b728                _HAL_VIF_WdmaBase
+                0x000000000000b754                _HAL_VIF_SgdmaBase
+                0x000000000000b780                HAL_VIF_WdmaSwTrig
+                0x000000000000b79c                HAL_VIF_WdmaGetMiuReqParam
+                0x000000000000b7a6                HAL_VIF_WdmaGetReqBustNum
+                0x000000000000b7c6                HAL_VIF_WdmaGetReqThd
+                0x000000000000b7e2                HAL_VIF_WdmaReqThd
+                0x000000000000b822                HAL_VIF_WdmaReqHighPriThd
+                0x000000000000b852                HAL_VIF_WdmaSetHighPri
+                0x000000000000b856                HAL_VIF_WdmaReqBustNum
+                0x000000000000b882                HAL_VIF_WdmaStatusClear
+                0x000000000000b894                HAL_VIF_WdmaBaseAddr
+                0x000000000000b8ba                HAL_VIF_WdmaBase1Addr
+                0x000000000000b8e0                HAL_VIF_WdmaFifoPush
+                0x000000000000b8f0                HAL_VIF_WdmaDataPrecision
+                0x000000000000b93a                HAL_VIF_WdmaSetPitchDirect
+                0x000000000000b972                HAL_VIF_WdmaSetLineCntHit
+                0x000000000000b980                HAL_VIF_WdmaUpdatePitch
+                0x000000000000b9a0                HAL_VIF_SenDataPrecision
+                0x000000000000b9d2                HAL_VIF_WdmaSetPitch
+                0x000000000000bade                HAL_VIF_WdmaEnable
+                0x000000000000bafa                HAL_VIF_Wdmanofifoemptyirq
+                0x000000000000bb1a                HAL_VIF_4PixelDataPakAtMsbToWdma
+                0x000000000000bb56                HAL_VIF_WdmaSetFrameIndexMode
+                0x000000000000bb6e                HAL_VIF_WdmaFbcEnable
+                0x000000000000bba0                HAL_VIF_WdmaFbcVsyncSel
+                0x000000000000bbba                HAL_VIF_WdmaFbcWidth
+                0x000000000000bc14                HAL_VIF_WdmaFieldModeConfig
+                0x000000000000bc30                HAL_VIF_WdmaFifoBaseClr
+                0x000000000000bc42                HAL_VIF_WdmaGetInfo
+                0x000000000000bd3c                HAL_VIF_GetWdmaStsInfo
+                0x000000000000bd70                HAL_VIF_WdmaTimerEnable
+                0x000000000000bd88                HAL_VIF_Wdma2FieldTrigEnable
+                0x000000000000bda2                HAL_VIF_WdmaGetEvent
+                0x000000000000bdb2                HAL_VIF_WdmaEventClr
+                0x000000000000bdca                HAL_VIF_WdmaInit
+                0x000000000000be74                HAL_VIF_WdmaGetSizeInfo
+                0x000000000000be8e                HAL_VIF_WdmaDeinit
+                0x000000000000bea8                HAL_VIF_WdmaSetCrcMode
+                0x000000000000bebe                HAL_VIF_ItuWdmaInit
+                0x000000000000bec2                HAL_VIF_GetWdmaWffNum
+                0x000000000000bed6                HAL_VIF_GetWdmaWffMaxSize
+                0x000000000000beec                HAL_VIF_SetWdmaWffStart
+                0x000000000000bf0c                HAL_VIF_GetFristWdmaIdbyGroup
+                0x000000000000bf14                HAL_VIF_GetWdmaWffStart
+                0x000000000000bf3c                HAL_VIF_SetWdmaWffSize
+                0x000000000000bf64                HAL_VIF_GetWdmaWffSize
+                0x000000000000bf8e                HAL_VIF_WdmaCusFrameId
+                0x000000000000bfa4                HAL_VIF_WInfoPop
+                0x000000000000bfba                HAL_VIF_WinfoPopMode
+                0x000000000000bfd0                HAL_VIF_GetWinfoPopMode
+                0x000000000000bfe0                HAL_VIF_WdmaFbcReset
+                0x000000000000bff6                HAL_VIF_WdmaPipeClkEn
+                0x000000000000c08a                HAL_VIF_WdmaGateClkEn
+                0x000000000000c168                HAL_VIF_WdmaResetRefCnt
+                0x000000000000c17c                HAL_VIF_WdmaIrqClkEn
+                0x000000000000cd2c                HAL_VIF_IF_GetDevNum
+                0x000000000000cd3c                _HAL_VIF_IF_WDMA_Config
+                0x000000000000cedc                _HAL_VIF_FrameGetWptrm
+                0x000000000000d04c                HAL_VIF_IF_Init
+                0x000000000000d064                HAL_VIF_IF_DeInit
+                0x000000000000d078                HAL_VIF_IF_GetDevCap
+                0x000000000000d07e                HAL_VIF_IF_SetPrivOps
+                0x000000000000d178                HAL_VIF_IF_SubdevInit
+                0x000000000000d1e0                HAL_VIF_IF_SubdevDeInit
+                0x000000000000d1e4                HAL_VIF_IspDmaMaskIntAll
+                0x000000000000d22e                HAL_VIF_IspDmaGetIntStatus1
+                0x000000000000d23a                HAL_VIF_IspDmaGetIntStatus2
+                0x000000000000d246                HAL_VIF_IspDmaGetIntStatus5
+                0x000000000000d254                HAL_VIF_IspDmaGetIntStatus6
+                0x000000000000d262                HAL_VIF_IspDmaMaskClear1
+                0x000000000000d284                HAL_VIF_IspDmaMaskClear2
+                0x000000000000d2a6                HAL_VIF_IspDmaMaskClear5
+                0x000000000000d2d2                HAL_VIF_IspDmaMaskClear6
+                0x000000000000d2fe                HAL_VIF_IspDmaMaskInt1
+                0x000000000000d310                HAL_VIF_IspDmaMaskInt2
+                0x000000000000d322                HAL_VIF_IspDmaMaskInt5
+                0x000000000000d338                HAL_VIF_IspDmaMaskInt6
+                0x000000000000d34e                HAL_VIF_IspDmaUnMaskInt1
+                0x000000000000d362                HAL_VIF_IspDmaUnMaskInt2
+                0x000000000000d376                HAL_VIF_IspDmaUnMaskInt5
+                0x000000000000d38e                HAL_VIF_IspDmaUnMaskInt6
+                0x000000000000d3a6                HAL_VIF_IspDmaClearInt
+                0x000000000000d3b2                HAL_VIF_IspDmaIsr
+                0x000000000000d498                HAL_VIF_IspVifIntMask
+                0x000000000000d506                HAL_VIF_IspVifIntUnMask
+                0x000000000000d570                HAL_VIF_IspVifIntMaskGet
+                0x000000000000d5a0                HAL_VIF_IspVifIntForce
+                0x000000000000d5ba                HAL_VIF_IspVifIntClr
+                0x000000000000d5d4                HAL_VIF_IspVifIntFinalStatus
+                0x000000000000d5f0                HAL_VIF_IspVifIntRawStatus
+                0x000000000000d61e                DRV_VIF_GetUsTimeStamp
+                0x000000000000d670                DRV_VIF_ShowInfo
+                0x000000000000d7ec                DRV_VIF_DebugInterface
+                0x000000000000d9f4                _vif_module_verify
+                0x000000000000d9f6                vif_module_get_clk_hd
+                0x000000000000da08                DRV_VIF_IrqCrtl
+                0x000000000000da2c                drv_vif_isr
+                0x000000000000da58                drv_vif_module_insmod
+                0x000000000000db04                drv_vif_module_rmmod
+ .text          0x000000000000db24      0x270 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+                0x000000000000dc20                vif_ioremap
+                0x000000000000dc24                vif_unmap
+                0x000000000000dc2e                vif_inirq
+                0x000000000000dc40                vif_dev_get
+                0x000000000000dc4c                vif_of_property_readu32
+                0x000000000000dc80                vif_irq_of_parse_and_map
+                0x000000000000dcb0                vif_request_irq
+                0x000000000000dccc                vif_free_irq
+                0x000000000000dcd0                vif_devnode_init
+                0x000000000000dd14                vif_register_misc_device
+                0x000000000000dd68                vif_unregister_misc_device
+                0x000000000000dd74                vif_mod_init
+                0x000000000000dd84                vif_mod_exit
+ .text          0x000000000000dd94        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000      0x300
+ *(.rodata)
+ .rodata        0x0000000000000000      0x25c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+                0x0000000000000206                _PixFmt
+ .rodata        0x000000000000025c       0xa4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.rodata.cst4    0x0000000000000000      0x17c
+ .rodata.cst4   0x0000000000000000      0x178 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .rodata.cst4   0x0000000000000178        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.rodata.str1.1  0x0000000000000000     0x2449
+ .rodata.str1.1
+                0x0000000000000000     0x2350 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .rodata.str1.1
+                0x0000000000002350       0xf9 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.modinfo        0x0000000000000000       0xb4
+ .modinfo       0x0000000000000000       0xb4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+__ksymtab_strings
+                0x0000000000000000       0x18
+ __ksymtab_strings
+                0x0000000000000000       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+___ksymtab+g_mi_vif_internal_apis
+                0x0000000000000000        0xc
+ ___ksymtab+g_mi_vif_internal_apis
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000      0x5a0
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000      0x564 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .ARM.extab     0x0000000000000564       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.ARM.exidx      0x0000000000000000     0x1450
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000     0x13b8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .ARM.exidx     0x00000000000013b8       0x98 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x280
+ *(.data)
+ .data          0x0000000000000000      0x200 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+                0x00000000000000d0                vif_debug_level
+                0x00000000000000d4                g_mi_vif_internal_apis
+                0x0000000000000128                VifToSnrCb
+                0x000000000000012c                g_dev2str
+                0x0000000000000148                _StrVifSrc
+                0x0000000000000168                _InputFmt
+                0x0000000000000170                vif_sd_init
+                0x0000000000000188                vif_sd_deinit
+                0x00000000000001a0                vif_sd_reset
+                0x00000000000001b8                vif_sd_enable
+                0x00000000000001d0                vif_sd_disable
+                0x00000000000001e8                vif_device_num
+ .data          0x0000000000000200       0x80 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+                0x0000000000000200                vif_ops
+ .data          0x0000000000000280        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.data.once      0x0000000000000000        0x1
+ .data.once     0x0000000000000000        0x1 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x9d0
+ *(.bss)
+ .bss           0x0000000000000000      0x99e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+                0x0000000000000004                vif_debug_file
+                0x0000000000000104                vif_debug_func
+                0x0000000000000208                gp_stVifModRes
+                0x000000000000020c                g_pVifInternalMetaDataPtr
+                0x0000000000000210                gp_stVifModDbgParams
+                0x0000000000000220                g_pVifExternalConfig
+                0x00000000000002a0                g_stVifWorkPool
+                0x00000000000003dc                g_stCallBackList
+                0x00000000000004fc                g_link_handle
+                0x0000000000000500                mod
+                0x0000000000000504                g_VifEventHandle
+                0x0000000000000508                g_ispscl_cbs
+                0x0000000000000964                g_u32ClkPreRate
+                0x0000000000000968                g_VifHandle
+                0x000000000000096c                g_Au32VifReg
+                0x0000000000000974                g_riuRegBase
+                0x0000000000000978                g_VifWdmaHandle
+                0x0000000000000994                irq_name
+ *fill*         0x000000000000099e        0x2 
+ .bss           0x00000000000009a0       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .bss           0x00000000000009d0        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x286
+ *(.comment)
+ .comment       0x0000000000000000      0x242 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .comment       0x0000000000000242       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .comment       0x0000000000000264       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .ARM.attributes
+                0x000000000000005e       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x268
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000      0x220 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_aranges
+                0x0000000000000220       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .debug_aranges
+                0x0000000000000250       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x581ba
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x44925 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_info    0x0000000000044925     0xf69e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .debug_info    0x0000000000053fc3     0x41f7 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.debug_abbrev   0x0000000000000000     0x4cc9
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x3f38 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_abbrev  0x0000000000003f38      0x964 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .debug_abbrev  0x000000000000489c      0x42d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.debug_line     0x0000000000000000    0x1560f
+ *(.debug_line)
+ .debug_line    0x0000000000000000    0x13f46 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_line    0x0000000000013f46     0x11ae /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .debug_line    0x00000000000150f4      0x51b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.debug_frame    0x0000000000000000     0x5534
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x533c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_frame   0x000000000000533c      0x1f8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.debug_str      0x0000000000000000    0x43bd4
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x3735a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_str     0x000000000003735a     0x982e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+ .debug_str     0x0000000000040b88     0x304c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_export.o
+
+.debug_loc      0x0000000000000000    0x1e192
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000    0x1d98f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_loc     0x000000000001d98f      0x803 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000     0x10d8
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0xf30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/../../obj/uclibc/9.1.0/vif.o
+ .debug_ranges  0x0000000000000f30      0x1a8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/vif_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/vif/mi_vif.o elf32-littlearm)

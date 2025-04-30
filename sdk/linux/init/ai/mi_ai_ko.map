@@ -1,0 +1,442 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x5224
+ *(.text .stub)
+ .text          0x0000000000000000     0x5204 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+                0x0000000000000918                MI_DEVICE_WrapperFunction_ai
+                0x0000000000000930                IS_PRINT_MATCH_ai
+                0x0000000000000998                MI_DEVICE_Instance_ai
+                0x00000000000009a0                MI_DEVICE_GetSelfDir_ai
+                0x00000000000009ac                AddUTIoctlTable
+                0x00000000000009ae                ai__module_init
+                0x0000000000000a78                ai__module_exit
+                0x0000000000000e80                MI_AI_IMPL_CloseAllDumpMhalChnFile
+                0x0000000000000f04                MI_AI_IMPL_OpenAllDumpMhalChnFile
+                0x000000000000101e                MI_AI_IMPL_CloseDumpMiChnFile
+                0x00000000000011d8                MI_AI_IMPL_OpenDumpMiChnFile
+                0x0000000000002cb8                _MI_AI_IMPL_AllDeviceIsClosed
+                0x0000000000002cdc                MI_AI_IMPL_CheckAndPrintModulePara
+                0x0000000000002dd8                MI_AI_IMPL_Init
+                0x0000000000002e18                MI_AI_IMPL_DeInit
+                0x0000000000002e60                _MI_AI_IMPL_CheckIfsAttachToDevice
+                0x0000000000002ec8                MI_AI_IMPL_InitGlobalData
+                0x00000000000030b8                MI_AI_IMPL_DeInitGlobalData
+                0x0000000000003148                MI_AI_IMPL_Open
+                0x0000000000003374                MI_AI_IMPL_AttachIf
+                0x00000000000036a4                MI_AI_IMPL_Close
+                0x0000000000003924                MI_AI_IMPL_GetChipDevNum
+                0x000000000000392c                MI_AI_IMPL_GetChnNumOfDev
+                0x00000000000039bc                MI_AI_IMPL_GetDevAttr
+                0x0000000000003a80                MI_AI_IMPL_EnableChnGrp
+                0x0000000000003c24                MI_AI_IMPL_DisableChnGrp
+                0x0000000000003dc8                MI_AI_IMPL_SetMute
+                0x0000000000003f94                MI_AI_IMPL_GetMute
+                0x00000000000040dc                MI_AI_IMPL_SetDpgaGain
+                0x0000000000004398                MI_AI_IMPL_GetDpgaGain
+                0x0000000000004510                MI_AI_IMPL_SetIfGain
+                0x00000000000045c8                MI_AI_IMPL_GetIfGain
+                0x0000000000004654                MI_AI_IMPL_SetI2sConfig
+                0x0000000000004948                MI_AI_IMPL_GetI2sConfig
+                0x00000000000049fc                MI_AI_IMPL_GetChnGrpBufInfo
+                0x0000000000004b40                MI_AI_IMPL_GetChnGrpEnableStatus
+                0x0000000000004c2c                MI_AI_IMPL_SetIfMute
+                0x0000000000004cb0                MI_AI_IMPL_GetIfMute
+                0x0000000000004d38                MI_AI_IMPL_OpenWithCfgFile
+                0x0000000000004fe4                _MI_AI_IMPL_MiDevToMhalDev
+                0x0000000000004ff4                MI_AI_IMPL_SoundModeToChannelCount
+                0x0000000000005008                MI_AI_IMPL_I2sIfToI2sSet
+                0x0000000000005020                MI_AI_IMPL_IfToStr
+                0x000000000000509c                _MI_AI_IMPL_MiIfToMhalIf
+                0x00000000000050a8                MI_AI_IMPL_MhalGetCurrDataLen
+                0x00000000000050c2                MI_AI_IMPL_MhalSetIfGain
+                0x00000000000050e0                MI_AI_IMPL_MhalSetIfMute
+                0x00000000000050fe                MI_AI_IMPL_MhalDpgaGain
+                0x000000000000511c                MI_AI_IMPL_MhalDpgaMute
+                0x000000000000513a                MI_AI_IMPL_MhalSineGenStart
+                0x000000000000518c                MI_AI_IMPL_MhalSineGenStop
+                0x00000000000051a4                MI_AI_IMPL_MhalSetI2sRxChSwap
+                0x00000000000051d4                MI_AI_IMPL_MhalSetDmicShareI2sClk
+                0x00000000000051e8                MI_AI_IMPL_MhalSetMicHpf
+ .text          0x0000000000005204       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+                0x0000000000005204                ai_mod_init
+                0x0000000000005214                ai_mod_exit
+ *(.gnu.warning)
+
+.init.text      0x0000000000000000        0x4
+ .init.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000        0x4
+ .exit.text     0x0000000000000000        0x4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0xbb
+ *(.rodata)
+ .rodata        0x0000000000000000       0x7c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .rodata        0x000000000000007c       0x3f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.rodata.str1.1  0x0000000000000000     0x1b78
+ .rodata.str1.1
+                0x0000000000000000     0x1b78 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+
+.rodata.cst4    0x0000000000000000       0x90
+ .rodata.cst4   0x0000000000000000       0x90 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.modinfo        0x0000000000000000       0xa4
+ .modinfo       0x0000000000000000       0xa4 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+__param         0x0000000000000000       0x3c
+ __param        0x0000000000000000       0x3c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0x18
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .ARM.extab     0x0000000000000018        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.ARM.exidx      0x0000000000000000      0x458
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x448 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .ARM.exidx     0x0000000000000448       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x278
+ *(.data)
+ .data          0x0000000000000000      0x278 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+                0x00000000000000f0                ai_debug_level
+                0x0000000000000130                g_aMiIfMapToMhalIf
+                0x00000000000001d4                g_aIfMapToStr
+ .data          0x0000000000000278        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x5e5
+ *(.bss)
+ .bss           0x0000000000000000      0x5e5 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+                0x0000000000000008                ai_debug_file
+                0x0000000000000108                ai_debug_func
+                0x0000000000000548                gp_stMiAiModRefDbgOpsParam
+ .bss           0x00000000000005e5        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x88
+ *(.comment)
+ .comment       0x0000000000000000       0x66 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .comment       0x0000000000000066       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x90
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_aranges
+                0x0000000000000060       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x1d6e2
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x1475d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_info    0x000000000001475d     0x8f85 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_abbrev   0x0000000000000000     0x1322
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0xd34 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_abbrev  0x0000000000000d34      0x5ee /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_line     0x0000000000000000     0x6bf8
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x6296 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_line    0x0000000000006296      0x962 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_frame    0x0000000000000000     0x164c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x15fc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_frame   0x00000000000015fc       0x50 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_str      0x0000000000000000    0x1676a
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x1057e /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_str     0x000000000001057e     0x61ec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_loc      0x0000000000000000     0x8e4c
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x8e4c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x200
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x1e0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/../../obj/uclibc/9.1.0/ai.o
+ .debug_ranges  0x00000000000001e0       0x20 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/ai_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/ai/mi_ai.o elf32-littlearm)

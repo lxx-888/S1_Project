@@ -1,0 +1,1 @@
+/home/causer/swnas/workspace/ALL--ALKAID--ReleaseBuild/alkaid/sdk/verify/sample_code/build/kmake.mk

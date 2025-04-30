@@ -1,0 +1,10 @@
+config VERIFY_CARDV_IMPL
+    bool "cardv_impl"
+    default n
+    help
+        whether to compile or not
+
+config verify_cardv_impl
+    string
+    default enable if VERIFY_CARDV_IMPL
+    default disable if !VERIFY_CARDV_IMPL

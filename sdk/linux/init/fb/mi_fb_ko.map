@@ -1,0 +1,625 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+LOAD /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000     0x6ae0
+ *(.text .stub)
+ .text          0x0000000000000000     0x5d18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+                0x0000000000000090                MI_FB_Init
+                0x000000000000013c                MI_FB_DeInit
+                0x00000000000001e8                MI_FB_Open
+                0x0000000000000298                MI_FB_Close
+                0x0000000000000348                MI_FB_Mmap
+                0x000000000000040c                MI_FB_PanDisplay
+                0x00000000000004d0                MI_FB_WaitForVsync
+                0x0000000000000580                MI_FB_GetVarScreenInfo
+                0x0000000000000648                MI_FB_SetVarScreenInfo
+                0x000000000000070c                MI_FB_GetFixScreenInfo
+                0x00000000000007d8                MI_FB_Munmap
+                0x0000000000000898                MI_FB_GetScreenLocation
+                0x0000000000000964                MI_FB_SetScreenLocation
+                0x0000000000000a2c                MI_FB_GetDisplayLayerAttr
+                0x0000000000000af4                MI_FB_SetDisplayLayerAttr
+                0x0000000000000bb8                MI_FB_GetCursorAttr
+                0x0000000000000c84                MI_FB_SetCursorAttr
+                0x0000000000000d9c                MI_FB_GetAlpha
+                0x0000000000000e68                MI_FB_SetAlpha
+                0x0000000000000f30                MI_FB_GetColorKey
+                0x0000000000000ffc                MI_FB_SetColorKey
+                0x00000000000010c4                MI_FB_SetCmap
+                0x000000000000123c                MI_FB_GetCmap
+                0x00000000000013b8                MI_FB_GetShow
+                0x0000000000001480                MI_FB_SetShow
+                0x0000000000001540                MI_FB_GetCompressionInfo
+                0x0000000000001614                MI_FB_SetCompressionInfo
+                0x0000000000001c18                MI_DEVICE_WrapperFunction_fb
+                0x0000000000001c30                IS_PRINT_MATCH_fb
+                0x0000000000001c98                MI_DEVICE_Instance_fb
+                0x0000000000001ca0                MI_DEVICE_GetSelfDir_fb
+                0x0000000000001cac                AddUTIoctlTable
+                0x0000000000001cae                fb__module_init
+                0x0000000000001d6c                fb__module_exit
+                0x00000000000026ec                MI_FB_IMPL_Init
+                0x0000000000002748                MI_FB_IMPL_Open
+                0x00000000000028c4                MI_FB_IMPL_Close
+                0x00000000000029f0                MI_FB_IMPL_DeInit
+                0x0000000000002a60                MI_FB_IMPL_Mmap
+                0x0000000000002b64                MI_FB_IMPL_PanDisplay
+                0x0000000000002cf8                MI_FB_IMPL_WaitForVsync
+                0x0000000000002d78                MI_FB_IMPL_GetVarScreenInfo
+                0x0000000000002dc0                MI_FB_IMPL_SetVarScreenInfo
+                0x0000000000002f0c                MI_FB_IMPL_GetFixScreenInfo
+                0x0000000000002f54                MI_FB_IMPL_Munmap
+                0x0000000000003014                MI_FB_IMPL_GetScreenLocation
+                0x00000000000030ac                MI_FB_IMPL_SetScreenLocation
+                0x0000000000003240                MI_FB_IMPL_GetDisplayLayerAttr
+                0x0000000000003314                MI_FB_IMPL_SetDisplayLayerAttr
+                0x0000000000003544                MI_FB_IMPL_GetCursorAttr
+                0x0000000000003648                MI_FB_IMPL_SetCursorAttr
+                0x0000000000003a18                MI_FB_IMPL_GetAlpha
+                0x0000000000003aa4                MI_FB_IMPL_SetAlpha
+                0x0000000000003b54                MI_FB_IMPL_GetColorKey
+                0x0000000000003be0                MI_FB_IMPL_SetColorKey
+                0x0000000000003c90                MI_FB_IMPL_GetCmap
+                0x0000000000003d4c                MI_FB_IMPL_SetCmap
+                0x0000000000003e18                MI_FB_IMPL_GetShow
+                0x0000000000003e9c                MI_FB_IMPL_SetShow
+                0x0000000000003f30                MI_FB_IMPL_GetCompressionInfo
+                0x0000000000003fbc                MI_FB_IMPL_SetCompressionInfo
+                0x0000000000005c7c                MI_FB_NORMAL_CreateDevice
+                0x0000000000005cec                MI_FB_NORMAL_DestroyDevice
+ .text          0x0000000000005d18      0xdc8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+                0x0000000000006880                MDRV_FB_Probe
+                0x0000000000006a78                MDRV_FB_Remove
+ .text          0x0000000000006ae0        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+ *(.gnu.warning)
+
+.text.unlikely  0x0000000000000000       0xec
+ .text.unlikely
+                0x0000000000000000       0xec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.init.text      0x0000000000000000      0x100
+ .init.text     0x0000000000000000      0x100 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+                0x0000000000000000                init_module
+
+.exit.text      0x0000000000000000       0x60
+ .exit.text     0x0000000000000000       0x60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+                0x0000000000000000                cleanup_module
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x0000000000000000       0xf4
+ *(.rodata)
+ .rodata        0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .rodata        0x000000000000000c       0xe8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.rodata.str1.1  0x0000000000000000     0x1c87
+ .rodata.str1.1
+                0x0000000000000000      0xf22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .rodata.str1.1
+                0x0000000000000f22      0xd65 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.rodata.cst4    0x0000000000000000      0x164
+ .rodata.cst4   0x0000000000000000      0x14c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .rodata.cst4   0x000000000000014c       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.extab.text.unlikely
+                0x0000000000000000        0x0
+ .ARM.extab.text.unlikely
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.exidx.text.unlikely
+                0x0000000000000000       0x10
+ .ARM.exidx.text.unlikely
+                0x0000000000000000       0x10 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.extab.init.text
+                0x0000000000000000        0x0
+ .ARM.extab.init.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.exidx.init.text
+                0x0000000000000000        0x8
+ .ARM.exidx.init.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.extab.exit.text
+                0x0000000000000000        0x0
+ .ARM.extab.exit.text
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.exidx.exit.text
+                0x0000000000000000        0x8
+ .ARM.exidx.exit.text
+                0x0000000000000000        0x8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.modinfo        0x0000000000000000       0x47
+ .modinfo       0x0000000000000000       0x47 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+__ksymtab_strings
+                0x0000000000000000      0x203
+ __ksymtab_strings
+                0x0000000000000000      0x203 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_Close
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_Close
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_DeInit
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_DeInit
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetAlpha
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetAlpha
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetCmap
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetCmap
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetColorKey
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetColorKey
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetCompressionInfo
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetCompressionInfo
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetCursorAttr
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetCursorAttr
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetDisplayLayerAttr
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetDisplayLayerAttr
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetFixScreenInfo
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetFixScreenInfo
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetScreenLocation
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetScreenLocation
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetShow
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetShow
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_GetVarScreenInfo
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_GetVarScreenInfo
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_Init
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_Init
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_Mmap
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_Mmap
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_Munmap
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_Munmap
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_Open
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_Open
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_PanDisplay
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_PanDisplay
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetAlpha
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetAlpha
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetCmap
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetCmap
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetColorKey
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetColorKey
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetCompressionInfo
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetCompressionInfo
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetCursorAttr
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetCursorAttr
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetDisplayLayerAttr
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetDisplayLayerAttr
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetScreenLocation
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetScreenLocation
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetShow
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetShow
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_SetVarScreenInfo
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_SetVarScreenInfo
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+___ksymtab+MI_FB_WaitForVsync
+                0x0000000000000000        0xc
+ ___ksymtab+MI_FB_WaitForVsync
+                0x0000000000000000        0xc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0000000000000000       0x30
+ *(.ARM.extab)
+ .ARM.extab     0x0000000000000000       0x30 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .ARM.extab     0x0000000000000030        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.ARM.exidx      0x0000000000000000      0x600
+ *(.ARM.exidx)
+ .ARM.exidx     0x0000000000000000      0x558 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .ARM.exidx     0x0000000000000558       0xa8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.data           0x0000000000000000      0x204
+ *(.data)
+ .data          0x0000000000000000      0x1a8 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+                0x0000000000000120                fb_debug_level
+                0x0000000000000124                gp_u8defaultMmaHeapName
+                0x0000000000000128                g_au8ReservedMemName
+ .data          0x00000000000001a8       0x5c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .data          0x0000000000000204        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x3d8
+ *(.bss)
+ .bss           0x0000000000000000      0x2fc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+                0x0000000000000004                fb_debug_file
+                0x0000000000000104                fb_debug_func
+                0x0000000000000204                g_stFbModInfo
+                0x0000000000000214                gp_stFbModDbgPams
+                0x0000000000000218                g_stTimingSyncInfo
+                0x0000000000000228                g_u32ReservedAreaBusyBitMap
+                0x000000000000026c                g_stMhalChipOps
+ .bss           0x00000000000002fc       0xdc /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .bss           0x00000000000003d8        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0xcc
+ *(.comment)
+ .comment       0x0000000000000000       0x88 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .comment       0x0000000000000088       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .comment       0x00000000000000aa       0x22 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .ARM.attributes
+                0x000000000000002f       0x2f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .ARM.attributes
+                0x000000000000005e       0x31 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xd8
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x80 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_aranges
+                0x0000000000000080       0x40 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .debug_aranges
+                0x00000000000000c0       0x18 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x348d6
+ *(.debug_info)
+ .debug_info    0x0000000000000000    0x1ecb0 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_info    0x000000000001ecb0    0x1154b /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .debug_info    0x00000000000301fb     0x46db /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.debug_abbrev   0x0000000000000000     0x2139
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x12fd /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_abbrev  0x00000000000012fd      0xa0f /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .debug_abbrev  0x0000000000001d0c      0x42d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.debug_line     0x0000000000000000     0xa289
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x7dcf /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_line    0x0000000000007dcf     0x1f2d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .debug_line    0x0000000000009cfc      0x58d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.debug_frame    0x0000000000000000     0x1e6c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000     0x1aec /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_frame   0x0000000000001aec      0x380 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.debug_str      0x0000000000000000    0x25054
+ *(.debug_str)
+ .debug_str     0x0000000000000000    0x1731d /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_str     0x000000000001731d     0xa26a /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+ .debug_str     0x0000000000021587     0x3acd /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_api_export.o
+
+.debug_loc      0x0000000000000000     0xb9c1
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0xa435 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_loc     0x000000000000a435     0x158c /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000     0x1160
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0xe60 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/../../obj/uclibc/9.1.0/fb.o
+ .debug_ranges  0x0000000000000e60      0x300 /home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/fb_init.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/lixx/ZGCX/S1_Project/IFord_CLD00V2.0.0/SourceCode/S1_Project/sdk/linux/init/fb/mi_fb.o elf32-littlearm)

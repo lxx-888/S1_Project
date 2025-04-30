@@ -1,0 +1,1862 @@
+/*===========================================================================
+ * Include file
+ *===========================================================================*/
+#include <string.h>
+#include "MenuCommon.h"
+
+/*===========================================================================
+ * Local function
+ *===========================================================================*/
+static int MenuSetting_Get_General(int icur_val, va_list *ap);
+static int ParamFun(SETTING_ATOM *pa, int idx, char *szVal, void *arg);
+static int ParamFun_adjustParam(SETTING_ATOM *pa, int idx, char *szVal, void *arg);
+ /*===========================================================================
+ * Extern varible
+ *===========================================================================*/
+
+  /*===========================================================================
+ * Global varible :
+ *===========================================================================*/
+static MenuInfo gCurMenuInfo = {0};
+
+static MENU_ATOMS  temp_menu_atoms;
+static MENU_ATOMS  menu_atoms =
+{
+    MAGIC_NUM,
+    HDRTAIL_NUM,
+	{
+        // Still
+        {/* 000 */COMMON_KEY_STILL_CAP_SIZE, 3, MENU_STILL_SIZE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_STILL_SIZE_30M_EN)
+			"30M",	IMAGE_SIZE_30M,     ///< 6400*4800
+			#endif
+			#if (MENU_STILL_SIZE_14M_EN)
+			"14M",	IMAGE_SIZE_14M,     ///< 4352*3264
+			#endif
+			#if (MENU_STILL_SIZE_12M_EN)
+			"12M",	IMAGE_SIZE_12M,     ///< 4000*3000
+			#endif
+			#if (MENU_STILL_SIZE_8M_EN)
+			"8M",	IMAGE_SIZE_8M,      ///< 3264*2448
+			#endif
+			#if (MENU_STILL_SIZE_6M_WIDE_EN)
+			"6M WIDE",	IMAGE_SIZE_6M_WIDE, ///<
+			#endif
+			#if (MENU_STILL_SIZE_6M_EN)
+			"6M",	IMAGE_SIZE_6M,      ///<
+			#endif
+			#if (MENU_STILL_SIZE_5M_EN)
+			"5M",	IMAGE_SIZE_5M,      ///< 2560*1920
+			#endif
+			#if (MENU_STILL_SIZE_3M_EN)
+			"3M",	IMAGE_SIZE_3M,      ///< 2048*1536
+			#endif
+			#if (MENU_STILL_SIZE_2M_WIDE_EN)
+			"2M",	IMAGE_SIZE_2M,      ///< 1920*1080
+			#endif
+			#if (MENU_STILL_SIZE_1d2M_EN)
+			"1.2M", IMAGE_SIZE_1_2M,    ///< 1280*960
+			#endif
+			#if (MENU_STILL_SIZE_VGA_EN)
+			"VGA", IMAGE_SIZE_VGA,     ///< 640*480
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 001 */COMMON_KEY_STILL_QUALITY, 0, MENU_STILL_QUALITY_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_STILL_QUALITY_SUPER_FINE_EN || MENU_MOVIE_QUALITY_SUPER_FINE_EN)
+			"Super Fine", QUALITY_SUPER_FINE,
+			#endif
+			#if (MENU_STILL_QUALITY_FINE_EN || MENU_MOVIE_QUALITY_FINE_EN)
+			"Fine", QUALITY_FINE,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 002 */COMMON_KEY_BURST_SHOT,	0, MENU_STILL_BURST_SHOT_EN, ParamFun, NULL,
+        	{NULL, 0},
+        },
+		// Movie
+        {/* 003 */COMMON_KEY_MOVIE_SIZE, 0, MENU_MOVIE_SIZE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if MENU_MOVIE_SIZE_4K_25P_EN
+			"4K25fps", MOVIE_SIZE_4K_25P,
+			#endif
+			#if (MENU_MOVIE_SIZE_1440_30P_EN)
+			"1440P30fps", MOVIE_SIZE_1440_30P,
+			#endif
+			#if MENU_MOVIE_SIZE_SHD_30P_EN
+			"1296P30fps", MOVIE_SIZE_SHD_30P,
+			#endif
+			#if MENU_MOVIE_SIZE_SHD_25P_EN
+			"1296P25fps", MOVIE_SIZE_SHD_25P,
+			#endif
+			#if MENU_MOVIE_SIZE_1080P_30_HDR_EN
+			"1080P30fps_hdr", MOVIE_SIZE_1080_30P_HDR,
+			#endif
+			#if MENU_MOVIE_SIZE_1080_60P_EN
+			"1080P60fps", MOVIE_SIZE_1080_60P,
+			#endif
+			#if MENU_MOVIE_SIZE_1080_25P_EN
+			"1080P25fps", MOVIE_SIZE_1080_25P,
+			#endif
+			#if MENU_MOVIE_SIZE_1080P_EN
+			"1080P30fps", MOVIE_SIZE_1080P,
+			#endif
+			#if (MENU_MOVIE_SIZE_960P_30P_EN)
+			"960P30fps", MOVIE_SIZE_960P_30P,
+			#endif
+			#if MENU_MOVIE_SIZE_900P_30P_EN
+			"900P30fps", MOVIE_SIZE_900P_30P,
+			#endif
+			#if MENU_MOVIE_SIZE_720P_EN
+			"720P30fps", MOVIE_SIZE_720P,
+			#endif
+			#if MENU_MOVIE_SIZE_720_120P_EN
+			"720P120fps", MOVIE_SIZE_720_120P,
+			#endif
+			#if MENU_MOVIE_SIZE_720_60P_EN
+			"720P60fps", MOVIE_SIZE_720_60P,
+			#endif
+			#if MENU_MOVIE_SIZE_720_50P_EN
+			"720P50fps", MOVIE_SIZE_720_50P,
+			#endif
+			#if MENU_MOVIE_SIZE_VGA30P_EN
+			"360P30fps", MOVIE_SIZE_VGA30P,
+			#endif
+			NULL, 0,
+        	}
+        },
+        {/* 004 */COMMON_KEY_MOVIE_QUALITY, 0, MENU_MOVIE_QUALITY_EN, ParamFun, MenuSetting_Get_General,
+			{
+			#if (MENU_STILL_QUALITY_SUPER_FINE_EN || MENU_MOVIE_QUALITY_SUPER_FINE_EN)
+			"Super Fine", QUALITY_SUPER_FINE,
+			#endif
+			#if (MENU_STILL_QUALITY_FINE_EN || MENU_MOVIE_QUALITY_FINE_EN)
+			"Fine", QUALITY_FINE,
+			#endif
+			NULL, 0
+			},
+        },
+        {/* 005 */COMMON_KEY_MIC_SENSITIVITY, 0, MENU_MOVIE_MIC_SEN_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_MIC_SEN_STANDARD_EN)
+			"Standard", MIC_SEN_STANDARD,
+			#endif
+			#if (MENU_MOVIE_MIC_SEN_LOW_EN)
+			"Low", MIC_SEN_LOW,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 006 */COMMON_KEY_PRE_RECD, 0, MENU_MOVIE_PRE_RECORD_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_PRE_RECORD_ON_EN)
+			"ON", MOVIE_PRE_RECORD_ON,
+			#endif
+			#if (MENU_MOVIE_PRE_RECORD_OFF_EN)
+			"OFF", MOVIE_PRE_RECORD_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 007 */COMMON_KEY_VR_CLIP_TIME, 2, MENU_MOVIE_CLIP_TIME_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_CLIP_TIME_OFF_EN)
+			"OFF", MOVIE_CLIP_TIME_OFF,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_1MIN_EN)
+			"1MIN", MOVIE_CLIP_TIME_1MIN,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_2MIN_EN)
+			"2MIN", MOVIE_CLIP_TIME_2MIN,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_3MIN_EN)
+			"3MIN", MOVIE_CLIP_TIME_3MIN,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_5MIN_EN)
+			"5MIN", MOVIE_CLIP_TIME_5MIN,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_10MIN_EN)
+			"10MIN", MOVIE_CLIP_TIME_10MIN,
+			#endif
+			#if (MENU_MOVIE_CLIP_TIME_30MIN_EN)
+			"30MIN", MOVIE_CLIP_TIME_30MIN,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 008 */COMMON_KEY_POWER_OFF_DELAY, 0, MENU_MOVIE_POWER_OFF_DELAY_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_POWER_OFF_DELAY_0SEC_EN)
+			"0", MOVIE_POWEROFF_TIME_0MIN,
+			#endif
+			#if (MENU_MOVIE_POWER_OFF_DELAY_5SEC_EN)
+			"5s", MOVIE_POWEROFF_TIME_5SEC,
+			#endif
+			#if (MENU_MOVIE_POWER_OFF_DELAY_10SEC_EN)
+			"10s", MOVIE_POWEROFF_TIME_10SEC,
+			#endif
+			#if (MENU_MOVIE_POWER_OFF_DELAY_15SEC_EN)
+			"15s", MOVIE_POWEROFF_TIME_15SEC,
+			#endif
+			#if (MENU_MOVIE_POWER_OFF_DELAY_30SEC_EN)
+			"30s", MOVIE_POWEROFF_TIME_30SEC,
+			#endif
+			#if (MENU_MOVIE_POWER_OFF_DELAY_1MIN_EN)
+			"60s", MOVIE_POWEROFF_TIME_1MIN,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 009 */COMMON_KEY_RECD_SOUND, 0, MENU_MOVIE_SOUND_RECORD_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_SOUND_RECORD_ON_EN)
+			"ON", MOVIE_SOUND_RECORD_ON,
+			#endif
+			#if (MENU_MOVIE_SOUND_RECORD_OFF_EN)
+			"OFF", MOVIE_SOUND_RECORD_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 010 */COMMON_KEY_RECD_VOLUME, 0, MENU_MOVIE_RECORD_VOLUME_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+            {
+            NULL, 0
+            },
+        },
+        {/* 010 */COMMON_KEY_VMD_REC_TIME, 0, MENU_MOVIE_VMD_REC_TIME_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_VMD_REC_TIME_5SEC_EN)
+			"5s", VMD_REC_TIME_5SEC,
+			#endif
+			#if (MENU_MOVIE_VMD_REC_TIME_10SEC_EN)
+			"10s", VMD_REC_TIME_10SEC,
+			#endif
+			#if (MENU_MOVIE_VMD_REC_TIME_30SEC_EN)
+			"30s", VMD_REC_TIME_30SEC,
+			#endif
+			#if (MENU_MOVIE_VMD_REC_TIME_1MIN_EN)
+			"1min", VMD_REC_TIME_1MIN,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 011 */COMMON_KEY_AUTO_RECORD, 0, MENU_MOVIE_AUTO_REC_EN, ParamFun, MenuSetting_Get_General,
+        	{
+        	"ON", AUTO_REC_ON,
+        	"OFF", AUTO_REC_OFF,
+        	NULL, 0
+        	},
+        },
+        {/* 012 */COMMON_KEY_TIMELAPSE, 0, MENU_MOVIE_TIMELAPSE_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_STILL_TIMELAPSE_TIME1_EN)
+			"0s", TIMELAPSE_INTERVAL_1,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME2_EN)
+			"1s", TIMELAPSE_INTERVAL_2,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME3_EN)
+			"2s", TIMELAPSE_INTERVAL_3,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME4_EN)
+			"5s", TIMELAPSE_INTERVAL_4,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME5_EN)
+			"10s", TIMELAPSE_INTERVAL_5,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME6_EN)
+			"30s", TIMELAPSE_INTERVAL_6,
+			#endif
+			#if (MENU_STILL_TIMELAPSE_TIME7_EN)
+			"60s", TIMELAPSE_INTERVAL_7,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 013 */COMMON_KEY_SLOWMOTION_EN, 0, MENU_MOVIE_SLOWMOTION_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			"off", SLOWMOTION_X1,
+			"x2", SLOWMOTION_X2,
+			"x4", SLOWMOTION_X4,
+			"x8", SLOWMOTION_X8,
+        	NULL, 0
+        	},
+        },
+        {/* 014 */COMMON_KEY_HDR_EN, 0, MENU_MOVIE_HDR_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			"ON", HDR_EN_ON,
+			"OFF", HDR_EN_OFF,
+        	NULL, 0
+        	},
+        },
+        {/* 015 */COMMON_KEY_WNR_EN, 0, MENU_MOVIE_WNR_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			"OFF", WNR_EN_OFF,
+			"ON", WNR_EN_ON,
+        	NULL, 0
+        	},
+        },
+        {/* 016 */COMMON_KEY_NIGHT_MODE_EN, 0, MENU_MOVIE_NIGHT_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MOVIE_NIGHT_MODE_ON_EN)
+			"ON", MOVIE_NIGHT_MODE_ON,
+			#endif
+			#if (MENU_MOVIE_NIGHT_MODE_OFF_EN)
+			"OFF", MOVIE_NIGHT_MODE_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 017 */COMMON_KEY_PARK_TYPE, 0, MENU_MOVIE_PARKING_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 018 */COMMON_KEY_LDWS_EN, 0, MENU_MOVIE_LDWS_MODE_EN, ParamFun, MenuSetting_Get_General,
+			{
+			"ON", LDWS_EN_ON,
+			"OFF", LDWS_EN_OFF,
+			NULL, 0
+			},
+        },
+        {/* 019 */COMMON_KEY_FCWS_EN, 0, MENU_MOVIE_FCWS_MODE_EN, ParamFun, MenuSetting_Get_General,
+			{
+			"ON", FCWS_EN_ON,
+			"OFF", FCWS_EN_OFF,
+			NULL, 0
+			},
+        },
+        {/* 020 */COMMON_KEY_SAG_EN, 0, MENU_MOVIE_SAG_MODE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			"ON", SAG_EN_ON,
+			"OFF", SAG_EN_OFF,
+        	NULL, 0
+        	},
+        },
+        {/* 021 */COMMON_KEY_CONTRAST, 0, MENU_MOVIE_SATURATION_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 022 */COMMON_KEY_SATURATION, 0, MENU_MOVIE_SATURATION_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 023 */COMMON_KEY_SHARPNESS, 0, MENU_MOVIE_SHARPNESS_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 024 */COMMON_KEY_GAMMA, 0, MENU_MOVIE_GAMMA_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        // Manual
+        {/* 025 */COMMON_KEY_SCENE, 0, MENU_MANUAL_SCENE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MANUAL_SCENE_AUTO_EN)
+			"Auto", SCENE_AUTO,
+			#endif
+			#if (MENU_MANUAL_SCENE_SPORT_EN)
+			"Sport", SCENE_SPORT,
+			#endif
+			#if (MENU_MANUAL_SCENE_PORTRAIT_EN)
+			"Portait", SCENE_PORTRAIT,
+			#endif
+			#if (MENU_MANUAL_SCENE_LANDSCAPE_EN)
+			"Landscape", SCENE_LANDSCAPE,
+			#endif
+			#if (MENU_MANUAL_SCENE_TWILIGHT_PORTRAIT_EN)
+			"TPortait", SCENE_TWILIGHT_PORTRAIT,
+			#endif
+			#if (MENU_MANUAL_SCENE_TWILIGHT_EN)
+			"TWilight", SCENE_TWILIGHT,
+			#endif
+			#if (MENU_MANUAL_SCENE_SNOW_EN)
+			"Snow", SCENE_SNOW,
+			#endif
+			#if (MENU_MANUAL_SCENE_BEACH_EN)
+			"Beach", SCENE_BEACH,
+			#endif
+			#if (MENU_MANUAL_SCENE_FIREWORKS_EN)
+			"Fireworks", SCENE_FIREWORKS,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 026 */COMMON_KEY_EV,    6, MENU_MANUAL_EV_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MANUAL_EV_N20_EN)
+			"EVN20", EVVALUE_N20 ,
+			#endif
+			#if (MENU_MANUAL_EV_N17_EN)
+			"EVN17", EVVALUE_N17 ,
+			#endif
+			#if (MENU_MANUAL_EV_N15_EN)
+			"EVN15", EVVALUE_N15 ,
+			#endif
+			#if (MENU_MANUAL_EV_N13_EN)
+			"EVN13", EVVALUE_N13 ,
+			#endif
+			#if (MENU_MANUAL_EV_N10_EN)
+			"EVN10", EVVALUE_N10 ,
+			#endif
+			#if (MENU_MANUAL_EV_N07_EN)
+			"EVN07", EVVALUE_N07 ,
+			#endif
+			#if (MENU_MANUAL_EV_N05_EN)
+			"EVN05", EVVALUE_N05 ,
+			#endif
+			#if (MENU_MANUAL_EV_N03_EN)
+			"EVN03", EVVALUE_N03 ,
+			#endif
+			//#if (MENU_MANUAL_EV_00_EN)    // always exist
+			"EV0", EVVALUE_00  ,
+			//#endif
+			#if (MENU_MANUAL_EV_P03_EN)
+			"EVP03", EVVALUE_P03 ,
+			#endif
+			#if (MENU_MANUAL_EV_P05_EN)
+			"EVP05", EVVALUE_P05 ,
+			#endif
+			#if (MENU_MANUAL_EV_P07_EN)
+			"EVP07", EVVALUE_P07 ,
+			#endif
+			#if (MENU_MANUAL_EV_P10_EN)
+			"EVP10", EVVALUE_P10 ,
+			#endif
+			#if (MENU_MANUAL_EV_P13_EN)
+			"EVP13", EVVALUE_P13 ,
+			#endif
+			#if (MENU_MANUAL_EV_P15_EN)
+			"EVP15", EVVALUE_P15 ,
+			#endif
+			#if (MENU_MANUAL_EV_P17_EN)
+			"EVP17", EVVALUE_P17 ,
+			#endif
+			#if (MENU_MANUAL_EV_P20_EN)
+			"EVP20", EVVALUE_P20 ,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 027 */COMMON_KEY_ISO,   0, MENU_MANUAL_ISO_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MANUAL_ISO_AUTO_EN)
+			"ISO_AUTO", ISO_AUTO,
+			#endif
+			//  ISO_80,
+			#if (MENU_MANUAL_ISO_100_EN)
+			"ISO_100", ISO_100,
+			#endif
+			#if (MENU_MANUAL_ISO_200_EN)
+			"ISO_200", ISO_200,
+			#endif
+			#if (MENU_MANUAL_ISO_400_EN)
+			"ISO_400", ISO_400,
+			#endif
+			#if (MENU_MANUAL_ISO_800_EN)
+			"ISO_800", ISO_800,
+			#endif
+			#if (MENU_MANUAL_ISO_1200_EN)
+			"ISO_1200", ISO_1200,
+			#endif
+			#if (MENU_MANUAL_ISO_1600_EN)
+			"ISO_1600", ISO_1600,
+			#endif
+			#if (MENU_MANUAL_ISO_3200_EN)
+			"ISO_3200", ISO_3200,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 028 */COMMON_KEY_WB,    1, MENU_MANUAL_WB_EN, ParamFun, MenuSetting_Get_General,
+			{
+			#if (MENU_MANUAL_WB_AUTO_EN)
+			"Auto", WB_AUTO,
+			#endif
+			#if (MENU_MANUAL_WB_DAYLIGHT_EN)
+			"Daylight", WB_DAYLIGHT,
+			#endif
+			#if (MENU_MANUAL_WB_CLOUDY_EN)
+			"Cloudy", WB_CLOUDY,
+			#endif
+			#if (MENU_MANUAL_WB_FLUORESCENT1_EN)
+			"Fluorescent1", WB_FLUORESCENT1,
+			#endif
+			#if (MENU_MANUAL_WB_FLUORESCENT2_EN)
+			"Fluorescent2", WB_FLUORESCENT2,
+			#endif
+			#if (MENU_MANUAL_WB_FLUORESCENT3_EN)
+			"Fluorescent3", WB_FLUORESCENT3,
+			#endif
+			#if (MENU_MANUAL_WB_INCANDESCENT_EN)
+			"Incandescent", WB_INCANDESCENT,
+			#endif
+			#if (MENU_MANUAL_WB_FLASH_EN)
+			"Flash", WB_FLASH,
+			#endif
+			#if (MENU_MANUAL_WB_ONEPUSH_EN)
+			"Onepush", WB_ONEPUSH,
+			#endif
+			#if (MENU_MANUAL_WB_ONE_PUSH_SET_EN)
+			"Onepush set", WB_ONE_PUSH_SET,
+			#endif
+			#if (MENU_MANUAL_WB_UNDERWATER)
+			"Underwater", WB_UNDERWATER,
+			#endif
+			NULL, 0
+			},
+        },
+        {/* 029 */COMMON_KEY_COLOR, 0, MENU_MANUAL_COLOR_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MANUAL_COLOR_NATURAL_EN)
+			"natural", COLOR_NATURAL,
+			#endif
+			#if (MENU_MANUAL_COLOR_VIVID_EN)
+			"vivid", COLOR_VIVID,
+			#endif
+			#if (MENU_MANUAL_COLOR_PALE_EN)
+			"pale", COLOR_PALE,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 030 */COMMON_KEY_EFFECT, 0, MENU_MANUAL_EFFECT_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_MANUAL_EFFECT_NORMAL_EN)
+			"noraml", EFFECT_NORMAL,
+			#endif
+			#if (MENU_MANUAL_EFFECT_SEPIA_EN)
+			"sepia", EFFECT_SEPIA,
+			#endif
+			#if (MENU_MANUAL_EFFECT_BLACK_WHITE_EN)
+			"black white", EFFECT_BLACK_WHITE,
+			#endif
+			#if (MENU_MANUAL_EFFECT_EMBOSS_EN)
+			"emboss", EFFECT_EMBOSS,
+			#endif
+			#if (MENU_MANUAL_EFFECT_NEGATIVE_EN)
+			"negative", EFFECT_NEGATIVE,
+			#endif
+			#if (MENU_MANUAL_EFFECT_SKETCH_EN)
+			"sketch", EFFECT_SKETCH,
+			#endif
+			#if (MENU_MANUAL_EFFECT_OIL_EN)
+			"oil", EFFECT_OIL,
+			#endif
+			#if (MENU_MANUAL_EFFECT_CRAYON_EN)
+			"crayon", EFFECT_CRAYON,
+			#endif
+			#if (MENU_MANUAL_EFFECT_BEAUTY_EN)
+			"beauty", EFFECT_BEAUTY,
+			#endif
+        	NULL, 0
+        	},
+        },
+        // Playback
+        {/* 031 */"PlaybackVideoType", 0, MENU_PLAYBACK_VIDEO_TYPE_EN, ParamFun, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 032 */"SlideShow",            0, 0,    NULL, NULL,
+        	{NULL, 0},
+        },
+        {/* 033 */"SlideShowFileType",  0, MENU_PLAYBACK_SLIDESHOW_FILE_EN, ParamFun, NULL,
+        	{NULL, 0},
+        },
+        {/* 034 */"SlideShowEffect",    0, MENU_PLAYBACK_SLIDESHOW_EFFECT_EN, ParamFun, NULL,
+        	{NULL, 0},
+        },
+        {/* 035 */"SlideShowMusic",     0, MENU_PLAYBACK_SLIDESHOW_MUSIC_EN, ParamFun, NULL,
+        	{NULL, 0},
+        },
+        {/* 036 */COMMON_KEY_PB_VOLUME,     4, MENU_PLAYBACK_VOLUME_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_PLAYBACK_VOLUME_LV0_EN)
+			"0", VOLUME_00,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV1_EN)
+			"1", VOLUME_01 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV2_EN)
+			"2", VOLUME_02 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV3_EN)
+			"3", VOLUME_03 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV4_EN)
+			"4", VOLUME_04 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV5_EN)
+			"5", VOLUME_05 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV6_EN)
+			"6", VOLUME_06 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV7_EN)
+			"7", VOLUME_07 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV8_EN)
+			"8", VOLUME_08 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV9_EN)
+			"9", VOLUME_09 ,
+			#endif
+			#if (MENU_PLAYBACK_VOLUME_LV10_EN)
+			"10", VOLUME_10 ,
+			#endif
+        	NULL, 0
+        	},
+        },
+        // Edit Tool
+        {/* 037 */"FileEdit",       0, 0, NULL, NULL,
+        	{NULL, 0},
+        },
+        // Media Tool
+        {/* 038 */"MediaSelect",    0, MENU_MEDIA_SELECT_MDEIA_EN, ParamFun, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        // General
+        {/* 039 */COMMON_KEY_BEEP,  0, MENU_GENERAL_BEEP_EN, ParamFun, MenuSetting_Get_General,
+			{
+			#if (MENU_GENERAL_BEEP_ON_EN)
+			"ON", BEEP_ON,
+			#endif
+			#if (MENU_GENERAL_BEEP_OFF_EN)
+			"OFF", BEEP_OFF,
+			#endif
+			NULL, 0
+			},
+        },
+        {/* 040 */COMMON_LCD_BRIGHTNESS, 0, MENU_GENERAL_LCD_BRIGHTNESS_EN, ParamFun_adjustParam, MenuSetting_Get_General,
+        	{NULL, 0},
+        },
+        {/* 041 */COMMON_AUTO_POWER_OFF, 0, MENU_GENERAL_AUTO_POWEROFF_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_AUTO_POWEROFF_NEVER_EN)
+			"never", AUTO_POWER_OFF_NEVER,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_15SEC_EN)
+			"15s", AUTO_POWER_OFF_15SEC,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_30SEC_EN)
+			"30s", AUTO_POWER_OFF_30SEC,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_1MIN_EN)
+			"1min", AUTO_POWER_OFF_1MIN,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_2MIN_EN)
+			"2min", AUTO_POWER_OFF_2MINS,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_3MIN_EN)
+			"3min", AUTO_POWER_OFF_3MINS,
+			#endif
+			#if (MENU_GENERAL_AUTO_POWEROFF_5MIN_EN)
+			"5min", AUTO_POWER_OFF_5MINS,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 042 */COMMON_DATE_TIME_FMT, 1, MENU_GENERAL_DATE_FORMAT_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_DATE_FORMAT_NONE_EN)
+			"NONE", DATETIME_SETUP_NONE,
+			#endif
+			#if (MENU_GENERAL_DATE_FORMAT_YMD_EN)
+			"YMD", DATETIME_SETUP_YMD,
+			#endif
+			#if (MENU_GENERAL_DATE_FORMAT_MDY_EN)
+			"MDY", DATETIME_SETUP_MDY,
+			#endif
+			#if (MENU_GENERAL_DATE_FORMAT_DMY_EN)
+			"DMY", DATETIME_SETUP_DMY,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 043 */COMMON_KEY_STICKER_LOGO_TXT, 1, MENU_GENERAL_DATE_LOGO_STAMP_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_DATE_LOGO_STAMP_DATE_LOGO_EN)
+			"date+logo", DATELOGO_STAMP,
+			#endif
+			#if (MENU_GENERAL_DATE_LOGO_STAMP_DATE_EN)
+			"date", DATE_STAMP,
+			#endif
+			#if (MENU_GENERAL_DATE_LOGO_STAMP_LOGO_EN)
+			"logo", LOGO_STAMP,
+			#endif
+			#if (MENU_GENERAL_DATE_LOGO_STAMP_OFF_EN)
+			"off", OFF_STAMP,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 044 */COMMON_KEY_STICKER_GPS, 1, MENU_GENERAL_GPS_STAMP_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_GPS_STAMP_ON_EN)
+			"ON", GPS_STAMP_ON,
+			#endif
+			#if (MENU_GENERAL_GPS_STAMP_OFF_EN)
+			"OFF", GPS_STAMP_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 045 */COMMON_KEY_STICKER_SPEED, 1, MENU_GENERAL_SPEED_STAMP_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_SPEED_STAMP_ON_EN)
+			"ON", SPEED_STAMP_ON,
+			#endif
+			#if (MENU_GENERAL_SPEED_STAMP_OFF_EN)
+			"OFF", SPEED_STAMP_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 046 */COMMON_KEY_LANGUAGE,       0, MENU_GENERAL_LANGUAGE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_LANGUAGE_ENGLISH_EN)
+			"English", LANGUAGE_ENGLISH,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_SPANISH_EN)
+			"Spanish", LANGUAGE_SPANISH,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_PORTUGUESE_EN)
+			"Portuguese", LANGUAGE_PORTUGUESE,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_RUSSIAN_EN)
+			"Russian", LANGUAGE_RUSSIAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_SCHINESE_EN)
+			"SChinese", LANGUAGE_SCHINESE,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_TCHINESE_EN)
+			"TChinese", LANGUAGE_TCHINESE,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_GERMAN_EN)
+			"German", LANGUAGE_GERMAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_ITALIAN_EN)
+			"Italian", LANGUAGE_ITALIAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_LATVIAN_EN)
+			"Latvian", LANGUAGE_LATVIAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_POLISH_EN)
+			"Polish", LANGUAGE_POLISH,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_ROMANIAN_EN)
+			"Romanian", LANGUAGE_ROMANIAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_SLOVAK_EN)
+			"Slovak", LANGUAGE_SLOVAK,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_UKRANINIAN_EN)
+			"Ukraninian", LANGUAGE_UKRANINIAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_FRENCH_EN)
+			"French", LANGUAGE_FRENCH,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_JAPANESE_EN)
+			"Japanese", LANGUAGE_JAPANESE,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_KOREAN_EN)
+			"Korean", LANGUAGE_KOREAN,
+			#endif
+			#if (MENU_GENERAL_LANGUAGE_CZECH_EN)
+			"Czech", LANGUAGE_CZECH,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 047 */"ResetSetting",          0, MENU_GENERAL_RESET_SETUP_EN, ParamFun, NULL,
+        	{NULL, 0},
+        },
+        {/* 048 */COMMON_KEY_FLICKER,          0, MENU_GENERAL_FLICKER_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_FLICKER_50HZ_EN)
+			"50HZ", FLICKER_50HZ  ,
+			#endif
+			#if (MENU_GENERAL_FLICKER_60HZ_EN)
+			"60HZ", FLICKER_60HZ  ,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 049 */COMMON_KEY_USB_FUNC,            0, MENU_GENERAL_USB_FUNCTION_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_USB_FUNCTION_MSDC_EN)
+        	"MSDC", MENU_SETTING_USB_MSDC  ,
+			#endif
+			#if (MENU_GENERAL_USB_FUNCTION_PCAM_EN)
+			"PCAM", MENU_SETTING_USB_PCAM  ,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 050 */COMMON_KEY_LCD_POWERS,          0, MENU_GENERAL_LCD_POWER_SAVE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_LCD_POWER_SAVE_OFF_EN)
+			"OFF", LCD_POWER_SAVE_OFF,
+			#endif
+			#if (MENU_GENERAL_LCD_POWER_SAVE_10SEC_EN)
+			"10s", LCD_POWER_SAVE_10SEC,
+			#endif
+			#if (MENU_GENERAL_LCD_POWER_SAVE_30SEC_EN)
+			"30s", LCD_POWER_SAVE_30SEC,
+			#endif
+			#if (MENU_GENERAL_LCD_POWER_SAVE_1MIN_EN)
+			"1min", LCD_POWER_SAVE_1MIN,
+			#endif
+			#if (MENU_GENERAL_LCD_POWER_SAVE_3MIN_EN)
+			"3min", LCD_POWER_SAVE_3MIN,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 051 */COMMON_KEY_GSENSOR_SENS, 3, MENU_GENERAL_GSENSOR_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_GSENSOR_OFF_EN)
+			"OFF", GSENSOR_SENSITIVITY_OFF,
+			#endif
+			#if (MENU_GENERAL_GSENSOR_LEVEL0_EN)
+			"LEVEL0", GSENSOR_SENSITIVITY_L0,
+			#endif
+			#if (MENU_GENERAL_GSENSOR_LEVEL1_EN)
+			"LEVEL1", GSENSOR_SENSITIVITY_L1,
+			#endif
+			#if (MENU_GENERAL_GSENSOR_LEVEL2_EN)
+			"LEVEL2", GSENSOR_SENSITIVITY_L2,
+			#endif
+			#if (MENU_GENERAL_GSENSOR_LEVEL3_EN)
+			"LEVEL3", GSENSOR_SENSITIVITY_L3,
+			#endif
+			#if (MENU_GENERAL_GSENSOR_LEVEL4_EN)
+			"LEVEL4", GSENSOR_SENSITIVITY_L4,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 052 */COMMON_KEY_GSENSOR_PWR_ON_SENS, 3, MENU_GENERAL_POWERON_GSENSOR_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_POWERON_GSENSOR_OFF_EN)
+			"OFF", GSENSOR_POWERON_SENSITIVITY_OFF,
+			#endif
+			#if (MENU_GENERAL_POWER_ON_GSENSOR_LEVEL0_EN)
+			"LEVEL0", GSENSOR_POWERON_SENSITIVITY_L0,
+			#endif
+			#if (MENU_GENERAL_POWER_ON_GSENSOR_LEVEL1_EN)
+			"LEVEL1", GSENSOR_POWERON_SENSITIVITY_L1,
+			#endif
+			#if (MENU_GENERAL_POWER_ON_GSENSOR_LEVEL2_EN)
+			"LEVEL2", GSENSOR_POWERON_SENSITIVITY_L2,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 053 */COMMON_KEY_TIME_ZONE,       13, MENU_GENERAL_TIME_ZONE_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			"GMT-12:00", TIMEZONE_GMT_M_12,  //00:0x00
+			"GMT-11:00", TIMEZONE_GMT_M_11,
+			"GMT-10:00", TIMEZONE_GMT_M_10,
+			"GMT-9:00", TIMEZONE_GMT_M_9,
+			"GMT-8:00", TIMEZONE_GMT_M_8,
+			"GMT-7:00", TIMEZONE_GMT_M_7,   //05:0x05
+			"GMT-6:00", TIMEZONE_GMT_M_6,
+			"GMT-5:00", TIMEZONE_GMT_M_5,
+			"GMT-4:00", TIMEZONE_GMT_M_4,
+			"GMT-4:30", TIMEZONE_GMT_M_3_30,
+			"GMT-3:00", TIMEZONE_GMT_M_3,   //10:0x0A
+			"GMT-2:00", TIMEZONE_GMT_M_2,
+			"GMT-1:00", TIMEZONE_GMT_M_1,
+			"GMT", TIMEZONE_GMT,
+			"GMT+1:00", TIMEZONE_GMT_P_1,
+			"GMT+2:00", TIMEZONE_GMT_P_2,   //15:0x0F
+			"GMT+3:00", TIMEZONE_GMT_P_3,
+			"GMT+3:30", TIMEZONE_GMT_P_3_30,
+			"GMT+4:00", TIMEZONE_GMT_P_4,
+			"GMT+4:30", TIMEZONE_GMT_P_4_30,
+			"GMT+5:00", TIMEZONE_GMT_P_5,   //20:0x14
+			"GMT+5:30", TIMEZONE_GMT_P_5_30,
+			"GMT+5:45", TIMEZONE_GMT_P_5_45,
+			"GMT+6:00", TIMEZONE_GMT_P_6,
+			"GMT+6:30", TIMEZONE_GMT_P_6_30,
+			"GMT+7:00", TIMEZONE_GMT_P_7,   //25:0x19
+			"GMT+8:00", TIMEZONE_GMT_P_8,
+			"GMT+9:00", TIMEZONE_GMT_P_9,
+			"GMT+9:30", TIMEZONE_GMT_P_9_30,
+			"GMT+10:00", TIMEZONE_GMT_P_10,
+			"GMT+11:00", TIMEZONE_GMT_P_11,  //30:0x1E
+        	NULL, 0
+        	},
+        },
+        {/* 054 */COMMON_KEY_MOTION_SENS,    0, MENU_GENERAL_MOTION_DTC_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_MOTION_DTC_OFF_EN)
+			"OFF", MOTION_DTC_SENSITIVITY_OFF,
+			#endif
+			#if (MENU_GENERAL_MOTION_DTC_LOW_EN)
+			"LOW", MOTION_DTC_SENSITIVITY_LOW,
+			#endif
+			#if (MENU_GENERAL_MOTION_DTC_MID_EN)
+			"MID", MOTION_DTC_SENSITIVITY_MID,
+			#endif
+			#if (MENU_GENERAL_MOTION_DTC_HIGH_EN)
+			"HIGH", MOTION_DTC_SENSITIVITY_HIGH,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 055 */"BatteryVoltage",       0, 0, NULL, NULL,
+        	{NULL, 0},
+        },
+        {/* 056 */COMMON_KEY_WIFI_EN,       0, MENU_GENERAL_WIFI_EN, ParamFun, MenuSetting_Get_General,
+        	{
+			#if (MENU_GENERAL_WIFI_ON_EN)
+			"ON", WIFI_MODE_ON,
+			#endif
+			#if (MENU_GENERAL_WIFI_OFF_EN)
+			"OFF", WIFI_MODE_OFF,
+			#endif
+        	NULL, 0
+        	},
+        },
+        {/* 057 */"version",       0, MENU_GENERAL_FW_VERSION_EN, NULL, NULL,
+        	{
+        	"v1.0.0", 0,
+        	NULL, 0
+        	},
+        },
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /* NEW!! Extension setting */
+
+        /* END OF MARK */
+        {NULL,                      0, 0, NULL,       NULL,
+        	{NULL, 0},
+        }
+	}
+};
+
+const char* osdstringpool[] = {
+"IDS_DS_EMPTY",
+"IDS_DS_MANUAL_SETTINGS",
+"IDS_DS_SCENE_SELECTION",
+"IDS_DS_AUTO",
+"IDS_DS_SCENE_SPORTS",
+"IDS_DS_SCENE_PORTRAIT",
+"IDS_DS_SCENE_LANDSCAPE",
+"IDS_DS_SCENE_TWILIGHTPORTRAIT",
+"IDS_DS_SCENE_TWILIGHT",
+"IDS_DS_SCENE_SNOW",
+"IDS_DS_SCENE_BEACH",
+"IDS_DS_SCENE_FIREWORKS",
+"IDS_DS_SCENE_DESCRIPTION",
+"IDS_DS_FOCUS_WINDOW",
+"IDS_DS_MULTI",
+"IDS_DS_CENTER_SPOT",
+"IDS_DS_FOCUS_WINDOW_DESCRIPTION",
+"IDS_DS_FOCUS_RANGE",
+"IDS_DS_NORMAL",
+"IDS_DS_FOCUS_RANGE_MACRO",
+"IDS_DS_FOCUS_RANGE_DESCRIPTION",
+"IDS_DS_METERING",
+"IDS_DS_METERING_CENTER_WEIGHTED",
+"IDS_DS_METERING_DESCRIPTION",
+"IDS_DS_EV",
+"IDS_DS_EV_P20",
+"IDS_DS_EV_P17",
+"IDS_DS_EV_P13",
+"IDS_DS_EV_P10",
+"IDS_DS_EV_P07",
+"IDS_DS_EV_P03",
+"IDS_DS_EV_0",
+"IDS_DS_EV_N03",
+"IDS_DS_EV_N07",
+"IDS_DS_EV_N10",
+"IDS_DS_EV_N13",
+"IDS_DS_EV_N17",
+"IDS_DS_EV_N20",
+"IDS_DS_EV_DESCRIPTION",
+"IDS_DS_ISO",
+"IDS_DS_ISO_100",
+"IDS_DS_ISO_200",
+"IDS_DS_ISO_400",
+"IDS_DS_ISO_800",
+"IDS_DS_ISO_1600",
+"IDS_DS_ISO_3200",
+"IDS_DS_ISO_DESCRIPTION",
+"IDS_DS_WB",
+"IDS_DS_WB_DAYLIGHT",
+"IDS_DS_WB_CLOUDY",
+"IDS_DS_WB_FLUORESCENT1",
+"IDS_DS_WB_FLUORESCENT2",
+"IDS_DS_WB_FLUORESCENT3",
+"IDS_DS_WB_INCANDESCENT",
+"IDS_DS_WB_FLASH",
+"IDS_DS_WB_ONEPUSH",
+"IDS_DS_WB_ONE_PUSH_SET",
+"IDS_DS_WB_DESCRIPTION",
+"IDS_DS_COLOR",
+"IDS_DS_COLOR_NATURAL",
+"IDS_DS_COLOR_VIVID",
+"IDS_DS_COLOR_PALE",
+"IDS_DS_COLOR_DESCRIPTION",
+"IDS_DS_EFFECT",
+"IDS_DS_EFFECT_SEPIA",
+"IDS_DS_EFFECT_BLACK_WHITE",
+"IDS_DS_EFFECT_EMBOSS",
+"IDS_DS_EFFECT_NEGATIVE",
+"IDS_DS_EFFECT_SKETCH",
+"IDS_DS_EFFECT_OIL",
+"IDS_DS_EFFECT_CRAYON",
+"IDS_DS_EFFECT_BEAUTY",
+"IDS_DS_EFFECT_DESCRIPTION",
+"IDS_DS_FACE_TOUCH",
+"IDS_DS_FACE_DETECTION",
+"IDS_DS_TOUCH_SPOT",
+"IDS_DS_FACE_TOUCH_DESCRIPTION",
+"IDS_DS_SMILE_DETECTION",
+"IDS_DS_SMILE_DETECTION_1PERSON",
+"IDS_DS_SMILE_DETECTION_2PERSONS",
+"IDS_DS_SMILE_DETECTION_DESCRIPTION",
+"IDS_DS_SMILE_SENSITIVITY",
+"IDS_DS_LOW",
+"IDS_DS_HIGH",
+"IDS_DS_SMILE_SENSITIVITY_DESCRIPTION",
+"IDS_DS_MENU",
+"IDS_DS_QUICK_MENU",
+"IDS_DS_MOVIE_MODE",
+"IDS_DS_MOVIE_MODE_SHD",
+"IDS_DS_MOVIE_MODE_SHD_25P",
+"IDS_DS_MOVIE_MODE_SHD_24P",
+"IDS_DS_MOVIE_MODE_FHD_60P",
+"IDS_DS_MOVIE_MODE_FHD",
+"IDS_DS_MOVIE_MODE_FHD_HDR",
+"IDS_DS_MOVIE_MODE_HD",
+"IDS_DS_MOVIE_MODE_VGA_30P",
+"IDS_DS_MOVIE_MODE_HD_60P",
+"IDS_DS_MOVIE_MODE_DESCRIPTION",
+"IDS_DS_MOVIE_RECORD",
+"IDS_DS_MOVIE_QUALITY",
+"IDS_DS_QUALITY_SUPERFINE",
+"IDS_DS_QUALITY_FINE",
+"IDS_DS_MOVIE_QUALITY_DESCRIPTION",
+"IDS_DS_MOVIE_STABLEILIZATION",
+"IDS_DS_ON",
+"IDS_DS_OFF",
+"IDS_DS_MOVIE_STABLE_DESCRIPTION",
+"IDS_DS_AUTO_SLOW_SHUTTER",
+"IDS_DS_ASSHUTTER_DESCRIPTION",
+"IDS_DS_MIC_SENSITIVITY",
+"IDS_DS_STANDARD",
+"IDS_DS_MIC_SENSITIVITY_DESCRIPTION",
+"IDS_DS_STILL_IMAGE_SIZE",
+"IDS_DS_IMAGE_SIZE_30M",
+"IDS_DS_IMAGE_SIZE_14M",
+"IDS_DS_IMAGE_SIZE_12M",
+"IDS_DS_IMAGE_SIZE_8M",
+"IDS_DS_IMAGE_SIZE_5M",
+"IDS_DS_IMAGE_SIZE_3M",
+"IDS_DS_IMAGE_SIZE_2M",
+"IDS_DS_IMAGE_SIZE_1_2M",
+"IDS_DS_IMAGE_SIZE_VGA",
+"IDS_DS_IMAGE_SIZE_DESCRIPTION",
+"IDS_DS_FLASH",
+"IDS_DS_FLASH_SLOW_SYNC",
+"IDS_DS_FLASH_DESCRIPTION",
+"IDS_DS_SELFTIMER",
+"IDS_TIME_1SEC",
+"IDS_TIME_2SEC",
+"IDS_TIME_5SEC",
+"IDS_TIME_10SEC",
+"IDS_TIME_15SEC",
+"IDS_TIME_30SEC",
+"IDS_TIME_60SEC",
+"IDS_TIME_0MIN",
+"IDS_TIME_1MIN",
+"IDS_TIME_2MIN",
+"IDS_TIME_3MIN",
+"IDS_TIME_5MIN",
+"IDS_TIME_10MIN",
+"IDS_TIME_15MIN",
+"IDS_TIME_25MIN",
+"IDS_TIME_30MIN",
+"IDS_TIME_60MIN",
+"IDS_DS_SELFTIMER_DESCRIPTION",
+"IDS_DS_STILL_CAPTURE",
+"IDS_DS_STILL_QUALITY",
+"IDS_DS_STILL_QUALITY_DESCRIPTION",
+"IDS_DS_STILL_STABLEILIZATION",
+"IDS_DS_STILL_STABLE_DESCRIPTION",
+"IDS_DS_FLASH_LEVEL",
+"IDS_DS_FLASH_LEVEL_DESCRIPTION",
+"IDS_DS_REDEYE_REDUCTION",
+"IDS_DS_REDEYE_REDUCTION_DESCRIPTION",
+"IDS_DS_BURST_CAPTURE",
+"IDS_DS_BURST_SHOT_LO",
+"IDS_DS_BURST_SHOT_MID",
+"IDS_DS_BURST_SHOT_HI",
+"IDS_DS_BURST_CAPTURE_DESCRIPTION",
+"IDS_DS_DELETE",
+"IDS_DS_YES",
+"IDS_DS_NO",
+"IDS_DS_PROTECT",
+"IDS_DS_CUT",
+"IDS_DS_VOLUME",
+"IDS_DS_VOLUME_DESCRIPTION",
+"IDS_DS_SLIDE_SHOW",
+"IDS_DS_ROTATE",
+"IDS_DS_OK",
+"IDS_DS_CANCEL",
+"IDS_DS_RESIZE",
+"IDS_DS_RESIZE_DESCRIPTION",
+"IDS_DS_TRIMMING",
+"IDS_DS_PLAYBACK",
+"IDS_DS_SLIDE_SHOW_FILES",
+"IDS_DS_FFILES_ALL",
+"IDS_DS_FILE_STILL",
+"IDS_DS_FILE_MOVIE",
+"IDS_DS_SSHOWFILES_DESCRIPTION",
+"IDS_DS_SLIDE_SHOW_EFFECTS",
+"IDS_DS_SIMPLE",
+"IDS_DS_EFFECTS_NOSTALGIC",
+"IDS_DS_EFFECTS_STYLISH",
+"IDS_DS_EFFECTS_ACTIVE",
+"IDS_DS_SSHOWEFFECTS_DESCRIPTION",
+"IDS_DS_SLIDE_SHOW_MUSIC",
+"IDS_DS_SSHOWMUSIC_DESCRIPTION",
+"IDS_DS_EDIT_TOOL",
+"IDS_DS_DELETE_ALL_DESCRIPTION",
+"IDS_DS_DELETE_ALL",
+"IDS_DS_DELETE_ALL_CONFIRM",
+"IDS_DS_PROTECT_ALL_DESCRIPTION",
+"IDS_DS_PROTECT_ALL",
+"IDS_DS_PROTECT_ALL_CONFIRM",
+"IDS_DS_MEDIA_TOOL",
+"IDS_DS_MEDIA_SELECT",
+"IDS_DS_MEDIA_SD_CARD",
+"IDS_DS_MEDIA_INTERNAL",
+"IDS_DS_MEDIA_SELECT_DESCRIPTION",
+"IDS_DS_FORMAT_SD_CARD",
+"IDS_DS_FORMAT_CARD_CONFIRM",
+"IDS_DS_DATA_DELETED",
+"IDS_DS_FORMAT_INTMEM",
+"IDS_DS_FORMAT_INTMEM_CONFIRM",
+"IDS_DS_SD_CARD_INFO",
+"IDS_DS_CARD_INFO",
+"IDS_DS_TIME_LEFT",
+"IDS_DS_PHOTO_LEFT",
+"IDS_DS_INTMEM_INFO",
+"IDS_DS_INTMEM_INFORMATION",
+"IDS_DS_GENERAL_SETTINGS",
+"IDS_DS_BEEP",
+"IDS_DS_BEEP_DESCRIPTION",
+"IDS_DS_LCD_BRIGHTNESS",
+"IDS_DS_BRIGHT",
+"IDS_DS_LCD_BRIGHTNESS_DESCRIPTION",
+"IDS_DS_POWER_OFF",
+"IDS_DS_POWER_OFF_NEVER",
+"IDS_DS_POWER_OFF_DESCRIPTION",
+"IDS_DS_POWER_SAVE",
+"IDS_DS_POWER_SAVE_DESCRIPTION",
+"IDS_DS_CLOCK_SETTINGS",
+"IDS_DS_DATETIME_Y",
+"IDS_DS_DATETIME_M",
+"IDS_DS_DATETIME_D",
+"IDS_DS_DATETIME_FORMAT",
+"IDS_DS_NONE",
+"IDS_DS_DATETIME_YMD",
+"IDS_DS_DATETIME_MDY",
+"IDS_DS_DATETIME_DMY",
+"IDS_DS_DATETIME_FORMAT_DESCRIPTION",
+"IDS_DS_LANGUAGE",
+"IDS_DS_LANGUAGES_ENGLISH",
+"IDS_DS_LANGUAGES_SPANISH",
+"IDS_DS_LANGUAGES_PORTUGUESE",
+"IDS_DS_LANGUAGES_RUSSIAN",
+"IDS_DS_LANGUAGES_SCHINESE",
+"IDS_DS_LANGUAGES_TCHINESE",
+"IDS_DS_LANGUAGES_GERMAN",
+"IDS_DS_LANGUAGES_ITALIAN",
+"IDS_DS_LANGUAGES_LATVIAN",
+"IDS_DS_LANGUAGES_POLISH",
+"IDS_DS_LANGUAGES_ROMANIAN",
+"IDS_DS_LANGUAGES_SLOVAK",
+"IDS_DS_LANGUAGES_UKRANINIAN",
+"IDS_DS_LANGUAGES_FRENCH",
+"IDS_DS_LANGUAGES_KOREAN",
+"IDS_DS_LANGUAGES_JAPANESE",
+"IDS_DS_LANGUAGES_CZECH",
+"IDS_DS_LANGUAGE_DESCRIPTION",
+"IDS_DS_TV_SYSTEM",
+"IDS_DS_TV_NTSC",
+"IDS_DS_TV_PAL",
+"IDS_DS_TV_SYSTEM_DESCRIPTION",
+"IDS_DS_HDMI_OUTPUT",
+"IDS_DS_HDMI_OUTPUT_1080P",
+"IDS_DS_HDMI_OUTPUT_1080I",
+"IDS_DS_HDMI_OUTPUT_720P",
+"IDS_DS_HDMI_OUTPUT_480P",
+"IDS_DS_HDMI_OUTPUT_DESCRIPTION",
+"IDS_DS_RESET_SETUP",
+"IDS_DS_RESET_SETUP_CONFIRM",
+"IDS_DS_RESET_INFO",
+"IDS_DS_MSG_CARD_ERROR",
+"IDS_DS_MSG_STORAGE_FULL",
+"IDS_DS_MSG_NO_CARD",
+"IDS_DS_MSG_LOW_BATTERY",
+"IDS_DS_MSG_FILE_ERROR",
+"IDS_DS_MSG_CARD_LOCK",
+"IDS_DS_MSG_CARD_SLOW",
+"IDS_DS_MSG_USE_RECOMMENDED",
+"IDS_DS_MSG_ADAPTER_ERROR",
+"IDS_DS_MSG_INVALID_OPERATION",
+"IDS_DS_MSG_CANNOT_DELETE",
+"IDS_DS_MSG_BATTERY_FULL",
+"IDS_DS_MSG_LENS_ERROR",
+"IDS_DS_MSG_HDMI_TV",
+"IDS_DS_MSG_FHD_VR",
+"IDS_DS_FLASH_LIGHTI",
+"IDS_DS_LED_LIGHTI",
+"IDS_DS_DATE_STAMP",
+"IDS_DS_RECORD",
+"IDS_DS_STANDBY",
+"IDS_DS_CAPTUREN",
+"IDS_DS_PLAYBACK2",
+"IDS_DS_POWER",
+"IDS_DS_SHUTTER",
+"IDS_DS_START",
+"IDS_DS_STOP",
+"IDS_DS_ZOOM",
+"IDS_DS_TELE",
+"IDS_DS_WIDE",
+"IDS_DS_UP",
+"IDS_DS_DOWN",
+"IDS_DS_LEFT",
+"IDS_DS_RIGHT",
+"IDS_DS_SWITCH",
+"IDS_DS_PAUSE",
+"IDS_DS_SET",
+"IDS_DS_PANORAMA",
+"IDS_DS_FW_VERSION_INFO",
+"IDS_DS_FW_VERSION",
+"IDS_DS_FW_TEST",
+"IDS_DS_FW_BRANCH",
+"IDS_DS_MOVIE_PRE_RECORD",
+"IDS_DS_MOVIE_PRE_RECORD_DESCRIPTION",
+"IDS_DS_EXITMENU",
+"IDS_DS_DELETE_ONE",
+"IDS_DS_PROTECT_ONE",
+"IDS_MOVIE_CLIPTIME",
+"IDS_MOVIE_POWEROFF_TIME",
+"IDS_DS_FLICKER",
+"IDS_FLICKER_50HZ",
+"IDS_FLICKER_60HZ",
+"IDS_MOVIE_SOUND_RECORD",
+"IDS_MOVIE_RECORD_VOLUME",
+"IDS_DS_MSG_CYCLE_RECORD_ERROR",
+"IDS_DS_MSG_CYCLE_RECORD_CLEAN_SPACE",
+"IDS_DS_MSG_SURE_TO_POWER_OFF",
+"IDS_DS_MSG_SURE_TO_DELETE_SELETED",
+"IDS_DS_MSG_DELETE_SELETED_ERROR",
+"IDS_DS_UNPROTECT_ONE",
+"IDS_DS_UNPROTECT_ALL",
+"IDS_DS_MSG_SURE_TO_PROTECT_SELETED",
+"IDS_DS_MSG_SURE_TO_UNPROTECT_SELETED",
+"IDS_DS_MSG_FORMAT_SD_CARD",
+"IDS_VIDEO_FILE",
+"IDS_IMAGE_FILE",
+"IDS_DS_MSG_FORMAT_SD_CARD_OK",
+"IDS_DS_MSG_FORMAT_SD_CARD_FAIL",
+"IDS_DS_MSG_LOCK_CURRENT_FILE",
+"IDS_MSDC_MODE",
+"IDS_PCAM_MODE",
+"IDS_USB_FUNCTION",
+"IDS_DS_MSG_WAIT_INITIAL_DONE",
+"IDS_DS_MSG_INSERT_SD_AGAIN",
+"IDS_DS_LCD_ROTATE",
+"IDS_DS_LCD_POWER_SAVE",
+"IDS_DS_MSG_DELETE_FILE_OK",
+"IDS_DS_MSG_PROTECT_FILE_OK",
+"IDS_DS_MSG_PLUG_OUT_SD",
+"IDS_DS_MSG_GOTO_POWER_OFF",
+"IDS_DS_LED_LIGHT",
+"IDS_DS_GSENSOR_SENSITIVETY",
+"IDS_DS_GSENSOR_SENSITIVETY_LEVEL0",
+"IDS_DS_GSENSOR_SENSITIVETY_LEVEL1",
+"IDS_DS_GSENSOR_SENSITIVETY_LEVEL2",
+"IDS_DS_GSENSOR_SENSITIVETY_LEVEL3",
+"IDS_DS_GSENSOR_SENSITIVETY_LEVEL4",
+"IDS_DS_MSG_FORMAT_SD_PROCESSING",
+"IDS_DS_DELAY_POWER_OFF",
+"IDS_DSC_MODE",
+"IDS_DV_MODE",
+"IDS_DS_MODE",
+"IDS_DS_MODE_TAKE_PHOTO",
+"IDS_DS_MODE_BROWSER_PHOTO",
+"IDS_DS_MODE_BROWSER_VIDEO",
+"IDS_DS_MODE_PLAYBACK_PHOTO",
+"IDS_DS_MODE_PLAYBACK_VIDEO",
+"IDS_DS_GPS_INFO_STATUS",
+"IDS_DS_TIME_ZONE",
+"IDS_DS_TIME_ZONE_GMT_M_12",
+"IDS_DS_TIME_ZONE_GMT_M_11",
+"IDS_DS_TIME_ZONE_GMT_M_10",
+"IDS_DS_TIME_ZONE_GMT_M_9",
+"IDS_DS_TIME_ZONE_GMT_M_8",
+"IDS_DS_TIME_ZONE_GMT_M_7",
+"IDS_DS_TIME_ZONE_GMT_M_6",
+"IDS_DS_TIME_ZONE_GMT_M_5",
+"IDS_DS_TIME_ZONE_GMT_M_4",
+"IDS_DS_TIME_ZONE_GMT_M_3_30",
+"IDS_DS_TIME_ZONE_GMT_M_3",
+"IDS_DS_TIME_ZONE_GMT_M_2",
+"IDS_DS_TIME_ZONE_GMT_M_1",
+"IDS_DS_TIME_ZONE_GMT",
+"IDS_DS_TIME_ZONE_GMT_P_1",
+"IDS_DS_TIME_ZONE_GMT_P_2",
+"IDS_DS_TIME_ZONE_GMT_P_3",
+"IDS_DS_TIME_ZONE_GMT_P_3_30",
+"IDS_DS_TIME_ZONE_GMT_P_4",
+"IDS_DS_TIME_ZONE_GMT_P_4_30",
+"IDS_DS_TIME_ZONE_GMT_P_5",
+"IDS_DS_TIME_ZONE_GMT_P_5_30",
+"IDS_DS_TIME_ZONE_GMT_P_5_45",
+"IDS_DS_TIME_ZONE_GMT_P_6",
+"IDS_DS_TIME_ZONE_GMT_P_6_30",
+"IDS_DS_TIME_ZONE_GMT_P_7",
+"IDS_DS_TIME_ZONE_GMT_P_8",
+"IDS_DS_TIME_ZONE_GMT_P_9",
+"IDS_DS_TIME_ZONE_GMT_P_9_30",
+"IDS_DS_TIME_ZONE_GMT_P_10",
+"IDS_DS_TIME_ZONE_GMT_P_11",
+"IDS_DS_TIME_ZONE_GMT_P_12",
+"IDS_DS_TIME_ZONE_GMT_P_13",
+"IDS_DS_MSG_UNLOCK_FILE",
+"IDS_DS_MSG_NO_FILE",
+"IDS_DS_MSG_CAPTURE_SCREEN",
+"IDS_DS_STAMP_DATELOGO",
+"IDS_DS_STAMP_DATE",
+"IDS_DS_STAMP_LOGO",
+"IDS_DS_STAMP",
+"IDS_DS_STAMP_DESCRIPTION",
+"IDS_DS_MIDDLE",
+"IDS_DS_DATETIME_H",
+"IDS_DS_DATETIME_MM",
+"IDS_DS_MOTION_DETECTION",
+"IDS_DS_MOTION_DETECTION_DESCRIPTION",
+"IDS_DS_SELECT",
+"IDS_VMD_REC_TIME",
+"IDS_VMD_SHOT_NUM",
+"IDS_DS_MSG_VMD",
+"IDS_DS_P",
+"IDS_DS_DATETIME_S",
+"IDS_AUTO_REC",
+"IDS_DS_LAST",
+"IDS_DS_ALL",
+"IDS_DS_SEC",
+"IDS_DS_TIMELAPSE",
+"IDS_DS_BOOTUP_MODE",
+"IDS_DS_RECORD_EX",
+"IDS_DSC_MODE_EX",
+"IDS_DS_BURST_CAPTURE_EX",
+"IDS_DS_TIMELAPSE_EX",
+"IDS_DS_MOVIE_MODE_FHD_EX",
+"IDS_DS_MOVIE_MODE_HD_EX",
+"IDS_DS_MOVIE_MODE_HD_60P_EX",
+"IDS_DS_MOVIE_MODE_VGA_30P_EX",
+"IDS_DS_POWER_OFF_1MIN_EX",
+"IDS_DS_POWER_OFF_5MIN_EX",
+"IDS_DS_GSENSOR_SENSITIVETY_DESCRIPTION",
+"IDS_DS_SELECT_A_FILE",
+"IDS_DS_NIGHT_MODE",
+"IDS_DS_NIGHT_MODE_DESCRIPTION",
+"IDS_DS_SWITCH_LCD_AV",
+"IDS_DS_MODE_BROWSER_EVENT",
+"IDS_DS_DRIVER_ID_SETTINGS",
+"IDS_DS_DRIVER_ID_D0",
+"IDS_DS_DRIVER_ID_D1",
+"IDS_DS_DRIVER_ID_D2",
+"IDS_DS_DRIVER_ID_D3",
+"IDS_DS_DRIVER_ID_D4",
+"IDS_DS_DRIVER_ID_D5",
+"IDS_DS_DRIVER_ID_D6",
+"IDS_DS_DRIVER_ID_D7",
+"IDS_DS_DRIVER_ID_D8",
+"IDS_DS_POWERON_GSENSOR_SENSITIVETY",
+"IDS_DS_WIFI",
+"IDS_DS_GENERAL_SETTINGS_DESCRIPTION",
+"IDS_DS_WIFI_MODE",
+"IDS_DS_WIFI_MODE_AP",
+"IDS_DS_WIFI_MODE_STATION",
+"IDS_DS_WIFI_AP_SSID",
+"IDS_DS_WIFI_AP_PASSWORD",
+"IDS_DS_WIFI_STATION1_SSID",
+"IDS_DS_WIFI_STATION1_PASSWORD",
+"IDS_DS_WIFI_STATION2_SSID",
+"IDS_DS_WIFI_STATION2_PASSWORD",
+"IDS_DS_WIFI_STATION3_SSID",
+"IDS_DS_WIFI_STATION3_PASSWORD",
+"IDS_DS_WIFI_STATION4_SSID",
+"IDS_DS_WIFI_STATION4_PASSWORD",
+"IDS_DS_WIFI_STATION5_SSID",
+"IDS_DS_WIFI_STATION5_PASSWORD",
+"IDS_DS_WIFI_STATION6_SSID",
+"IDS_DS_WIFI_STATION6_PASSWORD",
+"IDS_DS_VIDEO_TYPE",
+"IDS_DS_VIDEO_TYPE_NORMAL",
+"IDS_DS_VIDEO_TYPE_PARKING",
+"IDS_DS_VIDEO_TYPE_EMERGENCY",
+"IDS_DS_FW_READING",
+"IDS_DS_FW_UPDATING",
+"IDS_DS_LDWS_CALI",
+"IDS_DS_LDWS",
+"IDS_DS_FCWS",
+"IDS_DS_SAG",
+"IDS_DS_HDR",
+"IDS_DS_MSG_OPENFILE_WAIT",
+"IDS_DS_MOVIE_MODE_FHD_24P",
+"IDS_DS_MOVIE_MODE_HD_24P",
+"IDS_DS_CONTRAST",
+"IDS_DS_CONTRAST_DESCRIPTION",
+"IDS_DS_SATURATION",
+"IDS_DS_SATURATION_DESCRIPTION",
+"IDS_DS_SHARPNESS",
+"IDS_DS_SHARPNESS_DESCRIPTION",
+"IDS_DS_GAMMA",
+"IDS_DS_GAMMA_DESCRIPTION",
+"IDS_DS_SLOWMOTION",
+"IDS_DS_SLOWMOTION_X1",
+"IDS_DS_SLOWMOTION_X2",
+"IDS_DS_SLOWMOTION_X4",
+"IDS_DS_SLOWMOTION_X8",
+"IDS_DS_VIDEO_TIMELAPSE",
+"IDS_DS_WNR",
+"IDS_DS_REARCAMTYPE",
+"IDS_DS_REARCAM_NONE",
+"IDS_DS_AIT",
+"IDS_DS_SONIXMJPEG2H264",
+"IDS_DS_SONIXMJPEG",
+"IDS_DS_TVDECODER",
+"IDS_DS_BAYERSENSOR",
+"IDS_DS_YUVSENSOR",
+"IDS_DS_COLORTEMP",
+"IDS_DS_COLORTEMP_DEF",
+"IDS_DS_COLORTEMP_WARMCOLOR",
+"IDS_DS_COLORTEMP_COOLCOLOR",
+"IDS_DS_MODE1",
+"IDS_DS_MODE2",
+"IDS_DS_MODE3",
+"IDS_DS_MODE4",
+"IDS_DS_MODE5",
+"IDS_DS_INC",
+"IDS_DS_DEC",
+"IDS_DS_SYS_SETTINGS",
+"IDS_DS_VIDEO_CAM_ID",
+"IDS_DS_VIDEO_CAM_1ST",
+"IDS_DS_VIDEO_CAM_2ND",
+"IDS_DS_VIDEO_CAM_3RD",
+"IDS_DS_VIDEO_CAM_4TH",
+"IDS_DS_SYSTEM_POWER_OFF",
+"IDS_DS_MOVIE_MODE_4K_25",
+"IDS_DS_MOVIE_MODE_1440_30",
+};
+
+/*===========================================================================
+ * Main body
+ *===========================================================================*/
+
+bool Menu_General_EnGet(char *key, char *value, int len)
+{
+    FILE * fp = NULL;
+    char str[64] = {0};
+    bool ret = true;
+
+    sprintf(str, "%s%s", GET_CONFIG_SETTING, key);
+	printf("get [%s]\n", str);
+    fp = popen(str, "r");
+	if (fp == NULL)
+		return false;
+
+	if (value != NULL) {
+		while (fgets(value, len, fp) != NULL) {
+			if (value[strlen(value) - 1] == '\n')
+				value[strlen(value) - 1] = '\0';
+		}
+	}
+	pclose(fp);
+    return ret;
+}
+
+bool Menu_General_EnSet(const char *key, char *value)
+{
+	bool ret = true;
+	int status = 0;
+	char str[64] = {0};
+	sprintf(str, "%s%s %s", SET_CONFIG_SETTING, key, value);
+	printf("set [%s]\n", str);
+	status = system(str);
+	if (status < 0) {
+	    printf("[%s]fail\n", str);
+	    ret = false;
+	}
+	return ret;
+}
+
+static int MenuSetting_Get_General(int icur_val, va_list *ap)
+{
+    int* pSetting;
+
+    pSetting = va_arg(*ap, int *); // Get next argument (note: typedef must be correct)
+    *pSetting = icur_val;
+    return 0;
+}
+
+//menu_atoms.sAtom[i].fnSet(&menu_atoms.sAtom[0], i, val, pmi);
+static int ParamFun(SETTING_ATOM *pa, int idx, char *szVal, void *arg)
+{
+    int    *p; // point to MenuInfo
+    int     v = 0;
+    int     i = 0;
+
+    /* pmi is menu struct (MenuInfo), here use it as char* to set value.
+     * BE CAREFUL the order of MenuInfo and SETTING_ATOM must be same! */
+    p = (int *) arg;
+
+    for (i = 0; i < NUMBER_ITEM_VALS; i++) {
+    	if ((pa+idx)->szItemMaps[i].szItemKey != NULL) {
+    		if (strcmp(szVal, (pa+idx)->szItemMaps[i].szItemKey) == 0) {
+    			v = (pa+idx)->szItemMaps[i].nItemValue;
+    			break;
+    		} else
+    			v = 0;
+    	} else
+    		v = 0;
+    }
+
+    (pa + idx)->nSVal = v;
+
+    if (idx  < (int)sizeof(MenuInfo)/4)
+    {
+        *(p + idx) = (int)(pa + idx)->nSVal;
+    }
+
+    return  0;
+}
+
+#define MENU_MANUAL_ADJUST_PARAM_MAX    100
+#define MENU_MANUAL_ADJUST_PARAM_MIN    0
+static int ParamFun_adjustParam(SETTING_ATOM *pa, int idx, char *szVal, void *arg)
+{
+    int    *p; // point to MenuInfo
+    int     v = 0;
+
+    /* pmi is menu struct (MenuInfo), here use it as char* to set value.
+     * BE CAREFUL the order of MenuInfo and SETTING_ATOM must be same! */
+    p = (int *) arg;
+
+    v = atoi(szVal);
+    if (v < MENU_MANUAL_ADJUST_PARAM_MIN) v = MENU_MANUAL_ADJUST_PARAM_MIN;
+    if (v > MENU_MANUAL_ADJUST_PARAM_MAX) v = MENU_MANUAL_ADJUST_PARAM_MAX;
+
+    (pa + idx)->nSVal = v;
+
+    if (idx  < (int)sizeof(MenuInfo)/4)
+    {
+        *(p + idx) = (int)(pa + idx)->nSVal;
+    }
+
+    return  0;
+}
+
+/* Read cgi_config.bin  File Setting to MENU_ATOMS and MenuInfo */
+int ParseMenuSet(const char *file, MenuInfo* pmi /*out*/)
+{
+	FILE *fp = NULL;
+	char file_buf[128] = {0};
+	
+	//printf("open:%s\n",file);
+	fp = fopen(file, "r");
+	if (fp == NULL)
+		return -1;
+
+	while (!feof(fp)) {
+		memset(file_buf, 0, sizeof(file_buf));
+		if (fgets(file_buf, sizeof(file_buf), fp) != NULL) {
+			char    *key, *val;
+        	int     i;
+
+			if (strstr(file_buf, ";;\n") == NULL)
+				continue;
+			key = strtok(file_buf, "=");
+			val = strtok(NULL, ";;\n");
+			if (key == NULL)
+				continue;
+			if (val == NULL)
+				continue;
+			
+			for (i = 0; i< NUMBER_SETTING && menu_atoms.sAtom[i].szSKey != NULL; i++) {
+				if (strcmp(key, menu_atoms.sAtom[i].szSKey) == 0) {
+					//printf("%d:%s=%s\n",i,key,val);
+					if (menu_atoms.sAtom[i].fnSet != NULL)
+						menu_atoms.sAtom[i].fnSet(&menu_atoms.sAtom[0], i, val, pmi);
+					break;
+				}
+			}
+		}
+	}
+	fclose(fp);
+	//printf("close:%s\n",file);
+	return 0;
+}
+/*Get MENU_ATOMS value*/
+bool MenuSetting_GetCB(char *cmenu_string, ...)
+{
+	bool retVal = false;
+	int uloop;
+	va_list ap;
+
+	for (uloop = 0; menu_atoms.sAtom[uloop].szSKey != NULL; uloop++){
+		//case sensitive
+		if (/*strcmpi*/strcmp(cmenu_string, menu_atoms.sAtom[uloop].szSKey) == 0){
+			va_start(ap, cmenu_string);     // Set pointer to 1st argument of "Varaible List"
+			if (menu_atoms.sAtom[uloop].fnGet != NULL){
+				retVal = menu_atoms.sAtom[uloop].fnGet(menu_atoms.sAtom[uloop].nSVal, &ap);
+			}
+			va_end(ap);
+			return retVal;
+		}
+	}
+
+	return false;
+}
+
+bool ImportMenuInfo(MenuInfo *pmi)
+{
+    int *p;
+    unsigned int i = 0;
+
+    p = (int *)pmi;
+
+    for (i = 0; i < sizeof(MenuInfo)/4; i++) {
+        menu_atoms.sAtom[i].nSVal = *(p + i);
+    }
+    return true;
+}
+
+int ExportMenuInfo(const char *file)
+{
+	unsigned int i = 0;
+	int nValue = 0;
+	char szValue[20] = {0};
+	for (i = 0; i < sizeof(MenuInfo)/4; i++) {
+		if (menu_atoms.sAtom[i].szSKey != NULL &&
+				menu_atoms.sAtom[i].nSVal != temp_menu_atoms.sAtom[i].nSVal) {
+			nValue = menu_atoms.sAtom[i].nSVal;
+
+			//Caution:set gamma will make a "Segmentation fault"
+			if ((nValue < NUMBER_ITEM_VALS) && menu_atoms.sAtom[i].szItemMaps[nValue].szItemKey != NULL) {
+			    strcpy(szValue, menu_atoms.sAtom[i].szItemMaps[nValue].szItemKey);
+			}
+			else {
+				sprintf(szValue, "%d", nValue);
+			}
+			Menu_General_EnSet(menu_atoms.sAtom[i].szSKey, szValue);
+			break;
+		}
+	}
+	return 0;
+}
+
+bool MenuSetting_CheckMenuAtoms(void)
+{
+    if (memcmp((char *) &temp_menu_atoms, (char *) &menu_atoms, sizeof(MENU_ATOMS)) == 0) {
+        return true;
+    }
+    printf("Menu setting is changed\r\n");
+    return false;
+}
+
+void MenuSetting_BackupMenuAtoms(void)
+{
+    memcpy((char *) &temp_menu_atoms, (char *) &menu_atoms, sizeof(MENU_ATOMS));
+}
+
+void Menu_WriteSetting(void)
+{
+	ImportMenuInfo(&gCurMenuInfo);
+
+	if (MenuSetting_CheckMenuAtoms() == false) {
+		//ImportMenuInfo(&gCurMenuInfo);
+		ExportMenuInfo(MenuCfgFile);
+		MenuSetting_BackupMenuAtoms();
+	}
+}
+
+pMenuInfo MenuSettingConfig(void)
+{
+    return &gCurMenuInfo;
+}
+
+void DefaultMenuSettingInit(void)
+{
+    gCurMenuInfo.uiIMGSize              = IMAGE_SIZE_2M;
+    gCurMenuInfo.uiIMGQuality           = QUALITY_SUPER_FINE;
+    gCurMenuInfo.uiBurstShot            = BURST_SHOT_OFF;
+
+    gCurMenuInfo.uiMOVSize              = MOVIE_SIZE_1080_30P;
+    gCurMenuInfo.uiMOVQuality           = QUALITY_SUPER_FINE;
+    gCurMenuInfo.uiMicSensitivity       = MIC_SEN_STANDARD;
+    gCurMenuInfo.uiMOVPreRecord         = MOVIE_PRE_RECORD_OFF;
+    gCurMenuInfo.uiMOVClipTime          = MOVIE_CLIP_TIME_1MIN;
+
+    gCurMenuInfo.uiMOVPowerOffTime      = MOVIE_POWEROFF_TIME_DEFAULT;
+    gCurMenuInfo.uiMOVSoundRecord       = MOVIE_SOUND_RECORD_ON;
+    gCurMenuInfo.uiVMDRecTime           = VMD_REC_TIME_5SEC;
+    gCurMenuInfo.uiAutoRec              = AUTO_REC_ON;
+    gCurMenuInfo.uiTimeLapseTime        = TIMELAPSE_INTERVAL_DEFAULT;
+    gCurMenuInfo.uiSlowMotion           = SLOWMOTION_DEFAULT;
+    gCurMenuInfo.uiHDR                  = HDR_EN_DEFAULT;
+    gCurMenuInfo.uiWNR                  = WNR_EN_DEFAULT;
+    gCurMenuInfo.uiNightMode        	= MOVIE_NIGHT_MODE_DEFAULT;
+    gCurMenuInfo.uiParkingMode			= 0;
+    gCurMenuInfo.uiLDWS					= LDWS_EN_DEFAULT;
+    gCurMenuInfo.uiFCWS					= FCWS_EN_DEFAULT;
+    gCurMenuInfo.uiSAG					= SAG_EN_DEFAULT;
+    gCurMenuInfo.uiContrast				= 50;
+    gCurMenuInfo.uiSaturation			= 50;
+    gCurMenuInfo.uiSharpness			= 50;
+    gCurMenuInfo.uiGamma				= 50;
+
+    gCurMenuInfo.uiScene                = SCENE_AUTO;
+    gCurMenuInfo.uiEV                   = EVVALUE_00;
+    gCurMenuInfo.uiISO                  = ISO_AUTO;
+    gCurMenuInfo.uiWB                   = WB_AUTO;
+    gCurMenuInfo.uiColor                = COLOR_NATURAL;
+    gCurMenuInfo.uiEffect               = EFFECT_NORMAL;
+
+    gCurMenuInfo.uiSlideShowStart       = SLIDESHOW_DISABLE;
+    gCurMenuInfo.uiSlideShowFile        = SLIDESHOW_FILE_ALL;
+    gCurMenuInfo.uiSlideShowEffect      = SLIDESHOW_EFFECT_SIMPLE;
+    gCurMenuInfo.uiSlideShowMusic       = SLIDESHOW_MUSIC_OFF;
+    gCurMenuInfo.uiVolume               = VOLUME_05;
+
+    gCurMenuInfo.uiFileEdit             = FILEEDIT_DELETE;
+    gCurMenuInfo.uiMediaSelect          = MEDIA_SETTING_SD_CARD;
+
+    gCurMenuInfo.uiBeep                 = BEEP_OFF;
+    gCurMenuInfo.uiLCDBrightness        = 50;
+    gCurMenuInfo.uiAutoPowerOff         = AUTO_POWER_OFF_NEVER;
+    gCurMenuInfo.uiDateTimeFormat       = DATETIME_SETUP_YMD;
+
+    gCurMenuInfo.uiDateLogoStamp        = DATE_STAMP;
+    gCurMenuInfo.uiGPSStamp             = GPS_STAMP_ON;
+    gCurMenuInfo.uiSpeedStamp           = SPEED_STAMP_OFF;
+    gCurMenuInfo.uiLanguage             = LANGUAGE_ENGLISH;
+    gCurMenuInfo.uiResetSetting         = 0;
+    gCurMenuInfo.uiFlickerHz            = FLICKER_50HZ;
+    gCurMenuInfo.uiUSBFunction          = MENU_SETTING_USB_MSDC;
+    gCurMenuInfo.uiLCDPowerSave         = LCD_POWER_SAVE_OFF;
+    gCurMenuInfo.uiGsensorSensitivity   = GSENSOR_SENSITIVITY_OFF;
+    gCurMenuInfo.uiPowerOnGsensorSensitivity   = GSENSOR_POWERON_SENSITIVITY_OFF;
+    gCurMenuInfo.uiMotionDtcSensitivity = MOTION_DTC_SENSITIVITY_OFF;
+    gCurMenuInfo.uiTimeZone             = TIMEZONE_GMT_P_8;
+    gCurMenuInfo.uiBatteryVoltage       = BATTERY_VOLTAGE_FULL;
+    gCurMenuInfo.uiWifi					= WIFI_MODE_OFF;
+}
+
+void MenuSettingInit(void)
+{
+    if (ParseMenuSet(MenuCfgFile, MenuSettingConfig()) != 0) {
+        printf("###############################\r\n"
+                "--E-- No Default Settings\r\n"
+                "###############################\r\n");
+        DefaultMenuSettingInit();
+    }
+    ImportMenuInfo(&gCurMenuInfo);
+    MenuSetting_BackupMenuAtoms();
+    //ListAllMenuSetting(&gCurMenuInfo);
+}
+
+void ListAllMenuSetting(MenuInfo *Info)
+{
+    printf("---------------------------------------------------\n");
+    printf(" uiIMGSize          = %d \n", Info->uiIMGSize          );
+    printf(" uiIMGQuality       = %d \n", Info->uiIMGQuality       );
+    printf(" uiBurstShot        = %d \n", Info->uiBurstShot        );
+
+    printf(" uiMOVSize          = %d \n", Info->uiMOVSize          );
+    printf(" uiMOVQuality       = %d \n", Info->uiMOVQuality       );
+    printf(" uiMicSensitivity   = %d \n", Info->uiMicSensitivity   );
+    printf(" uiMOVPreRecord     = %d \n", Info->uiMOVPreRecord     );
+    printf(" uiMOVClipTime      = %d \n", Info->uiMOVClipTime      );
+    printf(" uiMOVPowerOffTime  = %d \n", Info->uiMOVPowerOffTime  );
+    printf(" uiMOVSoundRecord   = %d \n", Info->uiMOVSoundRecord   );
+    printf(" uiVMDRecTime       = %d \n", Info->uiVMDRecTime       );
+    printf(" uiAutoRec          = %d \n", Info->uiAutoRec          );
+    printf(" uiSlowMotion    = %d \n", Info->uiSlowMotion);
+    printf(" uiWNR    = %d \n", Info->uiWNR    );
+    printf(" uiWNR    = %d \n", Info->uiWNR    );
+    printf(" uiNightMode    = %d \n", Info->uiNightMode     );
+    printf(" uiParkingMode    = %d \n", Info->uiParkingMode   );
+    printf(" uiLDWS    = %d \n", Info->uiLDWS      );
+    printf(" uiFCWS    = %d \n", Info->uiFCWS      );
+    printf(" uiSAG    = %d \n", Info->uiSAG      );
+    printf(" uiContrast    = %d \n", Info->uiContrast      );
+    printf(" uiSaturation    = %d \n", Info->uiSaturation    );
+    printf(" uiSharpness    = %d \n", Info->uiSharpness     );
+    printf(" uiGamma    = %d \n", Info->uiGamma     );
+
+    printf(" uiScene            = %d \n", Info->uiScene            );
+    printf(" uiEV               = %d \n", Info->uiEV               );
+    printf(" uiISO              = %d \n", Info->uiISO              );
+    printf(" uiWB               = %d \n", Info->uiWB               );
+    printf(" uiColor            = %d \n", Info->uiColor            );
+    printf(" uiEffect           = %d \n", Info->uiEffect           );
+
+    printf(" uiSlideShowStart   = %d \n", Info->uiSlideShowStart   );
+    printf(" uiSlideShowFile    = %d \n", Info->uiSlideShowFile    );
+    printf(" uiSlideShowEffect  = %d \n", Info->uiSlideShowEffect  );
+    printf(" uiSlideShowMusic   = %d \n", Info->uiSlideShowMusic   );
+    printf(" uiVolume           = %d \n", Info->uiVolume           );
+
+    printf(" uiFileEdit         = %d \n", Info->uiFileEdit         );
+    printf(" uiMediaSelect      = %d \n", Info->uiMediaSelect      );
+
+    printf(" uiBeep             = %d \n", Info->uiBeep             );
+    printf(" uiLCDBrightness    = %d \n", Info->uiLCDBrightness    );
+    printf(" uiAutoPowerOff     = %d \n", Info->uiAutoPowerOff     );
+    printf(" uiDateTimeFormat   = %d \n", Info->uiDateTimeFormat   );
+    printf(" uiDateLogoStamp    = %d \n", Info->uiDateLogoStamp    );
+    printf(" uiGPSStamp         = %d \n", Info->uiGPSStamp         );
+    printf(" uiSpeedStamp       = %d \n", Info->uiSpeedStamp       );
+    printf(" uiLanguage         = %d \n", Info->uiLanguage         );
+    printf(" uiResetSetting     = %d \n", Info->uiResetSetting     );
+    printf(" uiFlickerHz        = %d \n", Info->uiFlickerHz        );
+    printf(" uiUSBFunction      = %d \n", Info->uiUSBFunction      );
+    printf(" uiLCDPowerSave     = %d \n", Info->uiLCDPowerSave     );
+    printf(" uiGsensorSensitivity   = %d \n", Info->uiGsensorSensitivity);
+    printf(" uiPowerOnGsensorSensitivity   = %d \n", Info->uiPowerOnGsensorSensitivity);
+    printf(" uiTimeZone         = %d \n", Info->uiTimeZone         );
+    printf(" uiMotionDtcSensitivity = %d \n", Info->uiMotionDtcSensitivity);
+    
+    printf(" uiBatteryVoltage              = %d \n", Info->uiBatteryVoltage);
+    printf(" uiWifi              = %d \n", Info->uiWifi);
+    printf(" uiVersion              = %d \n", Info->uiVersion);
+    printf("---------------------------------------------------\n");
+}
+
+int MenuSetting_GetStringPool(const char *file)
+{
+	FILE *fp = NULL;
+	char stringpool[32][IDS_DS_END] = {0};
+	int i = 0;
+
+	fp = fopen(file, "r+");
+	if (fp == NULL)
+		return -1;
+
+	while (!feof(fp)) {
+		fgets(stringpool[i], 32, fp);
+		printf("%d=%s\n", i, stringpool[i]);
+		i++;
+	}
+	fclose(fp);
+	return 0;
+}

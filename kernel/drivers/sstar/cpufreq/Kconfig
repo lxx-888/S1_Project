@@ -1,0 +1,11 @@
+config SSTAR_CPU_FREQ
+	tristate "CPU frequency scaling driver"
+    select CPU_FREQ
+    select CPU_FREQ_GOV_ONDEMAND
+    select PM_OPP
+
+if SSTAR_CPU_FREQ && (SSTAR_VOLTAGE_IDAC_CTRL || SSTAR_VOLTAGE_CTRL)
+config SSTAR_CPUFREQ_DVS
+    bool "cpufreq supports voltage scaling"
+	default y
+endif
