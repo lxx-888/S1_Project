@@ -4493,6 +4493,8 @@ void cardv_parserIni(char *pIniPath)
 
 MI_S32 main(MI_S32 argc, char **argv)
 {
+     printf("======================main==============================\n");
+
     if (argc != 2)
     {
         printf("please run [cardv *.ini &]\n");

@@ -286,10 +286,10 @@
             clocks = <&CLK_csi0_mac_lptx_top_i>, <&CLK_csi0_mac_top_i>, <&CLK_csi0_ns_top_i>, <&CLK_csi1_mac_lptx_top_i>, <&CLK_csi1_mac_top_i>, <&CLK_csi1_ns_top_i>;
             status = "ok";
             /* Config max lane number */
-            csi_sr0_lane_num = <2>;
+            csi_sr0_lane_num = <4>;
             csi_sr2_lane_num = <2>;
             /* Config lane selection */
-            csi_sr0_lane_select = <2 1 0 3 4>;
+            csi_sr0_lane_select = <2 1 3 0 4>;
             csi_sr2_lane_select = <2 1 0>;
             /* Config lane P/N swap */
             csi_sr0_lane_pn_swap = <0 0 0 0 0>;
@@ -312,11 +312,11 @@
             snr2_mipi_i2c = <2>;
 
             /* Config sensor 0 pad mux */
-            snr_sr0_mipi_mode         = <5>;
+            snr_sr0_mipi_mode         = <1>;
             snr_sr0_mipi_rst_mode     = <1>;
             snr_sr0_mipi_pdn_mode     = <0>;
             snr_sr0_mipi_mclk_mode    = <1>;
-            snr_sr0_pdn_gpio          = <PAD_PM_UART2_TX>;
+            snr_sr0_pdn_gpio          = <1>;
             snr_sr0_rst_pol           = <1>;
             /* Config sensor 2 pad mux */
             snr_sr2_mipi_mode         = <5>;

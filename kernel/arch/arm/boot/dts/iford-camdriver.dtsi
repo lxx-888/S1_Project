@@ -371,20 +371,21 @@
             clocks = <&CLK_sr00_mclk>, <&CLK_sr01_mclk>;
 
             snr0_mipi_i2c = <1>;
-            snr2_mipi_i2c = <1>;
+            snr2_mipi_i2c = <2>;
 
             /* Config sensor 0 pad mux */
             snr_sr0_mipi_mode         = <1>;
             snr_sr0_mipi_rst_mode     = <1>;
             snr_sr0_mipi_pdn_mode     = <0>;
             snr_sr0_mipi_mclk_mode    = <1>;
-
+            snr_sr0_pdn_gpio          = <1>;
+            snr_sr0_rst_pol           = <1>;
             /* Config sensor 2 pad mux */
-            snr_sr2_mipi_mode         = <3>;
+            snr_sr2_mipi_mode         = <5>;
             snr_sr2_mipi_rst_mode     = <1>;
             snr_sr2_mipi_pdn_mode     = <0>;
             snr_sr2_mipi_mclk_mode    = <1>;
-
+            snr_sr2_rst_pol           = <1>;
             /* Config mclk 37.125MHz supported */
             vif_sr0_mclk_37p125 = <1>;
             vif_sr2_mclk_37p125 = <1>;

@@ -46,7 +46,7 @@
 #define verify_cardv_ui "enable"
 #define interface_ive "disable"
 #define SUPPORT_AIO 1
-#define LOGO_MEM_SIZE "0x800000"
+#define LOGO_MEM_SIZE "0"
 #define BUSYBOX "busybox-1.20.2-arm-buildroot-linux-uclibcgnueabihf-uclibc-9.1.0-static"
 #define mi_scl_kapi "no"
 #define SUPPORT_VDF 1
@@ -83,10 +83,10 @@
 #define USE_BOOTLOGO "on"
 #define SUPPORT_IPU 1
 #define UBOOT_VERSION "2021"
-#define SENSOR0 "imx415_mipi.ko"
+#define SENSOR0 "sc550xs_mipi.ko"
 #define CONFIG_ENABLE_SNR_DEBUG 1
 #define INTERFACE_FB 1
-#define SENSOR0_OPT "chmap=1"
+#define SENSOR0_OPT "chmap=1 mclk=24M lane_num=4 "
 #define TOOLCHAIN_REL "arm-sigmastar-linux-uclibcgnueabihf-9.1.0"
 #define mi_common_cjson_write "disable"
 #define TFTP 1
@@ -141,8 +141,8 @@
 #define enable_rgn_debug 1
 #define VCM1_OPT ""
 #define interface_dpu "disable"
-#define IQ_API_LIST "imx415/imx415_api.bin"
-#define FB_MEM_SIZE "0x4b0000"
+#define IQ_API_LIST "imx307_api.bin"
+#define FB_MEM_SIZE "0"
 #define BOARD "029C"
 #define CONFIG_ENABLE_WBC_DEBUG 1
 #define SUPPORT_DEBUG 1
@@ -150,7 +150,7 @@
 #define enable_hdmi_debug 1
 #define USE_ADB "off"
 #define interface_gfx "disable"
-#define MMA_MEM_SIZE "0x4000000"
+#define MMA_MEM_SIZE "0x9000000"
 #define REMOVE_LIBS_LIST "libBF_2MIC_LINUX.so libBF_4MIC_LINUX.so libBF100_LINUX.so libAEC_LINUX.so libAED_LINUX.so libAGC_LINUX.so libANR_LINUX.so libAPC_LINUX.so libMD_LINUX.so libOD_LINUX.so libMIX_LINUX.so libSED_LINUX.so libSRC_LINUX.so libSSL_2MIC_LINUX.so libSSL_4MIC_LINUX.so libSSL100_LINUX.so libVAD_LINUX.so libsstaralgo_det.so libsstaralgo_fr.so libsstaralgo_hseg.so libsstaralgo_ovcls.so libVC_LINUX.so libVG_LINUX.so"
 #define SIGMA_WIFI "ssw101b_wifi_usb"
 #define mhal_vpe "enable"
@@ -182,8 +182,8 @@
 #define INTERFACE_ISP 1
 #define verify_release_sample_ptree "disable"
 #define CONFIG_ENABLE_AI_DEBUG 1
-#define DRAM_SIZE "0x8000000"
-#define SENSOR_LIST "imx415_mipi.ko"
+#define DRAM_SIZE "0x10000000"
+#define SENSOR_LIST "sc550xs_mipi.ko"
 #define config_mi_ldc 1
 #define BENCH "no"
 #define enable_vif_debug 1
@@ -247,7 +247,7 @@
 #define CONFIG_ENABLE_ISP_DEBUG 1
 #define interface_ao "enable"
 #define KERNELBOOTADDR ""
-#define LX_MEM_SIZE "0x8000000"
+#define LX_MEM_SIZE "0x10000000"
 #define SUPPORT_IVE 1
 #define USE_SSH "off"
 #define mi_sys_kapi "no"

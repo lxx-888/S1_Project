@@ -32,8 +32,8 @@
 / {
     #address-cells = <1>;
     #size-cells = <1>;
-    model = "IFORD SSC029A-S01A";
-    compatible = "sstar,iford";
+    model = "IFORD SSC029A-S01A AIGLASS";
+    compatible = "sstar,iford 111";
 /*
     memory {
         device_type = "memory";

@@ -32,7 +32,7 @@
 / {
     #address-cells = <1>;
     #size-cells = <1>;
-    model = "IFORD SSC029C-S01A";
+    model = "IFORD SSC029C-S01A AIGLASS";
     compatible = "sstar,iford";
 /*
     memory {
