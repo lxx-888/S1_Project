@@ -378,7 +378,7 @@
             snr_sr0_mipi_rst_mode     = <1>;
             snr_sr0_mipi_pdn_mode     = <0>;
             snr_sr0_mipi_mclk_mode    = <1>;
-            snr_sr0_pdn_gpio          = <1>;
+            snr_sr0_pdn_gpio          = <PAD_PM_UART2_TX>;
             snr_sr0_rst_pol           = <1>;
             /* Config sensor 2 pad mux */
             snr_sr2_mipi_mode         = <5>;

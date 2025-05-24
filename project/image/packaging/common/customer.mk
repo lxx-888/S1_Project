@@ -225,7 +225,8 @@ customer_$(PRODUCT):
 	echo "insmod config/modules/5.10/mi_debug.ko" >> $(customer$(RESOURCE))/demo.sh
 	echo "insmod config/modules/5.10/sstar_emac.ko" >> $(customer$(RESOURCE))/demo.sh
 	echo "ifconfig eth0 192.168.101.212" >> $(customer$(RESOURCE))/demo.sh
-	echo "tcpsvd 0 21 busybox ftpd -w /customer/sample_code/bin/ &" >> $(customer$(RESOURCE))/demo.sh
+	echo "tcpsvd 0 21 busybox ftpd -w / &" >> $(customer$(RESOURCE))/demo.sh
+	echo "source /etc/profile" >> $(customer$(RESOURCE))/demo.sh
 	echo "cardv /customer/cardv/one_bayer_framemode_one_yuv_framemode_no_panel.ini &" >> $(customer$(RESOURCE))/demo.sh
 	echo mdev -s >> $(customer$(RESOURCE))/demo.sh
 
